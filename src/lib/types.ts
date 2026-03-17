@@ -14,6 +14,9 @@ export interface Gemeente {
   vergrijzingsgraad: number; // % 65+
   bevolkingsgroei: number; // % t.o.v. vorig jaar
   gemiddeldeHuisprijs: number; // €
+  inkomensJaar?: number;
+  huisprijsJaar?: number;
+  bevolkingsTrend?: { jaar: number; inwoners: number }[];
   scores: ThemaScores;
 }
 
@@ -48,7 +51,7 @@ export interface GemeenteTrend {
 
 export type SortDirection = "asc" | "desc";
 
-export type Indicator = keyof Omit<Gemeente, "id" | "naam" | "provincie" | "scores">;
+export type Indicator = keyof Omit<Gemeente, "id" | "naam" | "provincie" | "scores" | "inkomensJaar" | "huisprijsJaar" | "bevolkingsTrend">;
 
 export const INDICATOR_LABELS: Record<Indicator, string> = {
   inwoners: "Inwoners",

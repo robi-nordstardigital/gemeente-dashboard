@@ -1,0 +1,89 @@
+{
+  "totaalInwoners": 6864766,
+  "totaalGemeenten": 285,
+  "gemiddeldInkomen": 42010,
+  "gemiddeldeHuisprijs": 223280,
+  "bevolkingsTrend": [
+    {
+      "jaar": 2015,
+      "waarde": 6444127
+    },
+    {
+      "jaar": 2016,
+      "waarde": 6477804
+    },
+    {
+      "jaar": 2017,
+      "waarde": 6516011
+    },
+    {
+      "jaar": 2018,
+      "waarde": 6552967
+    },
+    {
+      "jaar": 2019,
+      "waarde": 6589069
+    },
+    {
+      "jaar": 2020,
+      "waarde": 6629143
+    },
+    {
+      "jaar": 2021,
+      "waarde": 6653062
+    },
+    {
+      "jaar": 2022,
+      "waarde": 6698876
+    },
+    {
+      "jaar": 2023,
+      "waarde": 6774807
+    },
+    {
+      "jaar": 2024,
+      "waarde": 6821770
+    },
+    {
+      "jaar": 2025,
+      "waarde": 6864766
+    }
+  ],
+  "dataStatus": {
+    "bevolking": {
+      "bron": "Statbel",
+      "jaar": 2025,
+      "beschikbaar": true
+    },
+    "inkomen": {
+      "bron": "Statbel Fiscale Statistiek",
+      "jaar": 2023,
+      "beschikbaar": true
+    },
+    "vastgoed": {
+      "bron": "Statbel Vastgoedprijzen",
+      "jaar": 2017,
+      "beschikbaar": true
+    },
+    "laadpalen": {
+      "bron": "Dept. MOW",
+      "beschikbaar": false,
+      "reden": "Download vereist handmatige actie via FME portal"
+    },
+    "criminaliteit": {
+      "bron": "Federale Politie",
+      "beschikbaar": false,
+      "reden": "Alleen PDF rapporten beschikbaar"
+    },
+    "groeneRuimte": {
+      "bron": "Gemeente-Stadsmonitor",
+      "beschikbaar": false,
+      "reden": "Handmatige Excel download nodig"
+    },
+    "werkloosheid": {
+      "bron": "Statistiek Vlaanderen",
+      "beschikbaar": false,
+      "reden": "Geen directe API/CSV download"
+    }
+  }
+}

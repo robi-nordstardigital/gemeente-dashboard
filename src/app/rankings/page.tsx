@@ -10,14 +10,9 @@ const SORTABLE_INDICATORS: Indicator[] = [
   "inwoners",
   "dichtheid",
   "mediaalInkomen",
-  "werkloosheidsgraad",
-  "laadpalen",
-  "laadpalenPerInwoner",
-  "criminaliteitsgraad",
-  "groeneRuimte",
-  "vergrijzingsgraad",
-  "bevolkingsgroei",
   "gemiddeldeHuisprijs",
+  "bevolkingsgroei",
+  "oppervlakte",
 ];
 
 const PROVINCIES: (Provincie | "Alle")[] = [
