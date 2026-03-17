@@ -12,8 +12,16 @@ export interface Gemeente {
   criminaliteitsgraad: number; // per 1000 inwoners
   groeneRuimte: number; // % oppervlakte
   vergrijzingsgraad: number; // % 65+
+  // Stadsmonitor survey indicators (burgerbevraging, % eens/veel)
+  netheidCentrum: number;
+  netheidStraten: number;
+  groenBuurt: number;
+  tevredenheidGemeente: number;
+  graagWonen: number;
+  vertrouwenBestuur: number;
   bevolkingsgroei: number; // % t.o.v. vorig jaar
   gemiddeldeHuisprijs: number; // €
+  leerlingen: number; // Dataloep onderwijs — inschrijvingen per woonplaats
   inkomensJaar?: number;
   huisprijsJaar?: number;
   bevolkingsTrend?: { jaar: number; inwoners: number }[];
@@ -29,6 +37,7 @@ export interface ThemaScores {
   veiligheid: number;
   wonen: number;
   zorg: number;
+  leefbaarheid: number;
 }
 
 export type Provincie =
@@ -51,21 +60,24 @@ export interface GemeenteTrend {
 
 export type SortDirection = "asc" | "desc";
 
-export type Indicator = keyof Omit<Gemeente, "id" | "naam" | "provincie" | "scores" | "inkomensJaar" | "huisprijsJaar" | "bevolkingsTrend">;
+// Only indicators backed by real data are exposed to the UI
+export type Indicator = keyof Omit<Gemeente, "id" | "naam" | "provincie" | "scores" | "inkomensJaar" | "huisprijsJaar" | "bevolkingsTrend" | "leerlingen" | "werkloosheidsgraad" | "criminaliteitsgraad" | "groeneRuimte" | "vergrijzingsgraad">;
 
 export const INDICATOR_LABELS: Record<Indicator, string> = {
   inwoners: "Inwoners",
   oppervlakte: "Oppervlakte (km²)",
   dichtheid: "Dichtheid (inw/km²)",
   mediaalInkomen: "Mediaan inkomen (€)",
-  werkloosheidsgraad: "Werkloosheid (%)",
   laadpalen: "Laadpalen",
   laadpalenPerInwoner: "Laadpalen /1000 inw.",
-  criminaliteitsgraad: "Criminaliteit /1000 inw.",
-  groeneRuimte: "Groene ruimte (%)",
-  vergrijzingsgraad: "Vergrijzing 65+ (%)",
   bevolkingsgroei: "Bevolkingsgroei (%)",
   gemiddeldeHuisprijs: "Gem. huisprijs (€)",
+  netheidCentrum: "Netheid centrum (%)",
+  netheidStraten: "Netheid straten (%)",
+  groenBuurt: "Groen in buurt (%)",
+  tevredenheidGemeente: "Tevredenheid gemeente (%)",
+  graagWonen: "Graag wonen (%)",
+  vertrouwenBestuur: "Vertrouwen bestuur (%)",
 };
 
 export const PROVINCIE_KLEUREN: Record<Provincie, string> = {

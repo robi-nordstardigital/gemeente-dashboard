@@ -13,6 +13,11 @@ const SORTABLE_INDICATORS: Indicator[] = [
   "gemiddeldeHuisprijs",
   "bevolkingsgroei",
   "oppervlakte",
+  "graagWonen",
+  "tevredenheidGemeente",
+  "netheidCentrum",
+  "groenBuurt",
+  "vertrouwenBestuur",
 ];
 
 const PROVINCIES: (Provincie | "Alle")[] = [

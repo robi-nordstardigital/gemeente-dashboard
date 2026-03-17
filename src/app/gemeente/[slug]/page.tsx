@@ -20,15 +20,26 @@ import { getGemeenteBySlug, gemeenten } from "@/data/gemeenten";
 import { INDICATOR_LABELS, PROVINCIE_KLEUREN, Indicator } from "@/lib/types";
 import { formatIndicator, formatNumber, formatCurrency, getRank } from "@/lib/utils";
 
+const SURVEY_INDICATORS: { key: Indicator; label: string; icon: string; tooltip: string }[] = [
+  { key: "graagWonen", label: "Graag wonen in de gemeente", icon: "♥",
+    tooltip: "% inwoners dat aangeeft graag in hun gemeente te wonen (antwoord: eens)" },
+  { key: "tevredenheidGemeente", label: "Tevredenheid over de gemeente", icon: "★",
+    tooltip: "% inwoners dat tevreden is over de gemeente als geheel (antwoord: eens)" },
+  { key: "netheidCentrum", label: "Netheid van het centrum", icon: "✦",
+    tooltip: "% inwoners dat vindt dat het centrum van de gemeente netjes is (antwoord: eens)" },
+  { key: "netheidStraten", label: "Netheid straten en voetpaden", icon: "◆",
+    tooltip: "% inwoners dat vindt dat straten en voetpaden netjes zijn (antwoord: eens)" },
+  { key: "groenBuurt", label: "Voldoende groen in de buurt", icon: "●",
+    tooltip: "% inwoners dat vindt dat er voldoende groen is in hun buurt (antwoord: eens)" },
+  { key: "vertrouwenBestuur", label: "Vertrouwen in gemeentebestuur", icon: "◎",
+    tooltip: "% inwoners dat veel vertrouwen heeft in het gemeentebestuur (antwoord: veel)" },
+];
+
 const KEY_INDICATORS: { key: Indicator; label: string; ascending?: boolean }[] = [
   { key: "inwoners", label: "Inwoners" },
   { key: "dichtheid", label: "Dichtheid" },
   { key: "mediaalInkomen", label: "Mediaan Inkomen" },
-  { key: "werkloosheidsgraad", label: "Werkloosheid", ascending: true },
   { key: "laadpalenPerInwoner", label: "Laadpalen /1000 inw." },
-  { key: "criminaliteitsgraad", label: "Criminaliteit", ascending: true },
-  { key: "groeneRuimte", label: "Groene Ruimte" },
-  { key: "vergrijzingsgraad", label: "Vergrijzing" },
   { key: "bevolkingsgroei", label: "Bev. Groei" },
   { key: "gemiddeldeHuisprijs", label: "Huisprijs" },
 ];
@@ -43,9 +54,11 @@ export default function GemeenteDetailPage({
 
   if (!gemeente) return notFound();
 
-  const radarData = Object.entries(gemeente.scores).map(([key, value]) => ({
+  // Scores backed by real data
+  const REAL_SCORES = ["demografie", "economie", "mobiliteit", "onderwijs", "wonen", "leefbaarheid", "milieu", "veiligheid"] as const;
+  const radarData = REAL_SCORES.map((key) => ({
     subject: key.charAt(0).toUpperCase() + key.slice(1),
-    score: value,
+    score: gemeente.scores[key],
     fullMark: 100,
   }));
 
@@ -164,6 +177,127 @@ export default function GemeenteDetailPage({
           </div>
         </div>
       </div>
+
+      {/* Survey Indicators — Leefbaarheid detail */}
+      {gemeente.graagWonen > 0 && (
+        <div className="glass-strong rounded-xl p-4">
+          <p className="mb-1 text-[11px] font-medium uppercase tracking-wider text-muted">
+            Leefbaarheid — Burgerbevraging 2023
+          </p>
+          <p className="mb-4 text-[11px] text-muted/60">
+            % inwoners dat positief antwoordde (eens/veel) · Bron: Gemeente-Stadsmonitor
+          </p>
+          <div className="space-y-5">
+            {SURVEY_INDICATORS.map(({ key, label, icon, tooltip }) => {
+              const value = gemeente[key] as number;
+              if (value === 0) return null;
+              const withData = gemeenten.filter(g => (g[key] as number) > 0);
+              const values = withData.map(g => g[key] as number);
+              const vlAvg = values.reduce((s, v) => s + v, 0) / values.length;
+              const min = Math.min(...values);
+              const max = Math.max(...values);
+              const diff = value - vlAvg;
+              const rank = getRank(withData, gemeente.id, key);
+              // Position within min-max range (0-100%)
+              const range = max - min || 1;
+              const valuePos = ((value - min) / range) * 100;
+              const avgPos = ((vlAvg - min) / range) * 100;
+
+              return (
+                <div key={key} className="group">
+                  {/* Label row */}
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center gap-2 relative">
+                      <span className="text-sm">{icon}</span>
+                      <span className="text-[13px] text-foreground/90">{label}</span>
+                      <span className="text-muted/40 text-[10px] cursor-help" title={tooltip}>?</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[14px] font-bold font-mono">{value}%</span>
+                      <span className="text-[11px] font-mono text-muted">
+                        #{rank}<span className="text-muted/50">/{withData.length}</span>
+                      </span>
+                    </div>
+                  </div>
+                  {/* Tooltip explanation */}
+                  <p className="text-[10px] text-muted/50 mb-1.5 hidden group-hover:block">{tooltip}</p>
+                  {/* Range bar: min to max with markers */}
+                  <div className="relative h-4 rounded-full bg-white/[0.03] overflow-visible">
+                    {/* Track background showing full range */}
+                    <div className="absolute inset-y-0 left-0 right-0 rounded-full bg-white/5" />
+                    {/* Value bar from left edge to value position */}
+                    <div
+                      className="absolute inset-y-0 left-0 rounded-full transition-all"
+                      style={{
+                        width: `${valuePos}%`,
+                        background: diff >= 5
+                          ? "linear-gradient(90deg, rgba(34,197,94,0.15), rgba(34,197,94,0.45))"
+                          : diff > -5
+                            ? "linear-gradient(90deg, rgba(245,158,11,0.15), rgba(245,158,11,0.35))"
+                            : "linear-gradient(90deg, rgba(239,68,68,0.15), rgba(239,68,68,0.4))",
+                      }}
+                    />
+                    {/* Value dot */}
+                    <div
+                      className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-2 z-20"
+                      style={{
+                        left: `${valuePos}%`,
+                        background: diff >= 5 ? "#22c55e" : diff > -5 ? "#f59e0b" : "#ef4444",
+                        borderColor: diff >= 5 ? "#16a34a" : diff > -5 ? "#d97706" : "#dc2626",
+                      }}
+                    />
+                    {/* Flemish average marker */}
+                    <div
+                      className="absolute top-0 h-full w-0.5 bg-white/30 z-10"
+                      style={{ left: `${avgPos}%` }}
+                    />
+                    <div
+                      className="absolute -bottom-3.5 -translate-x-1/2 text-[8px] text-white/30"
+                      style={{ left: `${avgPos}%` }}
+                    >
+                      gem.
+                    </div>
+                  </div>
+                  {/* Min / diff badge / Max labels */}
+                  <div className="flex items-center justify-between mt-4 text-[10px] font-mono">
+                    <span className="text-muted/40">{min}%</span>
+                    <span
+                      className={`px-1.5 py-0.5 rounded text-[10px] font-medium ${
+                        diff >= 5
+                          ? "bg-emerald-500/10 text-emerald-400"
+                          : diff > -5
+                            ? "bg-amber-500/10 text-amber-400"
+                            : "bg-red-500/10 text-red-400"
+                      }`}
+                    >
+                      {diff > 0 ? "+" : ""}{diff.toFixed(1)} vs Vlaams gem. ({vlAvg.toFixed(0)}%)
+                    </span>
+                    <span className="text-muted/40">{max}%</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          {/* Overall leefbaarheid score */}
+          <div className="mt-4 pt-3 border-t border-glass-border flex items-center justify-between">
+            <span className="text-[12px] font-medium text-muted">Leefbaarheidsscore (gemiddelde)</span>
+            <div className="flex items-center gap-3">
+              <span className="text-lg font-bold">{gemeente.scores.leefbaarheid}/100</span>
+              {(() => {
+                const vlAvgLeef = gemeenten.filter(g => g.scores.leefbaarheid !== 50 || g.graagWonen > 0)
+                  .reduce((s, g) => s + g.scores.leefbaarheid, 0) /
+                  gemeenten.filter(g => g.scores.leefbaarheid !== 50 || g.graagWonen > 0).length;
+                const diff = gemeente.scores.leefbaarheid - vlAvgLeef;
+                return (
+                  <span className={`text-[12px] font-mono ${diff > 0 ? "text-emerald-400" : "text-red-400"}`}>
+                    {diff > 0 ? "+" : ""}{diff.toFixed(1)} vs gem.
+                  </span>
+                );
+              })()}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Comparison with Flemish average */}
       <div className="glass-strong rounded-xl p-4">

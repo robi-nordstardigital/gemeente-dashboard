@@ -2,7 +2,8 @@
   "totaalInwoners": 6864766,
   "totaalGemeenten": 285,
   "gemiddeldInkomen": 42010,
-  "gemiddeldeHuisprijs": 223280,
+  "gemiddeldeHuisprijs": 342673,
+  "totaalLaadpalen": 79945,
   "bevolkingsTrend": [
     {
       "jaar": 2015,
@@ -62,18 +63,28 @@
     },
     "vastgoed": {
       "bron": "Statbel Vastgoedprijzen",
-      "jaar": 2017,
+      "jaar": 2024,
       "beschikbaar": true
     },
     "laadpalen": {
-      "bron": "Dept. MOW",
-      "beschikbaar": false,
-      "reden": "Download vereist handmatige actie via FME portal"
+      "bron": "Dept. MOW (WFS)",
+      "jaar": 2025,
+      "beschikbaar": true
+    },
+    "onderwijs": {
+      "bron": "Dataloep (Dept. Onderwijs)",
+      "jaar": "2023-2024",
+      "beschikbaar": true
     },
     "criminaliteit": {
       "bron": "Federale Politie",
       "beschikbaar": false,
       "reden": "Alleen PDF rapporten beschikbaar"
+    },
+    "oppervlakte": {
+      "bron": "Statbel Kadaster (bodembezetting)",
+      "jaar": 2025,
+      "beschikbaar": true
     },
     "groeneRuimte": {
       "bron": "Gemeente-Stadsmonitor",
@@ -81,9 +92,14 @@
       "reden": "Handmatige Excel download nodig"
     },
     "werkloosheid": {
-      "bron": "Statistiek Vlaanderen",
+      "bron": "VDAB Arvastat",
       "beschikbaar": false,
-      "reden": "Geen directe API/CSV download"
+      "reden": "Interactieve tool, geen directe CSV API"
+    },
+    "stadsmonitorSurvey": {
+      "bron": "Gemeente-Stadsmonitor Burgerbevraging",
+      "jaar": 2023,
+      "beschikbaar": true
     }
   }
 }

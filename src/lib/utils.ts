@@ -21,13 +21,16 @@ export function formatIndicator(indicator: Indicator, value: number): string {
     case "mediaalInkomen":
     case "gemiddeldeHuisprijs":
       return formatCurrency(value);
-    case "werkloosheidsgraad":
-    case "groeneRuimte":
-    case "vergrijzingsgraad":
     case "bevolkingsgroei":
       return formatPercent(value);
+    case "netheidCentrum":
+    case "netheidStraten":
+    case "groenBuurt":
+    case "tevredenheidGemeente":
+    case "graagWonen":
+    case "vertrouwenBestuur":
+      return `${Math.round(value)}%`;
     case "laadpalenPerInwoner":
-    case "criminaliteitsgraad":
       return value.toFixed(2);
     case "dichtheid":
       return formatNumber(Math.round(value));

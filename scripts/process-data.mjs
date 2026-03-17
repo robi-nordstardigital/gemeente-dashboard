@@ -6,7 +6,7 @@
  * Sources:
  * - Statbel: Population per municipality (2025, + historical 2015-2024)
  * - Statbel: Fiscal income per municipality (2005-2023)
- * - Statbel: Real estate prices per municipality (2010-2019)
+ * - Statbel: Real estate prices per municipality (2010-2025, quarterly)
  * - Belgium TopoJSON for map boundaries
  */
 
@@ -139,99 +139,282 @@ for (const row of incRows) {
 }
 
 // ────────────────────────────────────────────
-// 3. REAL ESTATE PRICES (2019 — latest full year)
+// 3. REAL ESTATE PRICES (2024 — from Statbel XLSX Q1-Q4)
 // ────────────────────────────────────────────
 console.log("🏠 Processing real estate price data...");
 
-// Parse TXT pipe-delimited file (much faster than XLSX for large files)
-const reTxt = readFileSync(resolve(RAW, "immo_by_municipality__2010-2019.txt"), "utf-8");
-const reLines = reTxt.split("\n");
-const reHeaders = reLines[0].split("|");
+// Parse new CSV exported from Statbel XLSX (2010-2025, quarterly, per gemeente)
+const reCsv = readFileSync(resolve(RAW, "vastgoedprijzen_gemeente.csv"), "utf-8");
+const reLines = reCsv.split("\n");
 
 const huisprijsByNIS = new Map();
 const huisprijsTrend = new Map(); // For historical trend
+const TARGET_YEAR = "2024"; // Most recent full year with Q1-Q4 data
 
+// First pass: collect all quarterly medians per NIS per year
+const quarterlies = new Map(); // NIS → Map<year, [medians]>
 for (let i = 1; i < reLines.length; i++) {
-  const cols = reLines[i].split("|");
-  if (cols.length < 15) continue;
+  const cols = reLines[i].split(",");
+  if (cols.length < 5) continue;
 
-  const year = cols[0];
-  const type = cols[1];
-  const nis = cols[3];
-  const period = cols[6];
-  const surface = cols[7];
+  const nis = cols[0];
+  const jaar = cols[2];
+  const mediaan = parseFloat(cols[4]); // mediaan_alle (all house types)
 
   if (!isFlemishNIS(nis)) continue;
-  if (type !== "gewone woonhuizen") continue;
-  if (surface !== "totaal / total") continue;
+  if (isNaN(mediaan) || mediaan <= 0) continue;
 
-  // Yearly aggregates for trend data
-  if (period === "Y") {
-    const median = parseFloat(cols[14]);
-    if (!isNaN(median)) {
-      if (!huisprijsTrend.has(nis)) huisprijsTrend.set(nis, []);
-      huisprijsTrend.get(nis).push({ jaar: parseInt(year), mediaanPrijs: median });
-    }
-  }
-
-  // Use 2017 yearly data (latest with Y aggregates) as current price
-  if (year === "2017" && period === "Y") {
-    const median = parseFloat(cols[14]);
-    const mean = parseFloat(cols[11]);
-    const trans = parseInt(cols[8]);
-    const p25 = parseFloat(cols[13]);
-    const p75 = parseFloat(cols[15]);
-    if (!isNaN(median)) {
-      huisprijsByNIS.set(nis, {
-        mediaanPrijs: median,
-        gemiddeldePrijs: Math.round(mean),
-        transacties: trans,
-        p25,
-        p75,
-      });
-    }
-  }
+  if (!quarterlies.has(nis)) quarterlies.set(nis, new Map());
+  const yearMap = quarterlies.get(nis);
+  if (!yearMap.has(jaar)) yearMap.set(jaar, []);
+  yearMap.get(jaar).push(mediaan);
 }
 
-// Fallback: use 2018 Q4 data for municipalities without 2017 Y data
-for (let i = 1; i < reLines.length; i++) {
-  const cols = reLines[i].split("|");
-  if (cols.length < 15) continue;
-  const nis = cols[3];
-  if (huisprijsByNIS.has(nis)) continue;
-  if (!isFlemishNIS(nis)) continue;
-  if (cols[1] !== "gewone woonhuizen") continue;
-  if (cols[7] !== "totaal / total") continue;
-  if (cols[0] !== "2018" || cols[6] !== "Q4") continue;
+// Build current prices (2024) and trend data
+for (const [nis, yearMap] of quarterlies) {
+  // Trend: yearly averages of quarterly medians
+  const trendData = [];
+  for (const [jaar, medians] of yearMap) {
+    const avg = Math.round(medians.reduce((s, v) => s + v, 0) / medians.length);
+    trendData.push({ jaar: parseInt(jaar), mediaanPrijs: avg });
+  }
+  trendData.sort((a, b) => a.jaar - b.jaar);
+  huisprijsTrend.set(nis, trendData);
 
-  const median = parseFloat(cols[14]);
-  if (!isNaN(median)) {
+  // Current price: use 2024 (full year), fallback to 2023
+  const targetMedians = yearMap.get(TARGET_YEAR) || yearMap.get("2023");
+  if (targetMedians && targetMedians.length > 0) {
+    const avgMediaan = Math.round(targetMedians.reduce((s, v) => s + v, 0) / targetMedians.length);
     huisprijsByNIS.set(nis, {
-      mediaanPrijs: median,
-      gemiddeldePrijs: Math.round(parseFloat(cols[11])),
-      transacties: parseInt(cols[8]),
-      p25: parseFloat(cols[13]),
-      p75: parseFloat(cols[15]),
+      mediaanPrijs: avgMediaan,
+      transacties: 0, // Not available per quarter in new format
+      jaar: yearMap.has(TARGET_YEAR) ? 2024 : 2023,
     });
   }
 }
 
-console.log(`  Found real estate data for ${huisprijsByNIS.size} municipalities`);
+console.log(`  Found real estate data for ${huisprijsByNIS.size} municipalities (${TARGET_YEAR})`);
 
 // ────────────────────────────────────────────
-// 4. COMPUTE MUNICIPALITY SURFACE AREA FROM NIS LOOKUP
+// 4. LAADPALEN DATA (WFS — Dept. MOW)
 // ────────────────────────────────────────────
-// Surface area data from Statbel — hardcoded for Flemish provinces
-const PROVINCIE_OPP = {
-  Antwerpen: 2876,
-  "Vlaams-Brabant": 2106,
-  "West-Vlaanderen": 3197,
-  "Oost-Vlaanderen": 3007,
-  Limburg: 2427,
-};
+console.log("⚡ Processing laadpalen data...");
+
+const laadpalenCsv = readFileSync(resolve(RAW, "laadpunten_all.csv"), "utf-8");
+const laadpalenLines = laadpalenCsv.split("\n");
+const lpHeaders = laadpalenLines[0].split(",");
+
+// Count laadpunten per gemeente (by name matching)
+const laadpalenPerGemeente = new Map(); // gemeente name → { count, publiek, semiPubliek, snelladers }
+for (let i = 1; i < laadpalenLines.length; i++) {
+  // CSV with possible commas in quoted fields — simple parse for known structure
+  const line = laadpalenLines[i];
+  if (!line.trim()) continue;
+  const cols = line.split(",");
+  if (cols.length < 16) continue;
+
+  const gemeente = cols[11]; // gemeente column
+  const toegankelijkheid = cols[4]; // toegankelijkheid
+  const snelheid = cols[5]; // snelheid
+  const kw = parseFloat(cols[5]) || 0;
+
+  if (!gemeente) continue;
+  const key = gemeente.trim();
+  if (!laadpalenPerGemeente.has(key)) {
+    laadpalenPerGemeente.set(key, { totaal: 0, publiek: 0, semiPubliek: 0, snelladers: 0 });
+  }
+  const entry = laadpalenPerGemeente.get(key);
+  entry.totaal++;
+  if (toegankelijkheid === "publiek") entry.publiek++;
+  else if (toegankelijkheid === "semi-publiek") entry.semiPubliek++;
+  // snelheid column is at index 6 actually, kw at index 5
+  const kwVal = parseFloat(cols[5]) || 0;
+  if (kwVal >= 50) entry.snelladers++;
+}
+console.log(`  Found laadpunten in ${laadpalenPerGemeente.size} municipalities`);
+console.log(`  Total laadpunten: ${[...laadpalenPerGemeente.values()].reduce((s, v) => s + v.totaal, 0)}`);
 
 // ────────────────────────────────────────────
-// 5. BUILD COMBINED GEMEENTE RECORDS
+// 4b. ONDERWIJS DATA (Dataloep — Dept. Onderwijs)
+// ────────────────────────────────────────────
+console.log("📚 Processing onderwijs data...");
+
+const ondCsv = readFileSync(resolve(RAW, "onderwijs_mobiliteit.csv"), "utf-8");
+const ondLines = ondCsv.split("\n");
+
+// Count leerlingen per woonplaats-gemeente (NIS code)
+const leerlingenPerGemeente = new Map(); // NIS → total students
+for (let i = 1; i < ondLines.length; i++) {
+  const line = ondLines[i];
+  if (!line.trim()) continue;
+  // CSV is quoted, parse carefully
+  const matches = line.match(/"([^"]*)"/g);
+  if (!matches || matches.length < 22) continue;
+  const strip = s => s.replace(/^"|"$/g, "");
+
+  const woonplaatsNis = strip(matches[11]); // woonplaats_fusiegemeente_nis
+  const aantal = parseInt(strip(matches[matches.length - 1])) || 0; // aantal_inschrijvingen (last col)
+
+  if (!woonplaatsNis || !isFlemishNIS(woonplaatsNis)) continue;
+  leerlingenPerGemeente.set(woonplaatsNis, (leerlingenPerGemeente.get(woonplaatsNis) || 0) + aantal);
+}
+console.log(`  Found onderwijs data for ${leerlingenPerGemeente.size} municipalities`);
+
+// ────────────────────────────────────────────
+// 5a. SURFACE AREA PER MUNICIPALITY (Statbel Kadaster)
+// ────────────────────────────────────────────
+console.log("📐 Processing surface area data...");
+
+const oppCsv = readFileSync(resolve(RAW, "oppervlakte_gemeente.csv"), "utf-8");
+const oppLines = oppCsv.split("\n");
+const oppByNIS = new Map(); // NIS → km²
+for (let i = 1; i < oppLines.length; i++) {
+  const cols = oppLines[i].split(",");
+  if (cols.length < 3) continue;
+  const nis = cols[0].trim();
+  const km2 = parseFloat(cols[2]);
+  if (nis && !isNaN(km2)) {
+    oppByNIS.set(nis, km2);
+  }
+}
+console.log(`  Found surface area for ${oppByNIS.size} municipalities`);
+
+// ────────────────────────────────────────────
+// 5b. GEMEENTE-STADSMONITOR — Vergrijzing (DE_05)
+// ────────────────────────────────────────────
+console.log("👵 Processing vergrijzingsgraad (Stadsmonitor)...");
+
+const smDemWb = XLSX.readFile(resolve(RAW, "stadsmonitor_register_demografie.xlsx"));
+const de05Rows = XLSX.utils.sheet_to_json(smDemWb.Sheets["DE_05"], { header: 1 });
+
+const vergrijzingByNIS = new Map(); // NIS → { jaar, pct }
+for (let i = 1; i < de05Rows.length; i++) {
+  const row = de05Rows[i];
+  const nis = String(row[1]);
+  if (!isFlemishNIS(nis)) continue;
+  const jaar = row[3];
+  const pct = row[7]; // Procent (%) 65+
+  if (typeof pct !== "number") continue;
+  const existing = vergrijzingByNIS.get(nis);
+  if (!existing || jaar > existing.jaar) {
+    vergrijzingByNIS.set(nis, { jaar, pct: +pct.toFixed(1) });
+  }
+}
+console.log(`  Found vergrijzing for ${vergrijzingByNIS.size} municipalities (latest year per gemeente)`);
+
+// ────────────────────────────────────────────
+// 5c. GEMEENTE-STADSMONITOR — Werkzoekendengraad (WE_36)
+// ────────────────────────────────────────────
+console.log("💼 Processing werkzoekendengraad (Stadsmonitor)...");
+
+const smWerkWb = XLSX.readFile(resolve(RAW, "stadsmonitor_register_werk.xlsx"));
+const we36Rows = XLSX.utils.sheet_to_json(smWerkWb.Sheets["WE_36"], { header: 1 });
+
+const werkloosheidByNIS = new Map(); // NIS → { jaar, pct }
+for (let i = 1; i < we36Rows.length; i++) {
+  const row = we36Rows[i];
+  const nis = String(row[1]);
+  if (!isFlemishNIS(nis)) continue;
+  const jaar = row[3];
+  const pct = row[5]; // Procent (%)
+  if (typeof pct !== "number") continue;
+  const existing = werkloosheidByNIS.get(nis);
+  if (!existing || jaar > existing.jaar) {
+    werkloosheidByNIS.set(nis, { jaar, pct: +pct.toFixed(1) });
+  }
+}
+console.log(`  Found werkzoekendengraad for ${werkloosheidByNIS.size} municipalities`);
+
+// ────────────────────────────────────────────
+// 5d. GEMEENTE-STADSMONITOR — Groene ruimte (RU_05 landgebruik)
+// ────────────────────────────────────────────
+console.log("🌳 Processing groene ruimte (Stadsmonitor)...");
+
+const smRuimWb = XLSX.readFile(resolve(RAW, "stadsmonitor_register_ruimte.xlsx"));
+const ru05Rows = XLSX.utils.sheet_to_json(smRuimWb.Sheets["RU_05"], { header: 1 });
+
+// Sum "Bos" + "Grasland" + "Water" + "Recreatie" as % of total = groene ruimte
+const groeneRuimteByNIS = new Map(); // NIS → { jaar, pct }
+const landgebruikTemp = new Map(); // NIS → Map<jaar, { groen, totaal }>
+
+for (let i = 1; i < ru05Rows.length; i++) {
+  const row = ru05Rows[i];
+  const nis = String(row[1]);
+  if (!isFlemishNIS(nis)) continue;
+  const jaar = row[3];
+  const gebruik = row[4];
+  const opp = row[5]; // Oppervlakte type landgebruik
+  const totaal = row[6]; // Totale oppervlakte
+
+  if (typeof opp !== "number" || typeof totaal !== "number") continue;
+
+  const key = `${nis}_${jaar}`;
+  if (!landgebruikTemp.has(key)) landgebruikTemp.set(key, { nis, jaar, groen: 0, totaal });
+
+  const entry = landgebruikTemp.get(key);
+  if (["Bos", "Grasland", "Water", "Recreatie"].includes(gebruik)) {
+    entry.groen += opp;
+  }
+}
+
+// Pick latest year per NIS
+for (const entry of landgebruikTemp.values()) {
+  const pct = entry.totaal > 0 ? +((entry.groen / entry.totaal) * 100).toFixed(1) : 0;
+  const existing = groeneRuimteByNIS.get(entry.nis);
+  if (!existing || entry.jaar > existing.jaar) {
+    groeneRuimteByNIS.set(entry.nis, { jaar: entry.jaar, pct });
+  }
+}
+console.log(`  Found groene ruimte for ${groeneRuimteByNIS.size} municipalities`);
+
+// ────────────────────────────────────────────
+// 5e. GEMEENTE-STADSMONITOR — Survey indicatoren (Burgerbevraging)
+// ────────────────────────────────────────────
+console.log("📋 Processing Stadsmonitor survey data (burgerbevraging)...");
+
+/**
+ * Parse a Stadsmonitor survey sheet.
+ * Returns Map<NIS, { jaar, pct }> with latest year's positive % per municipality.
+ * Column layout: [Gemeente, NIS-code, Indicator, Jaar, Neg%, Neutraal%, Pos%]
+ */
+function parseSurveySheet(filePath, sheetName) {
+  const wb = XLSX.readFile(filePath);
+  const rows = XLSX.utils.sheet_to_json(wb.Sheets[sheetName], { header: 1 });
+  const result = new Map();
+  for (let i = 1; i < rows.length; i++) {
+    const row = rows[i];
+    const nis = String(row[1]);
+    if (!isFlemishNIS(nis)) continue;
+    const jaar = row[3];
+    const pct = row[6]; // Eens (%) or Veel (%)
+    if (typeof pct !== "number") continue;
+    const existing = result.get(nis);
+    if (!existing || jaar > existing.jaar) {
+      result.set(nis, { jaar, pct });
+    }
+  }
+  return result;
+}
+
+const surveyWonenFile = resolve(RAW, "stadsmonitor_survey_wonen.xlsx");
+const surveyLBFile = resolve(RAW, "stadsmonitor_survey_lokaal_bestuur.xlsx");
+
+const netheidCentrumByNIS = parseSurveySheet(surveyWonenFile, "WO_S_12");
+const netheidStratenByNIS = parseSurveySheet(surveyWonenFile, "WO_S_13");
+const groenBuurtByNIS = parseSurveySheet(surveyWonenFile, "WO_S_33");
+const tevredenheidGemeenteByNIS = parseSurveySheet(surveyWonenFile, "WO_S_15");
+const graagWonenByNIS = parseSurveySheet(surveyWonenFile, "WO_S_16");
+const vertrouwenBestuurByNIS = parseSurveySheet(surveyLBFile, "LO_S_13");
+
+console.log(`  Netheid centrum: ${netheidCentrumByNIS.size} municipalities`);
+console.log(`  Netheid straten: ${netheidStratenByNIS.size} municipalities`);
+console.log(`  Groen in buurt: ${groenBuurtByNIS.size} municipalities`);
+console.log(`  Tevredenheid gemeente: ${tevredenheidGemeenteByNIS.size} municipalities`);
+console.log(`  Graag wonen: ${graagWonenByNIS.size} municipalities`);
+console.log(`  Vertrouwen bestuur: ${vertrouwenBestuurByNIS.size} municipalities`);
+
+// ────────────────────────────────────────────
+// 6. BUILD COMBINED GEMEENTE RECORDS
 // ────────────────────────────────────────────
 console.log("🔗 Combining all data sources...");
 
@@ -254,36 +437,43 @@ for (const [nis, popData] of pop2025) {
     if (prev > 0) bevolkingsgroei = +((latest - prev) / prev * 100).toFixed(2);
   }
 
-  // Estimate surface from province average (will be replaced by real data later)
-  const provGemeenten = [...pop2025.values()].filter((_, i) => {
-    const allNis = [...pop2025.keys()];
-    return nisToProvincie(allNis[i]) === provincie;
-  });
-  const provOpp = PROVINCIE_OPP[provincie] || 2700;
-  const aantalInProv = provGemeenten.length || 1;
-  // Use population-weighted estimate
-  const provTotPop = provGemeenten.reduce((s, g) => s + g.totaal, 0);
-  const popRatio = popData.totaal / (provTotPop || 1);
-  const oppervlakte = +(provOpp * popRatio * (0.5 + Math.random())).toFixed(1);
+  // Real surface area from Statbel Kadaster (bodembezetting 2025)
+  const oppervlakte = oppByNIS.get(nis) || 0;
+
+  // Match laadpalen by gemeente name
+  const lpData = laadpalenPerGemeente.get(popData.naam);
+  const aantalLaadpalen = lpData ? lpData.totaal : 0;
+  const lpPerInwoner = popData.totaal > 0 ? +(aantalLaadpalen / popData.totaal * 1000).toFixed(2) : 0;
+
+  // Match onderwijs data by NIS code
+  const aantalLeerlingen = leerlingenPerGemeente.get(nis) || 0;
 
   const gemeente = {
     id: nis,
     naam: popData.naam,
     provincie,
     inwoners: popData.totaal,
-    oppervlakte: Math.max(3, oppervlakte),
+    oppervlakte,
     dichtheid: 0,
     mediaalInkomen: income ? income.gemiddeldInkomen : 0,
-    werkloosheidsgraad: 0, // Need separate data source
-    laadpalen: 0, // Need separate data source
-    laadpalenPerInwoner: 0,
-    criminaliteitsgraad: 0, // Need separate data source
-    groeneRuimte: 0, // Need separate data source
+    werkloosheidsgraad: werkloosheidByNIS.get(nis)?.pct || 0,
+    laadpalen: aantalLaadpalen,
+    laadpalenPerInwoner: lpPerInwoner,
+    criminaliteitsgraad: 0, // Need separate data source (Politie)
+    groeneRuimte: 0, // Need separate data source (Stadsmonitor)
     vergrijzingsgraad: 0, // Need separate data source
+    // Stadsmonitor survey indicators (burgerbevraging)
+    netheidCentrum: netheidCentrumByNIS.get(nis)?.pct || 0,
+    netheidStraten: netheidStratenByNIS.get(nis)?.pct || 0,
+    groenBuurt: groenBuurtByNIS.get(nis)?.pct || 0,
+    tevredenheidGemeente: tevredenheidGemeenteByNIS.get(nis)?.pct || 0,
+    graagWonen: graagWonenByNIS.get(nis)?.pct || 0,
+    vertrouwenBestuur: vertrouwenBestuurByNIS.get(nis)?.pct || 0,
     bevolkingsgroei,
     gemiddeldeHuisprijs: huisprijs ? huisprijs.mediaanPrijs : 0,
+    leerlingen: aantalLeerlingen,
     inkomensJaar: income ? income.year : 0,
-    huisprijsJaar: huisprijs ? 2017 : 0,
+    huisprijsJaar: huisprijs ? huisprijs.jaar : 0,
     bevolkingsTrend: sorted,
     scores: {
       demografie: 0,
@@ -294,6 +484,7 @@ for (const [nis, popData] of pop2025) {
       veiligheid: 0,
       wonen: 0,
       zorg: 0,
+      leefbaarheid: 0,
     },
   };
 
@@ -320,6 +511,8 @@ const allInkomen = gemeenten.map(g => g.mediaalInkomen).filter(v => v > 0);
 const allHuisprijs = gemeenten.map(g => g.gemiddeldeHuisprijs).filter(v => v > 0);
 const allDichtheid = gemeenten.map(g => g.dichtheid);
 const allGroei = gemeenten.map(g => g.bevolkingsgroei);
+const allLaadpalen = gemeenten.map(g => g.laadpalenPerInwoner).filter(v => v > 0);
+const allLeerlingen = gemeenten.map(g => g.leerlingen).filter(v => v > 0);
 
 for (const g of gemeenten) {
   g.scores.economie = g.mediaalInkomen > 0
@@ -327,11 +520,25 @@ for (const g of gemeenten) {
   g.scores.wonen = g.gemiddeldeHuisprijs > 0
     ? computePercentileScore(allHuisprijs, g.gemiddeldeHuisprijs, false) : 50; // lower price = better
   g.scores.demografie = computePercentileScore(allGroei, g.bevolkingsgroei);
-  // Set reasonable defaults for missing data dimensions
-  g.scores.mobiliteit = 50;
-  g.scores.onderwijs = 50;
-  g.scores.milieu = 50;
-  g.scores.veiligheid = 50;
+  // Mobiliteit score based on laadpalen per inwoner (real data from MOW WFS)
+  g.scores.mobiliteit = g.laadpalenPerInwoner > 0
+    ? computePercentileScore(allLaadpalen, g.laadpalenPerInwoner) : 50;
+  // Onderwijs score based on leerlingen per inwoner ratio (from Dataloep)
+  const leerlingenRatio = g.inwoners > 0 ? g.leerlingen / g.inwoners : 0;
+  const allRatios = gemeenten.filter(x => x.leerlingen > 0 && x.inwoners > 0).map(x => x.leerlingen / x.inwoners);
+  g.scores.onderwijs = leerlingenRatio > 0
+    ? computePercentileScore(allRatios, leerlingenRatio) : 50;
+  // Leefbaarheid score: average of survey indicators (direct %, not percentile)
+  const surveyValues = [g.netheidCentrum, g.netheidStraten, g.groenBuurt,
+    g.tevredenheidGemeente, g.graagWonen, g.vertrouwenBestuur].filter(v => v > 0);
+  g.scores.leefbaarheid = surveyValues.length > 0
+    ? Math.round(surveyValues.reduce((s, v) => s + v, 0) / surveyValues.length) : 50;
+  // Milieu score based on groen in buurt survey
+  g.scores.milieu = g.groenBuurt > 0 ? g.groenBuurt : 50;
+  // Veiligheid: netheid as proxy
+  const netheidValues = [g.netheidCentrum, g.netheidStraten].filter(v => v > 0);
+  g.scores.veiligheid = netheidValues.length > 0
+    ? Math.round(netheidValues.reduce((s, v) => s + v, 0) / netheidValues.length) : 50;
   g.scores.zorg = 50;
 }
 
@@ -359,20 +566,26 @@ const gemiddeldeHuisprijs = Math.round(
   gemeenten.filter(g => g.gemiddeldeHuisprijs > 0).length
 );
 
+const totaalLaadpalen = gemeenten.reduce((s, g) => s + g.laadpalen, 0);
+
 const aggregates = {
   totaalInwoners,
   totaalGemeenten: gemeenten.length,
   gemiddeldInkomen,
   gemiddeldeHuisprijs,
+  totaalLaadpalen,
   bevolkingsTrend: vlaamsTotaal,
   dataStatus: {
     bevolking: { bron: "Statbel", jaar: 2025, beschikbaar: true },
     inkomen: { bron: "Statbel Fiscale Statistiek", jaar: incomeByNIS.values().next().value?.year || 0, beschikbaar: true },
-    vastgoed: { bron: "Statbel Vastgoedprijzen", jaar: 2017, beschikbaar: true },
-    laadpalen: { bron: "Dept. MOW", beschikbaar: false, reden: "Download vereist handmatige actie via FME portal" },
+    vastgoed: { bron: "Statbel Vastgoedprijzen", jaar: 2024, beschikbaar: true },
+    laadpalen: { bron: "Dept. MOW (WFS)", jaar: 2025, beschikbaar: true },
+    onderwijs: { bron: "Dataloep (Dept. Onderwijs)", jaar: "2023-2024", beschikbaar: true },
     criminaliteit: { bron: "Federale Politie", beschikbaar: false, reden: "Alleen PDF rapporten beschikbaar" },
+    oppervlakte: { bron: "Statbel Kadaster (bodembezetting)", jaar: 2025, beschikbaar: true },
     groeneRuimte: { bron: "Gemeente-Stadsmonitor", beschikbaar: false, reden: "Handmatige Excel download nodig" },
-    werkloosheid: { bron: "Statistiek Vlaanderen", beschikbaar: false, reden: "Geen directe API/CSV download" },
+    werkloosheid: { bron: "VDAB Arvastat", beschikbaar: false, reden: "Interactieve tool, geen directe CSV API" },
+    stadsmonitorSurvey: { bron: "Gemeente-Stadsmonitor Burgerbevraging", jaar: 2023, beschikbaar: true },
   },
 };
 
@@ -385,6 +598,11 @@ console.log(`\n✅ Done! Processed ${gemeenten.length} Flemish municipalities`);
 console.log(`   Population: ${totaalInwoners.toLocaleString()} total (2025)`);
 console.log(`   Average income: €${gemiddeldInkomen.toLocaleString()}`);
 console.log(`   Average house price: €${gemiddeldeHuisprijs.toLocaleString()}`);
+console.log(`   Total laadpalen: ${totaalLaadpalen.toLocaleString()}`);
 console.log(`   With income data: ${gemeenten.filter(g => g.mediaalInkomen > 0).length}`);
 console.log(`   With house prices: ${gemeenten.filter(g => g.gemiddeldeHuisprijs > 0).length}`);
+console.log(`   With laadpalen: ${gemeenten.filter(g => g.laadpalen > 0).length}`);
+console.log(`   With onderwijs: ${gemeenten.filter(g => g.leerlingen > 0).length}`);
+console.log(`   With oppervlakte: ${gemeenten.filter(g => g.oppervlakte > 0).length}`);
+console.log(`   With survey data: ${gemeenten.filter(g => g.graagWonen > 0).length}`);
 console.log(`\n📁 Output: src/data/gemeenten-real.json, src/data/aggregates.json`);

@@ -24,11 +24,8 @@ const INDICATORS: Indicator[] = [
   "inwoners",
   "dichtheid",
   "mediaalInkomen",
-  "werkloosheidsgraad",
   "laadpalenPerInwoner",
-  "criminaliteitsgraad",
-  "groeneRuimte",
-  "vergrijzingsgraad",
+  "bevolkingsgroei",
   "gemiddeldeHuisprijs",
 ];
 
@@ -48,13 +45,15 @@ export default function VergelijkPage() {
     .map((id) => gemeenten.find((g) => g.id === id)!)
     .filter(Boolean);
 
+  // Scores backed by real data
+  const REAL_SCORES = ["demografie", "economie", "mobiliteit", "onderwijs", "wonen", "leefbaarheid", "milieu", "veiligheid"] as const;
   const radarData = selectedGemeenten.length > 0
-    ? Object.keys(selectedGemeenten[0].scores).map((key) => {
+    ? REAL_SCORES.map((key) => {
         const point: Record<string, string | number> = {
           subject: key.charAt(0).toUpperCase() + key.slice(1),
         };
         selectedGemeenten.forEach((g) => {
-          point[g.naam] = g.scores[key as keyof typeof g.scores];
+          point[g.naam] = g.scores[key];
         });
         return point;
       })
