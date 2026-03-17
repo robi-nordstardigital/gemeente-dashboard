@@ -567,33 +567,40 @@ for (const g of gemeenten) {
   // Mobiliteit: laadpalen per inwoner (MOW WFS)
   g.scores.mobiliteit = g.laadpalenPerInwoner > 0
     ? computePercentileScore(allLaadpalen, g.laadpalenPerInwoner) : 50;
-  // Fietsveiligheid: MO_S_06 survey (direct %)
-  g.scores.fietsveiligheid = g.veiligFietsen > 0 ? g.veiligFietsen : 50;
-  // Werk: werkzoekendengraad (inverse — lower is better)
+  // All scores are percentile-based: 50 = median, higher = better relative to other gemeenten
+  const allFietsen = gemeenten.map(x => x.veiligFietsen).filter(v => v > 0);
+  g.scores.fietsveiligheid = g.veiligFietsen > 0
+    ? computePercentileScore(allFietsen, g.veiligFietsen) : 50;
   const allWerkloosheid = gemeenten.map(x => x.werkloosheidsgraad).filter(v => v > 0);
   g.scores.werk = g.werkloosheidsgraad > 0
     ? computePercentileScore(allWerkloosheid, g.werkloosheidsgraad, false) : 50;
-  // Onderwijs: OKI (inverse — lower kansarmoede = better)
   const allOKI = gemeenten.map(x => x.oki).filter(v => v > 0);
   g.scores.onderwijs = g.oki > 0
     ? computePercentileScore(allOKI, g.oki, false) : 50;
-  // Veiligheid: criminaliteitsgraad (inverse — lower crime = better)
   const allCrim = gemeenten.map(x => x.criminaliteitsgraad).filter(v => v > 0);
   g.scores.veiligheid = g.criminaliteitsgraad > 0
     ? computePercentileScore(allCrim, g.criminaliteitsgraad, false) : 50;
-  // Zorg: tevredenheid gezondheidsvoorzieningen (direct %)
-  g.scores.zorg = g.tevredenheidZorg > 0 ? g.tevredenheidZorg : 50;
-  // Bestuur: vertrouwen gemeentebestuur (direct %)
-  g.scores.bestuur = g.vertrouwenBestuur > 0 ? g.vertrouwenBestuur : 50;
-  // Armoede: kansarmoede-index (inverse — lower = better)
+  const allZorg = gemeenten.map(x => x.tevredenheidZorg).filter(v => v > 0);
+  g.scores.zorg = g.tevredenheidZorg > 0
+    ? computePercentileScore(allZorg, g.tevredenheidZorg) : 50;
+  const allBestuur = gemeenten.map(x => x.vertrouwenBestuur).filter(v => v > 0);
+  g.scores.bestuur = g.vertrouwenBestuur > 0
+    ? computePercentileScore(allBestuur, g.vertrouwenBestuur) : 50;
   const allKansarmoede = gemeenten.map(x => x.kansarmoede).filter(v => v > 0);
   g.scores.armoede = g.kansarmoede > 0
     ? computePercentileScore(allKansarmoede, g.kansarmoede, false) : 50;
-  // Leefbaarheid: average of survey indicators
+  // Leefbaarheid: percentile of average survey score
   const surveyValues = [g.netheidCentrum, g.netheidStraten, g.groenBuurt,
     g.tevredenheidGemeente, g.graagWonen, g.vertrouwenBestuur].filter(v => v > 0);
-  g.scores.leefbaarheid = surveyValues.length > 0
-    ? Math.round(surveyValues.reduce((s, v) => s + v, 0) / surveyValues.length) : 50;
+  const leefAvg = surveyValues.length > 0
+    ? surveyValues.reduce((s, v) => s + v, 0) / surveyValues.length : 0;
+  const allLeef = gemeenten.map(x => {
+    const vals = [x.netheidCentrum, x.netheidStraten, x.groenBuurt,
+      x.tevredenheidGemeente, x.graagWonen, x.vertrouwenBestuur].filter(v => v > 0);
+    return vals.length > 0 ? vals.reduce((s, v) => s + v, 0) / vals.length : 0;
+  }).filter(v => v > 0);
+  g.scores.leefbaarheid = leefAvg > 0
+    ? computePercentileScore(allLeef, leefAvg) : 50;
 }
 
 // ────────────────────────────────────────────

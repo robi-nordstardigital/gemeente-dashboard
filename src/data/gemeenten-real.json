@@ -79,14 +79,14 @@
       "economie": 29,
       "werk": 8,
       "mobiliteit": 62,
-      "fietsveiligheid": 41,
+      "fietsveiligheid": 19,
       "onderwijs": 6,
       "wonen": 76,
       "veiligheid": 9,
-      "zorg": 83,
-      "bestuur": 22,
+      "zorg": 63,
+      "bestuur": 15,
       "armoede": 40,
-      "leefbaarheid": 62
+      "leefbaarheid": 11
     }
   },
   {
@@ -153,14 +153,14 @@
       "economie": 70,
       "werk": 92,
       "mobiliteit": 92,
-      "fietsveiligheid": 52,
+      "fietsveiligheid": 59,
       "onderwijs": 78,
       "wonen": 32,
       "veiligheid": 48,
-      "zorg": 89,
-      "bestuur": 30,
+      "zorg": 90,
+      "bestuur": 56,
       "armoede": 29,
-      "leefbaarheid": 72
+      "leefbaarheid": 63
     }
   },
   {
@@ -243,14 +243,14 @@
       "economie": 52,
       "werk": 28,
       "mobiliteit": 54,
-      "fietsveiligheid": 42,
+      "fietsveiligheid": 23,
       "onderwijs": 39,
       "wonen": 52,
       "veiligheid": 15,
-      "zorg": 85,
-      "bestuur": 23,
+      "zorg": 74,
+      "bestuur": 20,
       "armoede": 43,
-      "leefbaarheid": 67
+      "leefbaarheid": 26
     }
   },
   {
@@ -333,14 +333,14 @@
       "economie": 87,
       "werk": 41,
       "mobiliteit": 97,
-      "fietsveiligheid": 39,
+      "fietsveiligheid": 13,
       "onderwijs": 75,
       "wonen": 13,
       "veiligheid": 45,
-      "zorg": 77,
-      "bestuur": 34,
+      "zorg": 35,
+      "bestuur": 69,
       "armoede": 85,
-      "leefbaarheid": 68
+      "leefbaarheid": 33
     }
   },
   {
@@ -423,14 +423,14 @@
       "economie": 85,
       "werk": 84,
       "mobiliteit": 53,
-      "fietsveiligheid": 29,
+      "fietsveiligheid": 1,
       "onderwijs": 28,
       "wonen": 30,
       "veiligheid": 51,
-      "zorg": 74,
-      "bestuur": 36,
+      "zorg": 23,
+      "bestuur": 77,
       "armoede": 75,
-      "leefbaarheid": 68
+      "leefbaarheid": 30
     }
   },
   {
@@ -513,14 +513,14 @@
       "economie": 56,
       "werk": 65,
       "mobiliteit": 65,
-      "fietsveiligheid": 56,
+      "fietsveiligheid": 76,
       "onderwijs": 40,
       "wonen": 68,
       "veiligheid": 66,
-      "zorg": 91,
-      "bestuur": 27,
+      "zorg": 96,
+      "bestuur": 38,
       "armoede": 73,
-      "leefbaarheid": 75
+      "leefbaarheid": 76
     }
   },
   {
@@ -603,14 +603,14 @@
       "economie": 9,
       "werk": 98,
       "mobiliteit": 18,
-      "fietsveiligheid": 52,
+      "fietsveiligheid": 59,
       "onderwijs": 52,
       "wonen": 79,
       "veiligheid": 63,
-      "zorg": 66,
-      "bestuur": 30,
+      "zorg": 9,
+      "bestuur": 56,
       "armoede": 3,
-      "leefbaarheid": 70
+      "leefbaarheid": 45
     }
   },
   {
@@ -693,14 +693,14 @@
       "economie": 1,
       "werk": 1,
       "mobiliteit": 74,
-      "fietsveiligheid": 46,
+      "fietsveiligheid": 35,
       "onderwijs": 50,
       "wonen": 41,
       "veiligheid": 1,
-      "zorg": 76,
-      "bestuur": 28,
+      "zorg": 31,
+      "bestuur": 43,
       "armoede": 3,
-      "leefbaarheid": 60
+      "leefbaarheid": 8
     }
   },
   {
@@ -783,14 +783,14 @@
       "economie": 60,
       "werk": 96,
       "mobiliteit": 56,
-      "fietsveiligheid": 43,
+      "fietsveiligheid": 25,
       "onderwijs": 80,
       "wonen": 70,
       "veiligheid": 94,
-      "zorg": 86,
-      "bestuur": 25,
+      "zorg": 78,
+      "bestuur": 29,
       "armoede": 86,
-      "leefbaarheid": 71
+      "leefbaarheid": 56
     }
   },
   {
@@ -873,14 +873,14 @@
       "economie": 39,
       "werk": 92,
       "mobiliteit": 90,
-      "fietsveiligheid": 41,
+      "fietsveiligheid": 19,
       "onderwijs": 25,
       "wonen": 89,
       "veiligheid": 58,
-      "zorg": 90,
-      "bestuur": 44,
+      "zorg": 93,
+      "bestuur": 92,
       "armoede": 93,
-      "leefbaarheid": 76
+      "leefbaarheid": 84
     }
   },
   {
@@ -963,14 +963,14 @@
       "economie": 26,
       "werk": 28,
       "mobiliteit": 82,
-      "fietsveiligheid": 59,
+      "fietsveiligheid": 81,
       "onderwijs": 52,
       "wonen": 42,
       "veiligheid": 29,
-      "zorg": 78,
-      "bestuur": 29,
+      "zorg": 40,
+      "bestuur": 48,
       "armoede": 30,
-      "leefbaarheid": 75
+      "leefbaarheid": 76
     }
   },
   {
@@ -1053,14 +1053,14 @@
       "economie": 42,
       "werk": 36,
       "mobiliteit": 45,
-      "fietsveiligheid": 60,
+      "fietsveiligheid": 84,
       "onderwijs": 64,
       "wonen": 75,
       "veiligheid": 55,
-      "zorg": 75,
-      "bestuur": 42,
+      "zorg": 27,
+      "bestuur": 88,
       "armoede": 40,
-      "leefbaarheid": 76
+      "leefbaarheid": 85
     }
   },
   {
@@ -1143,14 +1143,14 @@
       "economie": 49,
       "werk": 23,
       "mobiliteit": 79,
-      "fietsveiligheid": 42,
+      "fietsveiligheid": 23,
       "onderwijs": 9,
       "wonen": 22,
       "veiligheid": 24,
-      "zorg": 74,
-      "bestuur": 27,
+      "zorg": 23,
+      "bestuur": 38,
       "armoede": 36,
-      "leefbaarheid": 60
+      "leefbaarheid": 8
     }
   },
   {
@@ -1233,14 +1233,14 @@
       "economie": 56,
       "werk": 73,
       "mobiliteit": 23,
-      "fietsveiligheid": 39,
+      "fietsveiligheid": 13,
       "onderwijs": 25,
       "wonen": 70,
       "veiligheid": 62,
-      "zorg": 74,
+      "zorg": 23,
       "bestuur": 24,
       "armoede": 54,
-      "leefbaarheid": 67
+      "leefbaarheid": 27
     }
   },
   {
@@ -1323,14 +1323,14 @@
       "economie": 21,
       "werk": 51,
       "mobiliteit": 11,
-      "fietsveiligheid": 42,
+      "fietsveiligheid": 23,
       "onderwijs": 33,
       "wonen": 98,
       "veiligheid": 52,
-      "zorg": 85,
-      "bestuur": 32,
+      "zorg": 74,
+      "bestuur": 62,
       "armoede": 26,
-      "leefbaarheid": 66
+      "leefbaarheid": 22
     }
   },
   {
@@ -1413,14 +1413,14 @@
       "economie": 4,
       "werk": 75,
       "mobiliteit": 8,
-      "fietsveiligheid": 62,
+      "fietsveiligheid": 89,
       "onderwijs": 8,
       "wonen": 50,
       "veiligheid": 56,
-      "zorg": 66,
-      "bestuur": 34,
+      "zorg": 9,
+      "bestuur": 69,
       "armoede": 21,
-      "leefbaarheid": 71
+      "leefbaarheid": 52
     }
   },
   {
@@ -1503,14 +1503,14 @@
       "economie": 39,
       "werk": 34,
       "mobiliteit": 47,
-      "fietsveiligheid": 61,
+      "fietsveiligheid": 88,
       "onderwijs": 67,
       "wonen": 79,
       "veiligheid": 77,
-      "zorg": 80,
-      "bestuur": 33,
+      "zorg": 49,
+      "bestuur": 65,
       "armoede": 79,
-      "leefbaarheid": 77
+      "leefbaarheid": 88
     }
   },
   {
@@ -1593,12 +1593,12 @@
       "economie": 49,
       "werk": 89,
       "mobiliteit": 36,
-      "fietsveiligheid": 54,
+      "fietsveiligheid": 69,
       "onderwijs": 85,
       "wonen": 30,
       "veiligheid": 78,
-      "zorg": 85,
-      "bestuur": 34,
+      "zorg": 74,
+      "bestuur": 69,
       "armoede": 81,
       "leefbaarheid": 74
     }
@@ -1683,14 +1683,14 @@
       "economie": 64,
       "werk": 55,
       "mobiliteit": 69,
-      "fietsveiligheid": 58,
+      "fietsveiligheid": 80,
       "onderwijs": 37,
       "wonen": 40,
       "veiligheid": 75,
-      "zorg": 86,
-      "bestuur": 25,
+      "zorg": 78,
+      "bestuur": 29,
       "armoede": 32,
-      "leefbaarheid": 73
+      "leefbaarheid": 64
     }
   },
   {
@@ -1773,14 +1773,14 @@
       "economie": 80,
       "werk": 60,
       "mobiliteit": 50,
-      "fietsveiligheid": 45,
+      "fietsveiligheid": 32,
       "onderwijs": 23,
       "wonen": 15,
       "veiligheid": 33,
-      "zorg": 76,
-      "bestuur": 30,
+      "zorg": 31,
+      "bestuur": 56,
       "armoede": 72,
-      "leefbaarheid": 69
+      "leefbaarheid": 36
     }
   },
   {
@@ -1863,14 +1863,14 @@
       "economie": 78,
       "werk": 80,
       "mobiliteit": 3,
-      "fietsveiligheid": 46,
+      "fietsveiligheid": 35,
       "onderwijs": 80,
       "wonen": 56,
       "veiligheid": 88,
-      "zorg": 82,
-      "bestuur": 19,
+      "zorg": 60,
+      "bestuur": 6,
       "armoede": 83,
-      "leefbaarheid": 67
+      "leefbaarheid": 24
     }
   },
   {
@@ -1953,14 +1953,14 @@
       "economie": 53,
       "werk": 75,
       "mobiliteit": 33,
-      "fietsveiligheid": 46,
+      "fietsveiligheid": 35,
       "onderwijs": 78,
       "wonen": 50,
       "veiligheid": 77,
-      "zorg": 76,
-      "bestuur": 31,
+      "zorg": 31,
+      "bestuur": 59,
       "armoede": 55,
-      "leefbaarheid": 69
+      "leefbaarheid": 38
     }
   },
   {
@@ -2043,14 +2043,14 @@
       "economie": 19,
       "werk": 22,
       "mobiliteit": 58,
-      "fietsveiligheid": 48,
+      "fietsveiligheid": 44,
       "onderwijs": 23,
       "wonen": 80,
       "veiligheid": 30,
-      "zorg": 83,
-      "bestuur": 25,
+      "zorg": 63,
+      "bestuur": 29,
       "armoede": 12,
-      "leefbaarheid": 71
+      "leefbaarheid": 51
     }
   },
   {
@@ -2133,14 +2133,14 @@
       "economie": 43,
       "werk": 21,
       "mobiliteit": 31,
-      "fietsveiligheid": 42,
+      "fietsveiligheid": 23,
       "onderwijs": 49,
       "wonen": 47,
       "veiligheid": 72,
-      "zorg": 78,
-      "bestuur": 23,
+      "zorg": 40,
+      "bestuur": 20,
       "armoede": 7,
-      "leefbaarheid": 67
+      "leefbaarheid": 23
     }
   },
   {
@@ -2223,14 +2223,14 @@
       "economie": 45,
       "werk": 60,
       "mobiliteit": 6,
-      "fietsveiligheid": 40,
+      "fietsveiligheid": 16,
       "onderwijs": 46,
       "wonen": 44,
       "veiligheid": 21,
-      "zorg": 77,
-      "bestuur": 27,
+      "zorg": 35,
+      "bestuur": 38,
       "armoede": 68,
-      "leefbaarheid": 72
+      "leefbaarheid": 57
     }
   },
   {
@@ -2313,14 +2313,14 @@
       "economie": 95,
       "werk": 86,
       "mobiliteit": 30,
-      "fietsveiligheid": 44,
+      "fietsveiligheid": 28,
       "onderwijs": 58,
       "wonen": 8,
       "veiligheid": 66,
-      "zorg": 83,
-      "bestuur": 32,
+      "zorg": 63,
+      "bestuur": 62,
       "armoede": 88,
-      "leefbaarheid": 73
+      "leefbaarheid": 64
     }
   },
   {
@@ -2403,14 +2403,14 @@
       "economie": 73,
       "werk": 75,
       "mobiliteit": 1,
-      "fietsveiligheid": 37,
+      "fietsveiligheid": 11,
       "onderwijs": 73,
       "wonen": 50,
       "veiligheid": 98,
-      "zorg": 37,
-      "bestuur": 43,
+      "zorg": 1,
+      "bestuur": 91,
       "armoede": 50,
-      "leefbaarheid": 74
+      "leefbaarheid": 75
     }
   },
   {
@@ -2543,14 +2543,14 @@
       "economie": 98,
       "werk": 60,
       "mobiliteit": 52,
-      "fietsveiligheid": 57,
+      "fietsveiligheid": 78,
       "onderwijs": 92,
       "wonen": 13,
       "veiligheid": 53,
-      "zorg": 71,
-      "bestuur": 48,
+      "zorg": 16,
+      "bestuur": 96,
       "armoede": 46,
-      "leefbaarheid": 78
+      "leefbaarheid": 92
     }
   },
   {
@@ -2683,14 +2683,14 @@
       "economie": 2,
       "werk": 2,
       "mobiliteit": 25,
-      "fietsveiligheid": 54,
+      "fietsveiligheid": 69,
       "onderwijs": 9,
       "wonen": 76,
       "veiligheid": 1,
-      "zorg": 81,
-      "bestuur": 26,
+      "zorg": 55,
+      "bestuur": 34,
       "armoede": 1,
-      "leefbaarheid": 62
+      "leefbaarheid": 11
     }
   },
   {
@@ -2773,14 +2773,14 @@
       "economie": 12,
       "werk": 51,
       "mobiliteit": 4,
-      "fietsveiligheid": 60,
+      "fietsveiligheid": 84,
       "onderwijs": 31,
       "wonen": 69,
       "veiligheid": 36,
-      "zorg": 84,
-      "bestuur": 28,
+      "zorg": 70,
+      "bestuur": 43,
       "armoede": 40,
-      "leefbaarheid": 76
+      "leefbaarheid": 83
     }
   },
   {
@@ -2863,14 +2863,14 @@
       "economie": 85,
       "werk": 28,
       "mobiliteit": 30,
-      "fietsveiligheid": 69,
+      "fietsveiligheid": 98,
       "onderwijs": 62,
       "wonen": 3,
       "veiligheid": 32,
-      "zorg": 82,
-      "bestuur": 35,
+      "zorg": 60,
+      "bestuur": 74,
       "armoede": 48,
-      "leefbaarheid": 77
+      "leefbaarheid": 88
     }
   },
   {
@@ -2953,14 +2953,14 @@
       "economie": 97,
       "werk": 55,
       "mobiliteit": 6,
-      "fietsveiligheid": 67,
+      "fietsveiligheid": 97,
       "onderwijs": 78,
       "wonen": 6,
       "veiligheid": 84,
-      "zorg": 82,
+      "zorg": 60,
       "bestuur": 24,
       "armoede": 67,
-      "leefbaarheid": 75
+      "leefbaarheid": 82
     }
   },
   {
@@ -3043,14 +3043,14 @@
       "economie": 5,
       "werk": 3,
       "mobiliteit": 68,
-      "fietsveiligheid": 36,
+      "fietsveiligheid": 8,
       "onderwijs": 2,
       "wonen": 75,
       "veiligheid": 2,
-      "zorg": 64,
+      "zorg": 6,
       "bestuur": 24,
       "armoede": 1,
-      "leefbaarheid": 50
+      "leefbaarheid": 1
     }
   },
   {
@@ -3133,14 +3133,14 @@
       "economie": 95,
       "werk": 89,
       "mobiliteit": 41,
-      "fietsveiligheid": 46,
+      "fietsveiligheid": 35,
       "onderwijs": 94,
       "wonen": 17,
       "veiligheid": 80,
-      "zorg": 71,
-      "bestuur": 8,
+      "zorg": 16,
+      "bestuur": 1,
       "armoede": 63,
-      "leefbaarheid": 57
+      "leefbaarheid": 5
     }
   },
   {
@@ -3223,14 +3223,14 @@
       "economie": 76,
       "werk": 48,
       "mobiliteit": 88,
-      "fietsveiligheid": 55,
+      "fietsveiligheid": 72,
       "onderwijs": 67,
       "wonen": 38,
       "veiligheid": 59,
-      "zorg": 85,
+      "zorg": 74,
       "bestuur": 24,
       "armoede": 43,
-      "leefbaarheid": 72
+      "leefbaarheid": 59
     }
   },
   {
@@ -3313,14 +3313,14 @@
       "economie": 93,
       "werk": 80,
       "mobiliteit": 22,
-      "fietsveiligheid": 33,
+      "fietsveiligheid": 5,
       "onderwijs": 58,
       "wonen": 20,
       "veiligheid": 76,
-      "zorg": 75,
-      "bestuur": 21,
+      "zorg": 27,
+      "bestuur": 9,
       "armoede": 95,
-      "leefbaarheid": 67
+      "leefbaarheid": 24
     }
   },
   {
@@ -3403,14 +3403,14 @@
       "economie": 54,
       "werk": 68,
       "mobiliteit": 39,
-      "fietsveiligheid": 39,
+      "fietsveiligheid": 13,
       "onderwijs": 64,
       "wonen": 91,
       "veiligheid": 68,
-      "zorg": 70,
-      "bestuur": 25,
+      "zorg": 14,
+      "bestuur": 29,
       "armoede": 60,
-      "leefbaarheid": 70
+      "leefbaarheid": 43
     }
   },
   {
@@ -3493,14 +3493,14 @@
       "economie": 84,
       "werk": 27,
       "mobiliteit": 26,
-      "fietsveiligheid": 64,
+      "fietsveiligheid": 93,
       "onderwijs": 52,
       "wonen": 4,
       "veiligheid": 23,
-      "zorg": 86,
-      "bestuur": 29,
+      "zorg": 78,
+      "bestuur": 48,
       "armoede": 57,
-      "leefbaarheid": 74
+      "leefbaarheid": 70
     }
   },
   {
@@ -3583,14 +3583,14 @@
       "economie": 70,
       "werk": 73,
       "mobiliteit": 59,
-      "fietsveiligheid": 59,
+      "fietsveiligheid": 81,
       "onderwijs": 69,
       "wonen": 15,
       "veiligheid": 42,
-      "zorg": 81,
-      "bestuur": 21,
+      "zorg": 55,
+      "bestuur": 9,
       "armoede": 61,
-      "leefbaarheid": 71
+      "leefbaarheid": 54
     }
   },
   {
@@ -3673,14 +3673,14 @@
       "economie": 22,
       "werk": 17,
       "mobiliteit": 23,
-      "fietsveiligheid": 67,
+      "fietsveiligheid": 97,
       "onderwijs": 13,
       "wonen": 80,
       "veiligheid": 12,
-      "zorg": 65,
-      "bestuur": 40,
+      "zorg": 7,
+      "bestuur": 84,
       "armoede": 3,
-      "leefbaarheid": 76
+      "leefbaarheid": 84
     }
   },
   {
@@ -3763,14 +3763,14 @@
       "economie": 13,
       "werk": 41,
       "mobiliteit": 46,
-      "fietsveiligheid": 64,
+      "fietsveiligheid": 93,
       "onderwijs": 49,
       "wonen": 90,
       "veiligheid": 31,
-      "zorg": 87,
-      "bestuur": 28,
+      "zorg": 83,
+      "bestuur": 43,
       "armoede": 79,
-      "leefbaarheid": 71
+      "leefbaarheid": 54
     }
   },
   {
@@ -3853,14 +3853,14 @@
       "economie": 28,
       "werk": 13,
       "mobiliteit": 89,
-      "fietsveiligheid": 57,
+      "fietsveiligheid": 78,
       "onderwijs": 26,
       "wonen": 43,
       "veiligheid": 5,
-      "zorg": 90,
-      "bestuur": 42,
+      "zorg": 93,
+      "bestuur": 88,
       "armoede": 10,
-      "leefbaarheid": 76
+      "leefbaarheid": 84
     }
   },
   {
@@ -3943,14 +3943,14 @@
       "economie": 73,
       "werk": 68,
       "mobiliteit": 36,
-      "fietsveiligheid": 40,
+      "fietsveiligheid": 16,
       "onderwijs": 52,
       "wonen": 31,
       "veiligheid": 38,
-      "zorg": 75,
+      "zorg": 27,
       "bestuur": 24,
       "armoede": 60,
-      "leefbaarheid": 70
+      "leefbaarheid": 45
     }
   },
   {
@@ -4033,14 +4033,14 @@
       "economie": 68,
       "werk": 86,
       "mobiliteit": 63,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 85,
       "wonen": 11,
       "veiligheid": 80,
-      "zorg": 80,
-      "bestuur": 27,
+      "zorg": 49,
+      "bestuur": 38,
       "armoede": 75,
-      "leefbaarheid": 68
+      "leefbaarheid": 30
     }
   },
   {
@@ -4123,14 +4123,14 @@
       "economie": 50,
       "werk": 27,
       "mobiliteit": 77,
-      "fietsveiligheid": 56,
+      "fietsveiligheid": 76,
       "onderwijs": 22,
       "wonen": 50,
       "veiligheid": 17,
-      "zorg": 78,
-      "bestuur": 37,
+      "zorg": 40,
+      "bestuur": 80,
       "armoede": 8,
-      "leefbaarheid": 78
+      "leefbaarheid": 94
     }
   },
   {
@@ -4213,14 +4213,14 @@
       "economie": 11,
       "werk": 9,
       "mobiliteit": 95,
-      "fietsveiligheid": 48,
+      "fietsveiligheid": 44,
       "onderwijs": 6,
       "wonen": 81,
       "veiligheid": 3,
-      "zorg": 68,
-      "bestuur": 45,
+      "zorg": 12,
+      "bestuur": 94,
       "armoede": 2,
-      "leefbaarheid": 76
+      "leefbaarheid": 85
     }
   },
   {
@@ -4303,14 +4303,14 @@
       "economie": 54,
       "werk": 73,
       "mobiliteit": 92,
-      "fietsveiligheid": 42,
+      "fietsveiligheid": 23,
       "onderwijs": 82,
       "wonen": 70,
       "veiligheid": 68,
-      "zorg": 92,
-      "bestuur": 29,
+      "zorg": 98,
+      "bestuur": 48,
       "armoede": 56,
-      "leefbaarheid": 68
+      "leefbaarheid": 29
     }
   },
   {
@@ -4377,14 +4377,14 @@
       "economie": 67,
       "werk": 65,
       "mobiliteit": 74,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 75,
       "wonen": 39,
       "veiligheid": 24,
-      "zorg": 87,
-      "bestuur": 29,
+      "zorg": 83,
+      "bestuur": 48,
       "armoede": 58,
-      "leefbaarheid": 71
+      "leefbaarheid": 54
     }
   },
   {
@@ -4467,14 +4467,14 @@
       "economie": 31,
       "werk": 17,
       "mobiliteit": 19,
-      "fietsveiligheid": 41,
+      "fietsveiligheid": 19,
       "onderwijs": 9,
       "wonen": 72,
       "veiligheid": 16,
-      "zorg": 70,
-      "bestuur": 22,
+      "zorg": 14,
+      "bestuur": 15,
       "armoede": 54,
-      "leefbaarheid": 56
+      "leefbaarheid": 4
     }
   },
   {
@@ -4557,14 +4557,14 @@
       "economie": 36,
       "werk": 15,
       "mobiliteit": 73,
-      "fietsveiligheid": 39,
+      "fietsveiligheid": 13,
       "onderwijs": 20,
       "wonen": 71,
       "veiligheid": 8,
-      "zorg": 79,
-      "bestuur": 21,
+      "zorg": 44,
+      "bestuur": 9,
       "armoede": 41,
-      "leefbaarheid": 61
+      "leefbaarheid": 9
     }
   },
   {
@@ -4647,14 +4647,14 @@
       "economie": 40,
       "werk": 99,
       "mobiliteit": 3,
-      "fietsveiligheid": 34,
+      "fietsveiligheid": 6,
       "onderwijs": 80,
       "wonen": 72,
       "veiligheid": 97,
-      "zorg": 79,
-      "bestuur": 29,
+      "zorg": 44,
+      "bestuur": 48,
       "armoede": 84,
-      "leefbaarheid": 67
+      "leefbaarheid": 27
     }
   },
   {
@@ -4737,14 +4737,14 @@
       "economie": 32,
       "werk": 23,
       "mobiliteit": 54,
-      "fietsveiligheid": 62,
+      "fietsveiligheid": 89,
       "onderwijs": 62,
       "wonen": 64,
       "veiligheid": 50,
-      "zorg": 65,
-      "bestuur": 35,
+      "zorg": 7,
+      "bestuur": 74,
       "armoede": 31,
-      "leefbaarheid": 77
+      "leefbaarheid": 88
     }
   },
   {
@@ -4827,14 +4827,14 @@
       "economie": 92,
       "werk": 80,
       "mobiliteit": 55,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 36,
       "wonen": 19,
       "veiligheid": 70,
-      "zorg": 90,
-      "bestuur": 32,
+      "zorg": 93,
+      "bestuur": 62,
       "armoede": 93,
-      "leefbaarheid": 75
+      "leefbaarheid": 76
     }
   },
   {
@@ -4917,14 +4917,14 @@
       "economie": 46,
       "werk": 45,
       "mobiliteit": 40,
-      "fietsveiligheid": 55,
+      "fietsveiligheid": 72,
       "onderwijs": 82,
       "wonen": 51,
       "veiligheid": 30,
-      "zorg": 84,
-      "bestuur": 26,
+      "zorg": 70,
+      "bestuur": 34,
       "armoede": 85,
-      "leefbaarheid": 74
+      "leefbaarheid": 73
     }
   },
   {
@@ -5007,14 +5007,14 @@
       "economie": 47,
       "werk": 17,
       "mobiliteit": 65,
-      "fietsveiligheid": 51,
+      "fietsveiligheid": 55,
       "onderwijs": 36,
       "wonen": 58,
       "veiligheid": 22,
-      "zorg": 83,
-      "bestuur": 34,
+      "zorg": 63,
+      "bestuur": 69,
       "armoede": 16,
-      "leefbaarheid": 69
+      "leefbaarheid": 35
     }
   },
   {
@@ -5097,14 +5097,14 @@
       "economie": 9,
       "werk": 41,
       "mobiliteit": 57,
-      "fietsveiligheid": 44,
+      "fietsveiligheid": 28,
       "onderwijs": 43,
       "wonen": 93,
       "veiligheid": 47,
-      "zorg": 81,
-      "bestuur": 27,
+      "zorg": 55,
+      "bestuur": 38,
       "armoede": 12,
-      "leefbaarheid": 70
+      "leefbaarheid": 49
     }
   },
   {
@@ -5187,14 +5187,14 @@
       "economie": 71,
       "werk": 41,
       "mobiliteit": 84,
-      "fietsveiligheid": 37,
+      "fietsveiligheid": 11,
       "onderwijs": 22,
       "wonen": 10,
       "veiligheid": 18,
-      "zorg": 78,
-      "bestuur": 22,
+      "zorg": 40,
+      "bestuur": 15,
       "armoede": 62,
-      "leefbaarheid": 62
+      "leefbaarheid": 10
     }
   },
   {
@@ -5277,14 +5277,14 @@
       "economie": 9,
       "werk": 17,
       "mobiliteit": 83,
-      "fietsveiligheid": 65,
+      "fietsveiligheid": 95,
       "onderwijs": 25,
       "wonen": 88,
       "veiligheid": 82,
-      "zorg": 86,
-      "bestuur": 31,
+      "zorg": 78,
+      "bestuur": 59,
       "armoede": 13,
-      "leefbaarheid": 77
+      "leefbaarheid": 91
     }
   },
   {
@@ -5367,14 +5367,14 @@
       "economie": 2,
       "werk": 15,
       "mobiliteit": 98,
-      "fietsveiligheid": 41,
+      "fietsveiligheid": 19,
       "onderwijs": 8,
       "wonen": 50,
       "veiligheid": 3,
-      "zorg": 57,
-      "bestuur": 47,
+      "zorg": 3,
+      "bestuur": 95,
       "armoede": 84,
-      "leefbaarheid": 68
+      "leefbaarheid": 29
     }
   },
   {
@@ -5457,14 +5457,14 @@
       "economie": 61,
       "werk": 32,
       "mobiliteit": 68,
-      "fietsveiligheid": 52,
+      "fietsveiligheid": 59,
       "onderwijs": 56,
       "wonen": 34,
       "veiligheid": 27,
-      "zorg": 74,
-      "bestuur": 34,
+      "zorg": 23,
+      "bestuur": 69,
       "armoede": 28,
-      "leefbaarheid": 71
+      "leefbaarheid": 52
     }
   },
   {
@@ -5547,14 +5547,14 @@
       "economie": 87,
       "werk": 21,
       "mobiliteit": 57,
-      "fietsveiligheid": 55,
+      "fietsveiligheid": 72,
       "onderwijs": 36,
       "wonen": 6,
       "veiligheid": 39,
-      "zorg": 80,
-      "bestuur": 32,
+      "zorg": 49,
+      "bestuur": 62,
       "armoede": 74,
-      "leefbaarheid": 69
+      "leefbaarheid": 38
     }
   },
   {
@@ -5637,14 +5637,14 @@
       "economie": 5,
       "werk": 5,
       "mobiliteit": 59,
-      "fietsveiligheid": 38,
+      "fietsveiligheid": 12,
       "onderwijs": 11,
       "wonen": 84,
       "veiligheid": 4,
-      "zorg": 91,
-      "bestuur": 15,
+      "zorg": 96,
+      "bestuur": 1,
       "armoede": 1,
-      "leefbaarheid": 53
+      "leefbaarheid": 1
     }
   },
   {
@@ -5727,14 +5727,14 @@
       "economie": 66,
       "werk": 51,
       "mobiliteit": 64,
-      "fietsveiligheid": 46,
+      "fietsveiligheid": 35,
       "onderwijs": 33,
       "wonen": 55,
       "veiligheid": 53,
-      "zorg": 76,
-      "bestuur": 34,
+      "zorg": 31,
+      "bestuur": 69,
       "armoede": 77,
-      "leefbaarheid": 73
+      "leefbaarheid": 66
     }
   },
   {
@@ -5817,14 +5817,14 @@
       "economie": 45,
       "werk": 48,
       "mobiliteit": 26,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 28,
       "wonen": 34,
       "veiligheid": 32,
-      "zorg": 61,
+      "zorg": 5,
       "bestuur": 24,
       "armoede": 92,
-      "leefbaarheid": 64
+      "leefbaarheid": 16
     }
   },
   {
@@ -5907,14 +5907,14 @@
       "economie": 63,
       "werk": 68,
       "mobiliteit": 60,
-      "fietsveiligheid": 43,
+      "fietsveiligheid": 25,
       "onderwijs": 46,
       "wonen": 42,
       "veiligheid": 40,
-      "zorg": 76,
-      "bestuur": 40,
+      "zorg": 31,
+      "bestuur": 84,
       "armoede": 27,
-      "leefbaarheid": 74
+      "leefbaarheid": 70
     }
   },
   {
@@ -5997,14 +5997,14 @@
       "economie": 81,
       "werk": 83,
       "mobiliteit": 46,
-      "fietsveiligheid": 36,
+      "fietsveiligheid": 8,
       "onderwijs": 88,
       "wonen": 41,
       "veiligheid": 86,
-      "zorg": 80,
-      "bestuur": 21,
+      "zorg": 49,
+      "bestuur": 9,
       "armoede": 63,
-      "leefbaarheid": 66
+      "leefbaarheid": 21
     }
   },
   {
@@ -6087,14 +6087,14 @@
       "economie": 35,
       "werk": 20,
       "mobiliteit": 66,
-      "fietsveiligheid": 43,
+      "fietsveiligheid": 25,
       "onderwijs": 46,
       "wonen": 50,
       "veiligheid": 17,
-      "zorg": 83,
-      "bestuur": 23,
+      "zorg": 63,
+      "bestuur": 20,
       "armoede": 17,
-      "leefbaarheid": 66
+      "leefbaarheid": 22
     }
   },
   {
@@ -6177,14 +6177,14 @@
       "economie": 34,
       "werk": 32,
       "mobiliteit": 4,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 52,
       "wonen": 93,
       "veiligheid": 64,
-      "zorg": 63,
-      "bestuur": 28,
+      "zorg": 6,
+      "bestuur": 43,
       "armoede": 51,
-      "leefbaarheid": 69
+      "leefbaarheid": 35
     }
   },
   {
@@ -6267,14 +6267,14 @@
       "economie": 4,
       "werk": 3,
       "mobiliteit": 88,
-      "fietsveiligheid": 58,
+      "fietsveiligheid": 80,
       "onderwijs": 5,
       "wonen": 78,
       "veiligheid": 8,
-      "zorg": 85,
-      "bestuur": 34,
+      "zorg": 74,
+      "bestuur": 69,
       "armoede": 6,
-      "leefbaarheid": 70
+      "leefbaarheid": 47
     }
   },
   {
@@ -6357,14 +6357,14 @@
       "economie": 8,
       "werk": 1,
       "mobiliteit": 96,
-      "fietsveiligheid": 50,
+      "fietsveiligheid": 53,
       "onderwijs": 2,
       "wonen": 29,
       "veiligheid": 1,
-      "zorg": 87,
-      "bestuur": 33,
+      "zorg": 83,
+      "bestuur": 65,
       "armoede": 7,
-      "leefbaarheid": 66
+      "leefbaarheid": 20
     }
   },
   {
@@ -6447,14 +6447,14 @@
       "economie": 16,
       "werk": 9,
       "mobiliteit": 17,
-      "fietsveiligheid": 32,
+      "fietsveiligheid": 3,
       "onderwijs": 10,
       "wonen": 96,
       "veiligheid": 7,
-      "zorg": 66,
-      "bestuur": 18,
+      "zorg": 9,
+      "bestuur": 3,
       "armoede": 8,
-      "leefbaarheid": 61
+      "leefbaarheid": 9
     }
   },
   {
@@ -6537,14 +6537,14 @@
       "economie": 71,
       "werk": 45,
       "mobiliteit": 54,
-      "fietsveiligheid": 43,
+      "fietsveiligheid": 25,
       "onderwijs": 46,
       "wonen": 98,
       "veiligheid": 58,
-      "zorg": 66,
-      "bestuur": 36,
+      "zorg": 9,
+      "bestuur": 77,
       "armoede": 46,
-      "leefbaarheid": 73
+      "leefbaarheid": 67
     }
   },
   {
@@ -6627,14 +6627,14 @@
       "economie": 32,
       "werk": 62,
       "mobiliteit": 39,
-      "fietsveiligheid": 43,
+      "fietsveiligheid": 25,
       "onderwijs": 15,
       "wonen": 73,
       "veiligheid": 71,
-      "zorg": 81,
-      "bestuur": 26,
+      "zorg": 55,
+      "bestuur": 34,
       "armoede": 35,
-      "leefbaarheid": 67
+      "leefbaarheid": 24
     }
   },
   {
@@ -6717,14 +6717,14 @@
       "economie": 83,
       "werk": 96,
       "mobiliteit": 13,
-      "fietsveiligheid": 48,
+      "fietsveiligheid": 44,
       "onderwijs": 67,
       "wonen": 50,
       "veiligheid": 99,
       "zorg": 88,
-      "bestuur": 53,
+      "bestuur": 99,
       "armoede": 91,
-      "leefbaarheid": 76
+      "leefbaarheid": 87
     }
   },
   {
@@ -6807,14 +6807,14 @@
       "economie": 74,
       "werk": 27,
       "mobiliteit": 82,
-      "fietsveiligheid": 40,
+      "fietsveiligheid": 16,
       "onderwijs": 11,
       "wonen": 15,
       "veiligheid": 31,
-      "zorg": 70,
-      "bestuur": 27,
+      "zorg": 14,
+      "bestuur": 38,
       "armoede": 65,
-      "leefbaarheid": 64
+      "leefbaarheid": 16
     }
   },
   {
@@ -6897,14 +6897,14 @@
       "economie": 68,
       "werk": 48,
       "mobiliteit": 64,
-      "fietsveiligheid": 64,
+      "fietsveiligheid": 93,
       "onderwijs": 56,
       "wonen": 46,
       "veiligheid": 59,
-      "zorg": 82,
-      "bestuur": 28,
+      "zorg": 60,
+      "bestuur": 43,
       "armoede": 91,
-      "leefbaarheid": 72
+      "leefbaarheid": 59
     }
   },
   {
@@ -6987,14 +6987,14 @@
       "economie": 89,
       "werk": 73,
       "mobiliteit": 29,
-      "fietsveiligheid": 46,
+      "fietsveiligheid": 35,
       "onderwijs": 94,
       "wonen": 27,
       "veiligheid": 52,
-      "zorg": 90,
-      "bestuur": 25,
+      "zorg": 93,
+      "bestuur": 29,
       "armoede": 81,
-      "leefbaarheid": 70
+      "leefbaarheid": 42
     }
   },
   {
@@ -7077,14 +7077,14 @@
       "economie": 64,
       "werk": 73,
       "mobiliteit": 32,
-      "fietsveiligheid": 32,
+      "fietsveiligheid": 3,
       "onderwijs": 43,
       "wonen": 53,
       "veiligheid": 43,
-      "zorg": 77,
-      "bestuur": 25,
+      "zorg": 35,
+      "bestuur": 29,
       "armoede": 54,
-      "leefbaarheid": 70
+      "leefbaarheid": 43
     }
   },
   {
@@ -7167,14 +7167,14 @@
       "economie": 53,
       "werk": 36,
       "mobiliteit": 19,
-      "fietsveiligheid": 36,
+      "fietsveiligheid": 8,
       "onderwijs": 64,
       "wonen": 87,
       "veiligheid": 85,
-      "zorg": 71,
-      "bestuur": 29,
+      "zorg": 16,
+      "bestuur": 48,
       "armoede": 16,
-      "leefbaarheid": 62
+      "leefbaarheid": 13
     }
   },
   {
@@ -7257,14 +7257,14 @@
       "economie": 37,
       "werk": 27,
       "mobiliteit": 72,
-      "fietsveiligheid": 38,
+      "fietsveiligheid": 12,
       "onderwijs": 15,
       "wonen": 46,
       "veiligheid": 15,
-      "zorg": 77,
-      "bestuur": 21,
+      "zorg": 35,
+      "bestuur": 9,
       "armoede": 52,
-      "leefbaarheid": 63
+      "leefbaarheid": 14
     }
   },
   {
@@ -7347,14 +7347,14 @@
       "economie": 25,
       "werk": 34,
       "mobiliteit": 43,
-      "fietsveiligheid": 45,
+      "fietsveiligheid": 32,
       "onderwijs": 19,
       "wonen": 87,
       "veiligheid": 37,
-      "zorg": 81,
-      "bestuur": 18,
+      "zorg": 55,
+      "bestuur": 3,
       "armoede": 61,
-      "leefbaarheid": 64
+      "leefbaarheid": 16
     }
   },
   {
@@ -7437,14 +7437,14 @@
       "economie": 8,
       "werk": 48,
       "mobiliteit": 10,
-      "fietsveiligheid": 60,
+      "fietsveiligheid": 84,
       "onderwijs": 22,
       "wonen": 36,
       "veiligheid": 67,
-      "zorg": 84,
-      "bestuur": 20,
+      "zorg": 70,
+      "bestuur": 8,
       "armoede": 38,
-      "leefbaarheid": 72
+      "leefbaarheid": 58
     }
   },
   {
@@ -7527,14 +7527,14 @@
       "economie": 25,
       "werk": 30,
       "mobiliteit": 88,
-      "fietsveiligheid": 54,
+      "fietsveiligheid": 69,
       "onderwijs": 22,
       "wonen": 94,
       "veiligheid": 27,
-      "zorg": 89,
-      "bestuur": 21,
+      "zorg": 90,
+      "bestuur": 9,
       "armoede": 31,
-      "leefbaarheid": 63
+      "leefbaarheid": 15
     }
   },
   {
@@ -7667,14 +7667,14 @@
       "economie": 27,
       "werk": 36,
       "mobiliteit": 5,
-      "fietsveiligheid": 60,
+      "fietsveiligheid": 84,
       "onderwijs": 49,
       "wonen": 67,
       "veiligheid": 44,
-      "zorg": 87,
-      "bestuur": 30,
+      "zorg": 83,
+      "bestuur": 56,
       "armoede": 22,
-      "leefbaarheid": 73
+      "leefbaarheid": 67
     }
   },
   {
@@ -7757,14 +7757,14 @@
       "economie": 25,
       "werk": 45,
       "mobiliteit": 45,
-      "fietsveiligheid": 57,
+      "fietsveiligheid": 78,
       "onderwijs": 46,
       "wonen": 66,
       "veiligheid": 72,
-      "zorg": 76,
-      "bestuur": 40,
+      "zorg": 31,
+      "bestuur": 84,
       "armoede": 33,
-      "leefbaarheid": 79
+      "leefbaarheid": 97
     }
   },
   {
@@ -7847,14 +7847,14 @@
       "economie": 47,
       "werk": 45,
       "mobiliteit": 11,
-      "fietsveiligheid": 45,
+      "fietsveiligheid": 32,
       "onderwijs": 52,
       "wonen": 53,
       "veiligheid": 28,
-      "zorg": 85,
+      "zorg": 74,
       "bestuur": 24,
       "armoede": 44,
-      "leefbaarheid": 68
+      "leefbaarheid": 31
     }
   },
   {
@@ -7937,14 +7937,14 @@
       "economie": 55,
       "werk": 20,
       "mobiliteit": 38,
-      "fietsveiligheid": 51,
+      "fietsveiligheid": 55,
       "onderwijs": 15,
       "wonen": 54,
       "veiligheid": 40,
-      "zorg": 59,
-      "bestuur": 30,
+      "zorg": 4,
+      "bestuur": 56,
       "armoede": 37,
-      "leefbaarheid": 66
+      "leefbaarheid": 21
     }
   },
   {
@@ -8027,14 +8027,14 @@
       "economie": 96,
       "werk": 60,
       "mobiliteit": 58,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 92,
       "wonen": 12,
       "veiligheid": 74,
-      "zorg": 83,
-      "bestuur": 16,
+      "zorg": 63,
+      "bestuur": 2,
       "armoede": 76,
-      "leefbaarheid": 65
+      "leefbaarheid": 18
     }
   },
   {
@@ -8117,14 +8117,14 @@
       "economie": 30,
       "werk": 11,
       "mobiliteit": 93,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 18,
       "wonen": 72,
       "veiligheid": 18,
       "zorg": 88,
-      "bestuur": 19,
+      "bestuur": 6,
       "armoede": 20,
-      "leefbaarheid": 62
+      "leefbaarheid": 12
     }
   },
   {
@@ -8207,14 +8207,14 @@
       "economie": 37,
       "werk": 51,
       "mobiliteit": 24,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 49,
       "wonen": 43,
       "veiligheid": 96,
-      "zorg": 86,
-      "bestuur": 23,
+      "zorg": 78,
+      "bestuur": 20,
       "armoede": 86,
-      "leefbaarheid": 69
+      "leefbaarheid": 38
     }
   },
   {
@@ -8297,14 +8297,14 @@
       "economie": 58,
       "werk": 51,
       "mobiliteit": 17,
-      "fietsveiligheid": 51,
+      "fietsveiligheid": 55,
       "onderwijs": 85,
       "wonen": 55,
       "veiligheid": 51,
-      "zorg": 94,
-      "bestuur": 28,
+      "zorg": 99,
+      "bestuur": 43,
       "armoede": 53,
-      "leefbaarheid": 76
+      "leefbaarheid": 83
     }
   },
   {
@@ -8387,14 +8387,14 @@
       "economie": 48,
       "werk": 68,
       "mobiliteit": 2,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 73,
       "wonen": 61,
       "veiligheid": 48,
-      "zorg": 73,
+      "zorg": 21,
       "bestuur": 24,
       "armoede": 69,
-      "leefbaarheid": 73
+      "leefbaarheid": 64
     }
   },
   {
@@ -8567,14 +8567,14 @@
       "economie": 63,
       "werk": 68,
       "mobiliteit": 6,
-      "fietsveiligheid": 31,
+      "fietsveiligheid": 1,
       "onderwijs": 67,
       "wonen": 56,
       "veiligheid": 77,
-      "zorg": 79,
-      "bestuur": 28,
+      "zorg": 44,
+      "bestuur": 43,
       "armoede": 90,
-      "leefbaarheid": 74
+      "leefbaarheid": 75
     }
   },
   {
@@ -8657,14 +8657,14 @@
       "economie": 16,
       "werk": 17,
       "mobiliteit": 69,
-      "fietsveiligheid": 51,
+      "fietsveiligheid": 55,
       "onderwijs": 17,
       "wonen": 54,
       "veiligheid": 70,
-      "zorg": 86,
-      "bestuur": 31,
+      "zorg": 78,
+      "bestuur": 59,
       "armoede": 5,
-      "leefbaarheid": 70
+      "leefbaarheid": 47
     }
   },
   {
@@ -8747,14 +8747,14 @@
       "economie": 6,
       "werk": 73,
       "mobiliteit": 74,
-      "fietsveiligheid": 44,
+      "fietsveiligheid": 28,
       "onderwijs": 26,
       "wonen": 99,
       "veiligheid": 49,
-      "zorg": 65,
-      "bestuur": 25,
+      "zorg": 7,
+      "bestuur": 29,
       "armoede": 42,
-      "leefbaarheid": 73
+      "leefbaarheid": 69
     }
   },
   {
@@ -8837,14 +8837,14 @@
       "economie": 84,
       "werk": 41,
       "mobiliteit": 85,
-      "fietsveiligheid": 43,
+      "fietsveiligheid": 25,
       "onderwijs": 97,
       "wonen": 96,
       "veiligheid": 88,
-      "zorg": 81,
+      "zorg": 55,
       "bestuur": 24,
       "armoede": 55,
-      "leefbaarheid": 67
+      "leefbaarheid": 23
     }
   },
   {
@@ -8927,14 +8927,14 @@
       "economie": 92,
       "werk": 55,
       "mobiliteit": 89,
-      "fietsveiligheid": 48,
+      "fietsveiligheid": 44,
       "onderwijs": 95,
       "wonen": 5,
       "veiligheid": 76,
-      "zorg": 77,
-      "bestuur": 39,
+      "zorg": 35,
+      "bestuur": 83,
       "armoede": 86,
-      "leefbaarheid": 73
+      "leefbaarheid": 64
     }
   },
   {
@@ -9017,14 +9017,14 @@
       "economie": 94,
       "werk": 86,
       "mobiliteit": 86,
-      "fietsveiligheid": 55,
+      "fietsveiligheid": 72,
       "onderwijs": 99,
       "wonen": 16,
       "veiligheid": 96,
-      "zorg": 75,
-      "bestuur": 34,
+      "zorg": 27,
+      "bestuur": 69,
       "armoede": 97,
-      "leefbaarheid": 75
+      "leefbaarheid": 81
     }
   },
   {
@@ -9107,14 +9107,14 @@
       "economie": 43,
       "werk": 89,
       "mobiliteit": 82,
-      "fietsveiligheid": 40,
+      "fietsveiligheid": 16,
       "onderwijs": 85,
       "wonen": 65,
       "veiligheid": 78,
-      "zorg": 86,
-      "bestuur": 35,
+      "zorg": 78,
+      "bestuur": 74,
       "armoede": 69,
-      "leefbaarheid": 74
+      "leefbaarheid": 71
     }
   },
   {
@@ -9197,14 +9197,14 @@
       "economie": 33,
       "werk": 32,
       "mobiliteit": 42,
-      "fietsveiligheid": 51,
+      "fietsveiligheid": 55,
       "onderwijs": 40,
       "wonen": 12,
       "veiligheid": 29,
-      "zorg": 75,
-      "bestuur": 21,
+      "zorg": 27,
+      "bestuur": 9,
       "armoede": 40,
-      "leefbaarheid": 68
+      "leefbaarheid": 31
     }
   },
   {
@@ -9287,14 +9287,14 @@
       "economie": 74,
       "werk": 98,
       "mobiliteit": 18,
-      "fietsveiligheid": 24,
+      "fietsveiligheid": 1,
       "onderwijs": 99,
       "wonen": 50,
       "veiligheid": 99,
-      "zorg": 80,
-      "bestuur": 23,
+      "zorg": 49,
+      "bestuur": 20,
       "armoede": 50,
-      "leefbaarheid": 69
+      "leefbaarheid": 40
     }
   },
   {
@@ -9377,14 +9377,14 @@
       "economie": 10,
       "werk": 11,
       "mobiliteit": 83,
-      "fietsveiligheid": 44,
+      "fietsveiligheid": 28,
       "onderwijs": 19,
       "wonen": 62,
       "veiligheid": 20,
-      "zorg": 79,
-      "bestuur": 28,
+      "zorg": 44,
+      "bestuur": 43,
       "armoede": 15,
-      "leefbaarheid": 63
+      "leefbaarheid": 14
     }
   },
   {
@@ -9467,14 +9467,14 @@
       "economie": 10,
       "werk": 86,
       "mobiliteit": 39,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 73,
       "wonen": 79,
       "veiligheid": 67,
-      "zorg": 79,
-      "bestuur": 34,
+      "zorg": 44,
+      "bestuur": 69,
       "armoede": 10,
-      "leefbaarheid": 72
+      "leefbaarheid": 62
     }
   },
   {
@@ -9557,14 +9557,14 @@
       "economie": 99,
       "werk": 73,
       "mobiliteit": 8,
-      "fietsveiligheid": 62,
+      "fietsveiligheid": 89,
       "onderwijs": 98,
       "wonen": 4,
       "veiligheid": 42,
-      "zorg": 82,
-      "bestuur": 22,
+      "zorg": 60,
+      "bestuur": 15,
       "armoede": 74,
-      "leefbaarheid": 71
+      "leefbaarheid": 54
     }
   },
   {
@@ -9647,14 +9647,14 @@
       "economie": 88,
       "werk": 84,
       "mobiliteit": 5,
-      "fietsveiligheid": 36,
+      "fietsveiligheid": 8,
       "onderwijs": 98,
       "wonen": 13,
       "veiligheid": 95,
-      "zorg": 78,
-      "bestuur": 33,
+      "zorg": 40,
+      "bestuur": 65,
       "armoede": 92,
-      "leefbaarheid": 70
+      "leefbaarheid": 45
     }
   },
   {
@@ -9737,14 +9737,14 @@
       "economie": 42,
       "werk": 55,
       "mobiliteit": 38,
-      "fietsveiligheid": 50,
+      "fietsveiligheid": 53,
       "onderwijs": 62,
       "wonen": 45,
       "veiligheid": 68,
-      "zorg": 62,
-      "bestuur": 21,
+      "zorg": 5,
+      "bestuur": 9,
       "armoede": 76,
-      "leefbaarheid": 68
+      "leefbaarheid": 28
     }
   },
   {
@@ -9827,14 +9827,14 @@
       "economie": 23,
       "werk": 80,
       "mobiliteit": 12,
-      "fietsveiligheid": 43,
+      "fietsveiligheid": 25,
       "onderwijs": 49,
       "wonen": 82,
       "veiligheid": 89,
-      "zorg": 78,
-      "bestuur": 29,
+      "zorg": 40,
+      "bestuur": 48,
       "armoede": 37,
-      "leefbaarheid": 70
+      "leefbaarheid": 43
     }
   },
   {
@@ -9917,14 +9917,14 @@
       "economie": 13,
       "werk": 10,
       "mobiliteit": 86,
-      "fietsveiligheid": 46,
+      "fietsveiligheid": 35,
       "onderwijs": 31,
       "wonen": 90,
       "veiligheid": 18,
-      "zorg": 87,
-      "bestuur": 31,
+      "zorg": 83,
+      "bestuur": 59,
       "armoede": 10,
-      "leefbaarheid": 72
+      "leefbaarheid": 59
     }
   },
   {
@@ -10007,14 +10007,14 @@
       "economie": 24,
       "werk": 48,
       "mobiliteit": 75,
-      "fietsveiligheid": 52,
+      "fietsveiligheid": 59,
       "onderwijs": 67,
       "wonen": 82,
       "veiligheid": 47,
-      "zorg": 80,
-      "bestuur": 35,
+      "zorg": 49,
+      "bestuur": 74,
       "armoede": 53,
-      "leefbaarheid": 73
+      "leefbaarheid": 66
     }
   },
   {
@@ -10097,14 +10097,14 @@
       "economie": 18,
       "werk": 32,
       "mobiliteit": 63,
-      "fietsveiligheid": 39,
+      "fietsveiligheid": 13,
       "onderwijs": 36,
       "wonen": 95,
       "veiligheid": 16,
-      "zorg": 89,
-      "bestuur": 17,
+      "zorg": 90,
+      "bestuur": 3,
       "armoede": 24,
-      "leefbaarheid": 58
+      "leefbaarheid": 6
     }
   },
   {
@@ -10187,14 +10187,14 @@
       "economie": 77,
       "werk": 98,
       "mobiliteit": 57,
-      "fietsveiligheid": 52,
+      "fietsveiligheid": 59,
       "onderwijs": 96,
       "wonen": 24,
       "veiligheid": 92,
-      "zorg": 83,
-      "bestuur": 21,
+      "zorg": 63,
+      "bestuur": 9,
       "armoede": 37,
-      "leefbaarheid": 69
+      "leefbaarheid": 38
     }
   },
   {
@@ -10277,14 +10277,14 @@
       "economie": 80,
       "werk": 80,
       "mobiliteit": 26,
-      "fietsveiligheid": 64,
+      "fietsveiligheid": 93,
       "onderwijs": 80,
       "wonen": 10,
       "veiligheid": 35,
-      "zorg": 85,
-      "bestuur": 46,
+      "zorg": 74,
+      "bestuur": 95,
       "armoede": 92,
-      "leefbaarheid": 81
+      "leefbaarheid": 98
     }
   },
   {
@@ -10367,14 +10367,14 @@
       "economie": 90,
       "werk": 92,
       "mobiliteit": 68,
-      "fietsveiligheid": 50,
+      "fietsveiligheid": 53,
       "onderwijs": 85,
       "wonen": 8,
       "veiligheid": 46,
-      "zorg": 76,
-      "bestuur": 27,
+      "zorg": 31,
+      "bestuur": 38,
       "armoede": 88,
-      "leefbaarheid": 70
+      "leefbaarheid": 45
     }
   },
   {
@@ -10457,14 +10457,14 @@
       "economie": 80,
       "werk": 83,
       "mobiliteit": 48,
-      "fietsveiligheid": 51,
+      "fietsveiligheid": 55,
       "onderwijs": 28,
       "wonen": 39,
       "veiligheid": 82,
-      "zorg": 68,
-      "bestuur": 22,
+      "zorg": 12,
+      "bestuur": 15,
       "armoede": 90,
-      "leefbaarheid": 59
+      "leefbaarheid": 7
     }
   },
   {
@@ -10547,14 +10547,14 @@
       "economie": 92,
       "werk": 32,
       "mobiliteit": 37,
-      "fietsveiligheid": 54,
+      "fietsveiligheid": 69,
       "onderwijs": 67,
       "wonen": 22,
       "veiligheid": 41,
-      "zorg": 77,
-      "bestuur": 37,
+      "zorg": 35,
+      "bestuur": 80,
       "armoede": 51,
-      "leefbaarheid": 70
+      "leefbaarheid": 47
     }
   },
   {
@@ -10637,12 +10637,12 @@
       "economie": 62,
       "werk": 89,
       "mobiliteit": 21,
-      "fietsveiligheid": 51,
+      "fietsveiligheid": 55,
       "onderwijs": 82,
       "wonen": 50,
       "veiligheid": 94,
-      "zorg": 79,
-      "bestuur": 35,
+      "zorg": 44,
+      "bestuur": 74,
       "armoede": 54,
       "leefbaarheid": 74
     }
@@ -10727,14 +10727,14 @@
       "economie": 68,
       "werk": 60,
       "mobiliteit": 38,
-      "fietsveiligheid": 60,
+      "fietsveiligheid": 84,
       "onderwijs": 56,
       "wonen": 37,
       "veiligheid": 74,
-      "zorg": 80,
-      "bestuur": 29,
+      "zorg": 49,
+      "bestuur": 48,
       "armoede": 45,
-      "leefbaarheid": 76
+      "leefbaarheid": 87
     }
   },
   {
@@ -10817,14 +10817,14 @@
       "economie": 99,
       "werk": 92,
       "mobiliteit": 8,
-      "fietsveiligheid": 55,
+      "fietsveiligheid": 72,
       "onderwijs": 96,
       "wonen": 4,
       "veiligheid": 90,
-      "zorg": 86,
-      "bestuur": 23,
+      "zorg": 78,
+      "bestuur": 20,
       "armoede": 70,
-      "leefbaarheid": 68
+      "leefbaarheid": 31
     }
   },
   {
@@ -10907,14 +10907,14 @@
       "economie": 14,
       "werk": 60,
       "mobiliteit": 25,
-      "fietsveiligheid": 63,
+      "fietsveiligheid": 92,
       "onderwijs": 43,
       "wonen": 63,
       "veiligheid": 58,
-      "zorg": 79,
-      "bestuur": 43,
+      "zorg": 44,
+      "bestuur": 91,
       "armoede": 50,
-      "leefbaarheid": 80
+      "leefbaarheid": 97
     }
   },
   {
@@ -10997,14 +10997,14 @@
       "economie": 50,
       "werk": 73,
       "mobiliteit": 84,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 78,
       "wonen": 92,
       "veiligheid": 83,
-      "zorg": 80,
-      "bestuur": 33,
+      "zorg": 49,
+      "bestuur": 65,
       "armoede": 82,
-      "leefbaarheid": 77
+      "leefbaarheid": 90
     }
   },
   {
@@ -11087,14 +11087,14 @@
       "economie": 91,
       "werk": 55,
       "mobiliteit": 95,
-      "fietsveiligheid": 60,
+      "fietsveiligheid": 84,
       "onderwijs": 26,
       "wonen": 1,
       "veiligheid": 6,
-      "zorg": 96,
-      "bestuur": 38,
+      "zorg": 99,
+      "bestuur": 81,
       "armoede": 9,
-      "leefbaarheid": 75
+      "leefbaarheid": 82
     }
   },
   {
@@ -11177,14 +11177,14 @@
       "economie": 18,
       "werk": 97,
       "mobiliteit": 25,
-      "fietsveiligheid": 51,
+      "fietsveiligheid": 55,
       "onderwijs": 49,
       "wonen": 87,
       "veiligheid": 49,
-      "zorg": 85,
-      "bestuur": 45,
+      "zorg": 74,
+      "bestuur": 94,
       "armoede": 30,
-      "leefbaarheid": 79
+      "leefbaarheid": 96
     }
   },
   {
@@ -11267,14 +11267,14 @@
       "economie": 87,
       "werk": 27,
       "mobiliteit": 78,
-      "fietsveiligheid": 79,
+      "fietsveiligheid": 99,
       "onderwijs": 15,
       "wonen": 18,
       "veiligheid": 14,
-      "zorg": 84,
-      "bestuur": 40,
+      "zorg": 70,
+      "bestuur": 84,
       "armoede": 14,
-      "leefbaarheid": 78
+      "leefbaarheid": 92
     }
   },
   {
@@ -11357,14 +11357,14 @@
       "economie": 88,
       "werk": 45,
       "mobiliteit": 99,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 82,
       "wonen": 24,
       "veiligheid": 34,
-      "zorg": 84,
-      "bestuur": 35,
+      "zorg": 70,
+      "bestuur": 74,
       "armoede": 70,
-      "leefbaarheid": 69
+      "leefbaarheid": 36
     }
   },
   {
@@ -11447,14 +11447,14 @@
       "economie": 20,
       "werk": 89,
       "mobiliteit": 43,
-      "fietsveiligheid": 41,
+      "fietsveiligheid": 19,
       "onderwijs": 62,
       "wonen": 72,
       "veiligheid": 61,
-      "zorg": 83,
-      "bestuur": 32,
+      "zorg": 63,
+      "bestuur": 62,
       "armoede": 39,
-      "leefbaarheid": 70
+      "leefbaarheid": 47
     }
   },
   {
@@ -11537,14 +11537,14 @@
       "economie": 67,
       "werk": 90,
       "mobiliteit": 17,
-      "fietsveiligheid": 52,
+      "fietsveiligheid": 59,
       "onderwijs": 85,
       "wonen": 44,
       "veiligheid": 99,
-      "zorg": 75,
-      "bestuur": 34,
+      "zorg": 27,
+      "bestuur": 69,
       "armoede": 69,
-      "leefbaarheid": 75
+      "leefbaarheid": 82
     }
   },
   {
@@ -11627,14 +11627,14 @@
       "economie": 89,
       "werk": 65,
       "mobiliteit": 81,
-      "fietsveiligheid": 48,
+      "fietsveiligheid": 44,
       "onderwijs": 64,
       "wonen": 11,
       "veiligheid": 60,
       "zorg": 88,
-      "bestuur": 27,
+      "bestuur": 38,
       "armoede": 80,
-      "leefbaarheid": 69
+      "leefbaarheid": 35
     }
   },
   {
@@ -11717,14 +11717,14 @@
       "economie": 18,
       "werk": 5,
       "mobiliteit": 90,
-      "fietsveiligheid": 57,
+      "fietsveiligheid": 78,
       "onderwijs": 13,
       "wonen": 85,
       "veiligheid": 2,
-      "zorg": 93,
-      "bestuur": 29,
+      "zorg": 99,
+      "bestuur": 48,
       "armoede": 19,
-      "leefbaarheid": 69
+      "leefbaarheid": 38
     }
   },
   {
@@ -11807,14 +11807,14 @@
       "economie": 91,
       "werk": 38,
       "mobiliteit": 31,
-      "fietsveiligheid": 60,
+      "fietsveiligheid": 84,
       "onderwijs": 99,
       "wonen": 1,
       "veiligheid": 28,
-      "zorg": 72,
-      "bestuur": 42,
+      "zorg": 18,
+      "bestuur": 88,
       "armoede": 69,
-      "leefbaarheid": 72
+      "leefbaarheid": 59
     }
   },
   {
@@ -11881,14 +11881,14 @@
       "economie": 75,
       "werk": 96,
       "mobiliteit": 75,
-      "fietsveiligheid": 45,
+      "fietsveiligheid": 32,
       "onderwijs": 91,
       "wonen": 29,
       "veiligheid": 69,
-      "zorg": 78,
-      "bestuur": 29,
+      "zorg": 40,
+      "bestuur": 48,
       "armoede": 81,
-      "leefbaarheid": 72
+      "leefbaarheid": 62
     }
   },
   {
@@ -11971,14 +11971,14 @@
       "economie": 24,
       "werk": 41,
       "mobiliteit": 93,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 33,
       "wonen": 68,
       "veiligheid": 28,
-      "zorg": 91,
-      "bestuur": 41,
+      "zorg": 96,
+      "bestuur": 88,
       "armoede": 42,
-      "leefbaarheid": 72
+      "leefbaarheid": 57
     }
   },
   {
@@ -12061,14 +12061,14 @@
       "economie": 48,
       "werk": 55,
       "mobiliteit": 20,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 64,
       "wonen": 41,
       "veiligheid": 81,
-      "zorg": 78,
-      "bestuur": 25,
+      "zorg": 40,
+      "bestuur": 29,
       "armoede": 25,
-      "leefbaarheid": 71
+      "leefbaarheid": 51
     }
   },
   {
@@ -12151,14 +12151,14 @@
       "economie": 81,
       "werk": 84,
       "mobiliteit": 49,
-      "fietsveiligheid": 56,
+      "fietsveiligheid": 76,
       "onderwijs": 80,
       "wonen": 28,
       "veiligheid": 59,
-      "zorg": 87,
-      "bestuur": 44,
+      "zorg": 83,
+      "bestuur": 92,
       "armoede": 73,
-      "leefbaarheid": 79
+      "leefbaarheid": 95
     }
   },
   {
@@ -12241,14 +12241,14 @@
       "economie": 20,
       "werk": 23,
       "mobiliteit": 27,
-      "fietsveiligheid": 54,
+      "fietsveiligheid": 69,
       "onderwijs": 17,
       "wonen": 56,
       "veiligheid": 41,
-      "zorg": 83,
-      "bestuur": 29,
+      "zorg": 63,
+      "bestuur": 48,
       "armoede": 33,
-      "leefbaarheid": 71
+      "leefbaarheid": 52
     }
   },
   {
@@ -12331,14 +12331,14 @@
       "economie": 58,
       "werk": 27,
       "mobiliteit": 31,
-      "fietsveiligheid": 36,
+      "fietsveiligheid": 8,
       "onderwijs": 20,
       "wonen": 84,
       "veiligheid": 41,
-      "zorg": 77,
-      "bestuur": 22,
+      "zorg": 35,
+      "bestuur": 15,
       "armoede": 47,
-      "leefbaarheid": 65
+      "leefbaarheid": 19
     }
   },
   {
@@ -12421,14 +12421,14 @@
       "economie": 27,
       "werk": 83,
       "mobiliteit": 51,
-      "fietsveiligheid": 55,
+      "fietsveiligheid": 72,
       "onderwijs": 31,
       "wonen": 85,
       "veiligheid": 94,
-      "zorg": 80,
-      "bestuur": 26,
+      "zorg": 49,
+      "bestuur": 34,
       "armoede": 21,
-      "leefbaarheid": 70
+      "leefbaarheid": 49
     }
   },
   {
@@ -12511,14 +12511,14 @@
       "economie": 53,
       "werk": 62,
       "mobiliteit": 35,
-      "fietsveiligheid": 35,
+      "fietsveiligheid": 7,
       "onderwijs": 43,
       "wonen": 62,
       "veiligheid": 39,
-      "zorg": 76,
-      "bestuur": 21,
+      "zorg": 31,
+      "bestuur": 9,
       "armoede": 41,
-      "leefbaarheid": 63
+      "leefbaarheid": 13
     }
   },
   {
@@ -12601,14 +12601,14 @@
       "economie": 63,
       "werk": 38,
       "mobiliteit": 16,
-      "fietsveiligheid": 40,
+      "fietsveiligheid": 16,
       "onderwijs": 62,
       "wonen": 61,
       "veiligheid": 36,
-      "zorg": 87,
-      "bestuur": 22,
+      "zorg": 83,
+      "bestuur": 15,
       "armoede": 48,
-      "leefbaarheid": 67
+      "leefbaarheid": 23
     }
   },
   {
@@ -12691,14 +12691,14 @@
       "economie": 33,
       "werk": 95,
       "mobiliteit": 48,
-      "fietsveiligheid": 54,
+      "fietsveiligheid": 69,
       "onderwijs": 73,
       "wonen": 95,
       "veiligheid": 93,
-      "zorg": 83,
-      "bestuur": 46,
+      "zorg": 63,
+      "bestuur": 95,
       "armoede": 74,
-      "leefbaarheid": 72
+      "leefbaarheid": 62
     }
   },
   {
@@ -12781,14 +12781,14 @@
       "economie": 37,
       "werk": 75,
       "mobiliteit": 71,
-      "fietsveiligheid": 58,
+      "fietsveiligheid": 80,
       "onderwijs": 89,
       "wonen": 97,
       "veiligheid": 85,
-      "zorg": 90,
-      "bestuur": 50,
+      "zorg": 93,
+      "bestuur": 97,
       "armoede": 73,
-      "leefbaarheid": 78
+      "leefbaarheid": 94
     }
   },
   {
@@ -12871,14 +12871,14 @@
       "economie": 82,
       "werk": 95,
       "mobiliteit": 55,
-      "fietsveiligheid": 36,
+      "fietsveiligheid": 8,
       "onderwijs": 58,
       "wonen": 16,
       "veiligheid": 55,
-      "zorg": 75,
-      "bestuur": 22,
+      "zorg": 27,
+      "bestuur": 15,
       "armoede": 95,
-      "leefbaarheid": 69
+      "leefbaarheid": 35
     }
   },
   {
@@ -12961,14 +12961,14 @@
       "economie": 11,
       "werk": 13,
       "mobiliteit": 3,
-      "fietsveiligheid": 46,
+      "fietsveiligheid": 35,
       "onderwijs": 13,
       "wonen": 88,
       "veiligheid": 15,
-      "zorg": 83,
-      "bestuur": 21,
+      "zorg": 63,
+      "bestuur": 9,
       "armoede": 4,
-      "leefbaarheid": 56
+      "leefbaarheid": 4
     }
   },
   {
@@ -13051,14 +13051,14 @@
       "economie": 34,
       "werk": 6,
       "mobiliteit": 79,
-      "fietsveiligheid": 61,
+      "fietsveiligheid": 88,
       "onderwijs": 20,
       "wonen": 7,
       "veiligheid": 1,
-      "zorg": 90,
-      "bestuur": 51,
+      "zorg": 93,
+      "bestuur": 98,
       "armoede": 34,
-      "leefbaarheid": 76
+      "leefbaarheid": 87
     }
   },
   {
@@ -13141,14 +13141,14 @@
       "economie": 41,
       "werk": 97,
       "mobiliteit": 63,
-      "fietsveiligheid": 55,
+      "fietsveiligheid": 72,
       "onderwijs": 64,
       "wonen": 48,
       "veiligheid": 82,
-      "zorg": 84,
-      "bestuur": 40,
+      "zorg": 70,
+      "bestuur": 84,
       "armoede": 44,
-      "leefbaarheid": 76
+      "leefbaarheid": 85
     }
   },
   {
@@ -13231,14 +13231,14 @@
       "economie": 38,
       "werk": 30,
       "mobiliteit": 33,
-      "fietsveiligheid": 39,
+      "fietsveiligheid": 13,
       "onderwijs": 17,
       "wonen": 64,
       "veiligheid": 21,
-      "zorg": 77,
-      "bestuur": 23,
+      "zorg": 35,
+      "bestuur": 20,
       "armoede": 25,
-      "leefbaarheid": 63
+      "leefbaarheid": 14
     }
   },
   {
@@ -13321,14 +13321,14 @@
       "economie": 35,
       "werk": 5,
       "mobiliteit": 69,
-      "fietsveiligheid": 57,
+      "fietsveiligheid": 78,
       "onderwijs": 14,
       "wonen": 58,
       "veiligheid": 11,
-      "zorg": 81,
-      "bestuur": 30,
+      "zorg": 55,
+      "bestuur": 56,
       "armoede": 11,
-      "leefbaarheid": 68
+      "leefbaarheid": 33
     }
   },
   {
@@ -13411,14 +13411,14 @@
       "economie": 66,
       "werk": 92,
       "mobiliteit": 4,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 69,
       "wonen": 69,
       "veiligheid": 98,
-      "zorg": 68,
-      "bestuur": 53,
+      "zorg": 12,
+      "bestuur": 99,
       "armoede": 38,
-      "leefbaarheid": 81
+      "leefbaarheid": 98
     }
   },
   {
@@ -13485,14 +13485,14 @@
       "economie": 61,
       "werk": 73,
       "mobiliteit": 19,
-      "fietsveiligheid": 52,
+      "fietsveiligheid": 59,
       "onderwijs": 75,
       "wonen": 40,
       "veiligheid": 33,
-      "zorg": 89,
-      "bestuur": 26,
+      "zorg": 90,
+      "bestuur": 34,
       "armoede": 52,
-      "leefbaarheid": 74
+      "leefbaarheid": 71
     }
   },
   {
@@ -13575,14 +13575,14 @@
       "economie": 58,
       "werk": 41,
       "mobiliteit": 62,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 75,
       "wonen": 38,
       "veiligheid": 35,
-      "zorg": 78,
-      "bestuur": 19,
+      "zorg": 40,
+      "bestuur": 6,
       "armoede": 59,
-      "leefbaarheid": 72
+      "leefbaarheid": 59
     }
   },
   {
@@ -13665,14 +13665,14 @@
       "economie": 85,
       "werk": 13,
       "mobiliteit": 1,
-      "fietsveiligheid": 31,
+      "fietsveiligheid": 1,
       "onderwijs": 82,
       "wonen": 50,
       "veiligheid": 37,
-      "zorg": 84,
-      "bestuur": 37,
+      "zorg": 70,
+      "bestuur": 80,
       "armoede": 76,
-      "leefbaarheid": 73
+      "leefbaarheid": 67
     }
   },
   {
@@ -13755,14 +13755,14 @@
       "economie": 91,
       "werk": 48,
       "mobiliteit": 50,
-      "fietsveiligheid": 71,
+      "fietsveiligheid": 99,
       "onderwijs": 69,
       "wonen": 8,
       "veiligheid": 62,
-      "zorg": 80,
+      "zorg": 49,
       "bestuur": 24,
       "armoede": 46,
-      "leefbaarheid": 68
+      "leefbaarheid": 31
     }
   },
   {
@@ -13845,14 +13845,14 @@
       "economie": 65,
       "werk": 65,
       "mobiliteit": 10,
-      "fietsveiligheid": 42,
+      "fietsveiligheid": 23,
       "onderwijs": 78,
       "wonen": 84,
       "veiligheid": 92,
-      "zorg": 65,
-      "bestuur": 29,
+      "zorg": 7,
+      "bestuur": 48,
       "armoede": 87,
-      "leefbaarheid": 70
+      "leefbaarheid": 45
     }
   },
   {
@@ -13935,14 +13935,14 @@
       "economie": 16,
       "werk": 98,
       "mobiliteit": 87,
-      "fietsveiligheid": 66,
+      "fietsveiligheid": 96,
       "onderwijs": 46,
       "wonen": 50,
       "veiligheid": 95,
-      "zorg": 73,
-      "bestuur": 33,
+      "zorg": 21,
+      "bestuur": 65,
       "armoede": 98,
-      "leefbaarheid": 75
+      "leefbaarheid": 80
     }
   },
   {
@@ -14125,14 +14125,14 @@
       "economie": 17,
       "werk": 23,
       "mobiliteit": 66,
-      "fietsveiligheid": 61,
+      "fietsveiligheid": 88,
       "onderwijs": 49,
       "wonen": 51,
       "veiligheid": 26,
-      "zorg": 87,
-      "bestuur": 31,
+      "zorg": 83,
+      "bestuur": 59,
       "armoede": 16,
-      "leefbaarheid": 74
+      "leefbaarheid": 71
     }
   },
   {
@@ -14215,14 +14215,14 @@
       "economie": 79,
       "werk": 83,
       "mobiliteit": 41,
-      "fietsveiligheid": 45,
+      "fietsveiligheid": 32,
       "onderwijs": 73,
       "wonen": 25,
       "veiligheid": 54,
-      "zorg": 69,
-      "bestuur": 15,
+      "zorg": 13,
+      "bestuur": 1,
       "armoede": 99,
-      "leefbaarheid": 64
+      "leefbaarheid": 17
     }
   },
   {
@@ -14305,14 +14305,14 @@
       "economie": 96,
       "werk": 80,
       "mobiliteit": 36,
-      "fietsveiligheid": 31,
+      "fietsveiligheid": 1,
       "onderwijs": 94,
       "wonen": 22,
       "veiligheid": 87,
-      "zorg": 85,
-      "bestuur": 29,
+      "zorg": 74,
+      "bestuur": 48,
       "armoede": 77,
-      "leefbaarheid": 69
+      "leefbaarheid": 41
     }
   },
   {
@@ -14395,14 +14395,14 @@
       "economie": 64,
       "werk": 65,
       "mobiliteit": 80,
-      "fietsveiligheid": 44,
+      "fietsveiligheid": 28,
       "onderwijs": 62,
       "wonen": 43,
       "veiligheid": 49,
-      "zorg": 78,
+      "zorg": 40,
       "bestuur": 24,
       "armoede": 23,
-      "leefbaarheid": 70
+      "leefbaarheid": 42
     }
   },
   {
@@ -14485,14 +14485,14 @@
       "economie": 76,
       "werk": 99,
       "mobiliteit": 28,
-      "fietsveiligheid": 51,
+      "fietsveiligheid": 55,
       "onderwijs": 92,
       "wonen": 50,
       "veiligheid": 97,
-      "zorg": 74,
-      "bestuur": 40,
+      "zorg": 23,
+      "bestuur": 84,
       "armoede": 98,
-      "leefbaarheid": 79
+      "leefbaarheid": 96
     }
   },
   {
@@ -14575,14 +14575,14 @@
       "economie": 15,
       "werk": 30,
       "mobiliteit": 13,
-      "fietsveiligheid": 58,
+      "fietsveiligheid": 80,
       "onderwijs": 22,
       "wonen": 74,
       "veiligheid": 62,
-      "zorg": 70,
-      "bestuur": 25,
+      "zorg": 14,
+      "bestuur": 29,
       "armoede": 13,
-      "leefbaarheid": 70
+      "leefbaarheid": 49
     }
   },
   {
@@ -14665,14 +14665,14 @@
       "economie": 1,
       "werk": 5,
       "mobiliteit": 29,
-      "fietsveiligheid": 48,
+      "fietsveiligheid": 44,
       "onderwijs": 7,
       "wonen": 81,
       "veiligheid": 13,
-      "zorg": 83,
+      "zorg": 63,
       "bestuur": 24,
       "armoede": 4,
-      "leefbaarheid": 61
+      "leefbaarheid": 10
     }
   },
   {
@@ -14755,14 +14755,14 @@
       "economie": 4,
       "werk": 9,
       "mobiliteit": 99,
-      "fietsveiligheid": 43,
+      "fietsveiligheid": 25,
       "onderwijs": 2,
       "wonen": 33,
       "veiligheid": 9,
-      "zorg": 58,
-      "bestuur": 29,
+      "zorg": 3,
+      "bestuur": 48,
       "armoede": 12,
-      "leefbaarheid": 56
+      "leefbaarheid": 3
     }
   },
   {
@@ -14845,14 +14845,14 @@
       "economie": 27,
       "werk": 80,
       "mobiliteit": 78,
-      "fietsveiligheid": 52,
+      "fietsveiligheid": 59,
       "onderwijs": 36,
       "wonen": 48,
       "veiligheid": 43,
       "zorg": 88,
-      "bestuur": 29,
+      "bestuur": 48,
       "armoede": 47,
-      "leefbaarheid": 72
+      "leefbaarheid": 62
     }
   },
   {
@@ -14935,14 +14935,14 @@
       "economie": 44,
       "werk": 51,
       "mobiliteit": 62,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 52,
       "wonen": 20,
       "veiligheid": 44,
-      "zorg": 90,
-      "bestuur": 29,
+      "zorg": 93,
+      "bestuur": 48,
       "armoede": 57,
-      "leefbaarheid": 75
+      "leefbaarheid": 80
     }
   },
   {
@@ -15025,14 +15025,14 @@
       "economie": 40,
       "werk": 4,
       "mobiliteit": 96,
-      "fietsveiligheid": 60,
+      "fietsveiligheid": 84,
       "onderwijs": 3,
       "wonen": 36,
       "veiligheid": 7,
-      "zorg": 75,
-      "bestuur": 33,
+      "zorg": 27,
+      "bestuur": 65,
       "armoede": 15,
-      "leefbaarheid": 67
+      "leefbaarheid": 25
     }
   },
   {
@@ -15115,14 +15115,14 @@
       "economie": 43,
       "werk": 38,
       "mobiliteit": 44,
-      "fietsveiligheid": 31,
+      "fietsveiligheid": 1,
       "onderwijs": 52,
       "wonen": 82,
       "veiligheid": 79,
-      "zorg": 72,
-      "bestuur": 21,
+      "zorg": 18,
+      "bestuur": 9,
       "armoede": 38,
-      "leefbaarheid": 69
+      "leefbaarheid": 40
     }
   },
   {
@@ -15205,14 +15205,14 @@
       "economie": 89,
       "werk": 62,
       "mobiliteit": 35,
-      "fietsveiligheid": 41,
+      "fietsveiligheid": 19,
       "onderwijs": 56,
       "wonen": 7,
       "veiligheid": 84,
-      "zorg": 65,
-      "bestuur": 23,
+      "zorg": 7,
+      "bestuur": 20,
       "armoede": 96,
-      "leefbaarheid": 68
+      "leefbaarheid": 33
     }
   },
   {
@@ -15295,14 +15295,14 @@
       "economie": 3,
       "werk": 4,
       "mobiliteit": 79,
-      "fietsveiligheid": 45,
+      "fietsveiligheid": 32,
       "onderwijs": 4,
       "wonen": 99,
       "veiligheid": 10,
-      "zorg": 86,
-      "bestuur": 28,
+      "zorg": 78,
+      "bestuur": 43,
       "armoede": 9,
-      "leefbaarheid": 59
+      "leefbaarheid": 7
     }
   },
   {
@@ -15385,14 +15385,14 @@
       "economie": 75,
       "werk": 62,
       "mobiliteit": 35,
-      "fietsveiligheid": 40,
+      "fietsveiligheid": 16,
       "onderwijs": 20,
       "wonen": 23,
       "veiligheid": 63,
-      "zorg": 72,
-      "bestuur": 23,
+      "zorg": 18,
+      "bestuur": 20,
       "armoede": 46,
-      "leefbaarheid": 64
+      "leefbaarheid": 17
     }
   },
   {
@@ -15525,14 +15525,14 @@
       "economie": 30,
       "werk": 18,
       "mobiliteit": 50,
-      "fietsveiligheid": 68,
+      "fietsveiligheid": 98,
       "onderwijs": 67,
       "wonen": 35,
       "veiligheid": 37,
-      "zorg": 90,
-      "bestuur": 52,
+      "zorg": 93,
+      "bestuur": 99,
       "armoede": 78,
-      "leefbaarheid": 82
+      "leefbaarheid": 99
     }
   },
   {
@@ -15615,14 +15615,14 @@
       "economie": 1,
       "werk": 15,
       "mobiliteit": 42,
-      "fietsveiligheid": 50,
+      "fietsveiligheid": 53,
       "onderwijs": 31,
       "wonen": 50,
       "veiligheid": 19,
-      "zorg": 29,
-      "bestuur": 51,
+      "zorg": 1,
+      "bestuur": 98,
       "armoede": 2,
-      "leefbaarheid": 75
+      "leefbaarheid": 79
     }
   },
   {
@@ -15705,14 +15705,14 @@
       "economie": 7,
       "werk": 21,
       "mobiliteit": 76,
-      "fietsveiligheid": 60,
+      "fietsveiligheid": 84,
       "onderwijs": 18,
       "wonen": 83,
       "veiligheid": 4,
-      "zorg": 76,
-      "bestuur": 32,
+      "zorg": 31,
+      "bestuur": 62,
       "armoede": 25,
-      "leefbaarheid": 71
+      "leefbaarheid": 56
     }
   },
   {
@@ -15795,14 +15795,14 @@
       "economie": 33,
       "werk": 13,
       "mobiliteit": 49,
-      "fietsveiligheid": 50,
+      "fietsveiligheid": 53,
       "onderwijs": 17,
       "wonen": 55,
       "veiligheid": 25,
-      "zorg": 87,
-      "bestuur": 36,
+      "zorg": 83,
+      "bestuur": 77,
       "armoede": 35,
-      "leefbaarheid": 70
+      "leefbaarheid": 49
     }
   },
   {
@@ -15885,14 +15885,14 @@
       "economie": 22,
       "werk": 75,
       "mobiliteit": 44,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 27,
       "wonen": 98,
       "veiligheid": 79,
-      "zorg": 85,
-      "bestuur": 20,
+      "zorg": 74,
+      "bestuur": 8,
       "armoede": 62,
-      "leefbaarheid": 68
+      "leefbaarheid": 30
     }
   },
   {
@@ -15975,14 +15975,14 @@
       "economie": 59,
       "werk": 7,
       "mobiliteit": 37,
-      "fietsveiligheid": 59,
+      "fietsveiligheid": 81,
       "onderwijs": 31,
       "wonen": 12,
       "veiligheid": 13,
-      "zorg": 81,
-      "bestuur": 31,
+      "zorg": 55,
+      "bestuur": 59,
       "armoede": 27,
-      "leefbaarheid": 62
+      "leefbaarheid": 12
     }
   },
   {
@@ -16115,14 +16115,14 @@
       "economie": 39,
       "werk": 27,
       "mobiliteit": 52,
-      "fietsveiligheid": 41,
+      "fietsveiligheid": 19,
       "onderwijs": 25,
       "wonen": 78,
       "veiligheid": 45,
-      "zorg": 73,
-      "bestuur": 19,
+      "zorg": 21,
+      "bestuur": 6,
       "armoede": 36,
-      "leefbaarheid": 57
+      "leefbaarheid": 5
     }
   },
   {
@@ -16205,14 +16205,14 @@
       "economie": 35,
       "werk": 83,
       "mobiliteit": 27,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 75,
       "wonen": 50,
       "veiligheid": 89,
-      "zorg": 81,
-      "bestuur": 25,
+      "zorg": 55,
+      "bestuur": 29,
       "armoede": 75,
-      "leefbaarheid": 72
+      "leefbaarheid": 59
     }
   },
   {
@@ -16295,14 +16295,14 @@
       "economie": 11,
       "werk": 7,
       "mobiliteit": 97,
-      "fietsveiligheid": 62,
+      "fietsveiligheid": 89,
       "onderwijs": 6,
       "wonen": 47,
       "veiligheid": 3,
-      "zorg": 83,
-      "bestuur": 31,
+      "zorg": 63,
+      "bestuur": 59,
       "armoede": 5,
-      "leefbaarheid": 75
+      "leefbaarheid": 76
     }
   },
   {
@@ -16385,14 +16385,14 @@
       "economie": 65,
       "werk": 62,
       "mobiliteit": 2,
-      "fietsveiligheid": 54,
+      "fietsveiligheid": 69,
       "onderwijs": 82,
       "wonen": 45,
       "veiligheid": 92,
-      "zorg": 84,
-      "bestuur": 27,
+      "zorg": 70,
+      "bestuur": 38,
       "armoede": 66,
-      "leefbaarheid": 73
+      "leefbaarheid": 64
     }
   },
   {
@@ -16475,14 +16475,14 @@
       "economie": 26,
       "werk": 27,
       "mobiliteit": 32,
-      "fietsveiligheid": 34,
+      "fietsveiligheid": 6,
       "onderwijs": 13,
       "wonen": 77,
       "veiligheid": 14,
-      "zorg": 70,
-      "bestuur": 23,
+      "zorg": 14,
+      "bestuur": 20,
       "armoede": 22,
-      "leefbaarheid": 58
+      "leefbaarheid": 6
     }
   },
   {
@@ -16565,14 +16565,14 @@
       "economie": 56,
       "werk": 34,
       "mobiliteit": 87,
-      "fietsveiligheid": 60,
+      "fietsveiligheid": 84,
       "onderwijs": 67,
       "wonen": 33,
       "veiligheid": 65,
-      "zorg": 85,
-      "bestuur": 26,
+      "zorg": 74,
+      "bestuur": 34,
       "armoede": 81,
-      "leefbaarheid": 72
+      "leefbaarheid": 57
     }
   },
   {
@@ -16655,14 +16655,14 @@
       "economie": 2,
       "werk": 1,
       "mobiliteit": 80,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 1,
       "wonen": 74,
       "veiligheid": 2,
-      "zorg": 74,
-      "bestuur": 22,
+      "zorg": 23,
+      "bestuur": 15,
       "armoede": 1,
-      "leefbaarheid": 62
+      "leefbaarheid": 11
     }
   },
   {
@@ -16745,14 +16745,14 @@
       "economie": 88,
       "werk": 99,
       "mobiliteit": 36,
-      "fietsveiligheid": 32,
+      "fietsveiligheid": 3,
       "onderwijs": 96,
       "wonen": 32,
       "veiligheid": 73,
-      "zorg": 81,
-      "bestuur": 22,
+      "zorg": 55,
+      "bestuur": 15,
       "armoede": 94,
-      "leefbaarheid": 66
+      "leefbaarheid": 22
     }
   },
   {
@@ -16835,14 +16835,14 @@
       "economie": 65,
       "werk": 86,
       "mobiliteit": 70,
-      "fietsveiligheid": 52,
+      "fietsveiligheid": 59,
       "onderwijs": 91,
       "wonen": 14,
       "veiligheid": 83,
-      "zorg": 89,
-      "bestuur": 44,
+      "zorg": 90,
+      "bestuur": 92,
       "armoede": 51,
-      "leefbaarheid": 80
+      "leefbaarheid": 97
     }
   },
   {
@@ -16925,14 +16925,14 @@
       "economie": 22,
       "werk": 90,
       "mobiliteit": 15,
-      "fietsveiligheid": 44,
+      "fietsveiligheid": 28,
       "onderwijs": 56,
       "wonen": 59,
       "veiligheid": 65,
-      "zorg": 91,
-      "bestuur": 30,
+      "zorg": 96,
+      "bestuur": 56,
       "armoede": 50,
-      "leefbaarheid": 72
+      "leefbaarheid": 58
     }
   },
   {
@@ -17015,14 +17015,14 @@
       "economie": 75,
       "werk": 68,
       "mobiliteit": 27,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 69,
       "wonen": 49,
       "veiligheid": 65,
-      "zorg": 62,
-      "bestuur": 25,
+      "zorg": 5,
+      "bestuur": 29,
       "armoede": 85,
-      "leefbaarheid": 70
+      "leefbaarheid": 49
     }
   },
   {
@@ -17105,14 +17105,14 @@
       "economie": 99,
       "werk": 68,
       "mobiliteit": 9,
-      "fietsveiligheid": 55,
+      "fietsveiligheid": 72,
       "onderwijs": 94,
       "wonen": 9,
       "veiligheid": 88,
-      "zorg": 83,
-      "bestuur": 36,
+      "zorg": 63,
+      "bestuur": 77,
       "armoede": 99,
-      "leefbaarheid": 71
+      "leefbaarheid": 52
     }
   },
   {
@@ -17195,14 +17195,14 @@
       "economie": 70,
       "werk": 41,
       "mobiliteit": 34,
-      "fietsveiligheid": 55,
+      "fietsveiligheid": 72,
       "onderwijs": 78,
       "wonen": 18,
       "veiligheid": 85,
-      "zorg": 69,
-      "bestuur": 26,
+      "zorg": 13,
+      "bestuur": 34,
       "armoede": 32,
-      "leefbaarheid": 74
+      "leefbaarheid": 71
     }
   },
   {
@@ -17285,14 +17285,14 @@
       "economie": 46,
       "werk": 15,
       "mobiliteit": 89,
-      "fietsveiligheid": 32,
+      "fietsveiligheid": 3,
       "onderwijs": 31,
       "wonen": 73,
       "veiligheid": 20,
-      "zorg": 87,
-      "bestuur": 25,
+      "zorg": 83,
+      "bestuur": 29,
       "armoede": 20,
-      "leefbaarheid": 66
+      "leefbaarheid": 20
     }
   },
   {
@@ -17375,14 +17375,14 @@
       "economie": 36,
       "werk": 48,
       "mobiliteit": 39,
-      "fietsveiligheid": 45,
+      "fietsveiligheid": 32,
       "onderwijs": 33,
       "wonen": 47,
       "veiligheid": 71,
-      "zorg": 72,
-      "bestuur": 34,
+      "zorg": 18,
+      "bestuur": 69,
       "armoede": 23,
-      "leefbaarheid": 68
+      "leefbaarheid": 33
     }
   },
   {
@@ -17449,14 +17449,14 @@
       "economie": 36,
       "werk": 60,
       "mobiliteit": 67,
-      "fietsveiligheid": 63,
+      "fietsveiligheid": 92,
       "onderwijs": 85,
       "wonen": 52,
       "veiligheid": 84,
-      "zorg": 72,
-      "bestuur": 21,
+      "zorg": 18,
+      "bestuur": 9,
       "armoede": 80,
-      "leefbaarheid": 73
+      "leefbaarheid": 69
     }
   },
   {
@@ -17539,14 +17539,14 @@
       "economie": 95,
       "werk": 73,
       "mobiliteit": 16,
-      "fietsveiligheid": 50,
+      "fietsveiligheid": 53,
       "onderwijs": 99,
       "wonen": 3,
       "veiligheid": 57,
-      "zorg": 84,
-      "bestuur": 29,
+      "zorg": 70,
+      "bestuur": 48,
       "armoede": 99,
-      "leefbaarheid": 70
+      "leefbaarheid": 43
     }
   },
   {
@@ -17679,14 +17679,14 @@
       "economie": 23,
       "werk": 65,
       "mobiliteit": 34,
-      "fietsveiligheid": 64,
+      "fietsveiligheid": 93,
       "onderwijs": 56,
       "wonen": 59,
       "veiligheid": 31,
-      "zorg": 78,
-      "bestuur": 26,
+      "zorg": 40,
+      "bestuur": 34,
       "armoede": 57,
-      "leefbaarheid": 73
+      "leefbaarheid": 66
     }
   },
   {
@@ -17753,14 +17753,14 @@
       "economie": 21,
       "werk": 36,
       "mobiliteit": 42,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 38,
       "wonen": 61,
       "veiligheid": 45,
       "zorg": 88,
-      "bestuur": 33,
+      "bestuur": 65,
       "armoede": 66,
-      "leefbaarheid": 72
+      "leefbaarheid": 58
     }
   },
   {
@@ -17843,14 +17843,14 @@
       "economie": 94,
       "werk": 95,
       "mobiliteit": 29,
-      "fietsveiligheid": 33,
+      "fietsveiligheid": 5,
       "onderwijs": 73,
       "wonen": 50,
       "veiligheid": 99,
-      "zorg": 53,
-      "bestuur": 25,
+      "zorg": 2,
+      "bestuur": 29,
       "armoede": 96,
-      "leefbaarheid": 70
+      "leefbaarheid": 42
     }
   },
   {
@@ -17933,14 +17933,14 @@
       "economie": 26,
       "werk": 75,
       "mobiliteit": 58,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 85,
       "wonen": 67,
       "veiligheid": 86,
-      "zorg": 77,
-      "bestuur": 39,
+      "zorg": 35,
+      "bestuur": 83,
       "armoede": 82,
-      "leefbaarheid": 77
+      "leefbaarheid": 88
     }
   },
   {
@@ -18023,14 +18023,14 @@
       "economie": 5,
       "werk": 55,
       "mobiliteit": 72,
-      "fietsveiligheid": 52,
+      "fietsveiligheid": 59,
       "onderwijs": 27,
       "wonen": 97,
       "veiligheid": 34,
-      "zorg": 92,
-      "bestuur": 36,
+      "zorg": 98,
+      "bestuur": 77,
       "armoede": 15,
-      "leefbaarheid": 77
+      "leefbaarheid": 88
     }
   },
   {
@@ -18113,14 +18113,14 @@
       "economie": 62,
       "werk": 73,
       "mobiliteit": 22,
-      "fietsveiligheid": 48,
+      "fietsveiligheid": 44,
       "onderwijs": 58,
       "wonen": 28,
       "veiligheid": 72,
-      "zorg": 74,
-      "bestuur": 22,
+      "zorg": 23,
+      "bestuur": 15,
       "armoede": 55,
-      "leefbaarheid": 68
+      "leefbaarheid": 28
     }
   },
   {
@@ -18187,14 +18187,14 @@
       "economie": 79,
       "werk": 65,
       "mobiliteit": 83,
-      "fietsveiligheid": 51,
+      "fietsveiligheid": 55,
       "onderwijs": 58,
       "wonen": 30,
       "veiligheid": 44,
-      "zorg": 76,
-      "bestuur": 42,
+      "zorg": 31,
+      "bestuur": 88,
       "armoede": 44,
-      "leefbaarheid": 75
+      "leefbaarheid": 76
     }
   },
   {
@@ -18277,14 +18277,14 @@
       "economie": 82,
       "werk": 60,
       "mobiliteit": 44,
-      "fietsveiligheid": 61,
+      "fietsveiligheid": 88,
       "onderwijs": 91,
       "wonen": 15,
       "veiligheid": 57,
-      "zorg": 72,
-      "bestuur": 18,
+      "zorg": 18,
+      "bestuur": 3,
       "armoede": 48,
-      "leefbaarheid": 69
+      "leefbaarheid": 40
     }
   },
   {
@@ -18367,14 +18367,14 @@
       "economie": 19,
       "werk": 60,
       "mobiliteit": 21,
-      "fietsveiligheid": 55,
+      "fietsveiligheid": 72,
       "onderwijs": 39,
       "wonen": 18,
       "veiligheid": 51,
-      "zorg": 67,
-      "bestuur": 40,
+      "zorg": 12,
+      "bestuur": 84,
       "armoede": 58,
-      "leefbaarheid": 75
+      "leefbaarheid": 76
     }
   },
   {
@@ -18457,14 +18457,14 @@
       "economie": 49,
       "werk": 32,
       "mobiliteit": 7,
-      "fietsveiligheid": 71,
+      "fietsveiligheid": 99,
       "onderwijs": 46,
       "wonen": 48,
       "veiligheid": 50,
-      "zorg": 81,
-      "bestuur": 34,
+      "zorg": 55,
+      "bestuur": 69,
       "armoede": 60,
-      "leefbaarheid": 78
+      "leefbaarheid": 93
     }
   },
   {
@@ -18547,14 +18547,14 @@
       "economie": 28,
       "werk": 41,
       "mobiliteit": 15,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 39,
       "wonen": 82,
       "veiligheid": 75,
-      "zorg": 70,
-      "bestuur": 32,
+      "zorg": 14,
+      "bestuur": 62,
       "armoede": 66,
-      "leefbaarheid": 72
+      "leefbaarheid": 58
     }
   },
   {
@@ -18637,14 +18637,14 @@
       "economie": 30,
       "werk": 83,
       "mobiliteit": 73,
-      "fietsveiligheid": 54,
+      "fietsveiligheid": 69,
       "onderwijs": 49,
       "wonen": 25,
       "veiligheid": 38,
-      "zorg": 83,
-      "bestuur": 32,
+      "zorg": 63,
+      "bestuur": 62,
       "armoede": 17,
-      "leefbaarheid": 76
+      "leefbaarheid": 85
     }
   },
   {
@@ -18727,14 +18727,14 @@
       "economie": 15,
       "werk": 6,
       "mobiliteit": 94,
-      "fietsveiligheid": 51,
+      "fietsveiligheid": 55,
       "onderwijs": 11,
       "wonen": 93,
       "veiligheid": 8,
-      "zorg": 91,
-      "bestuur": 40,
+      "zorg": 96,
+      "bestuur": 84,
       "armoede": 7,
-      "leefbaarheid": 71
+      "leefbaarheid": 51
     }
   },
   {
@@ -18817,14 +18817,14 @@
       "economie": 1,
       "werk": 2,
       "mobiliteit": 61,
-      "fietsveiligheid": 32,
+      "fietsveiligheid": 3,
       "onderwijs": 1,
       "wonen": 99,
       "veiligheid": 10,
-      "zorg": 74,
-      "bestuur": 27,
+      "zorg": 23,
+      "bestuur": 38,
       "armoede": 14,
-      "leefbaarheid": 63
+      "leefbaarheid": 13
     }
   },
   {
@@ -18907,14 +18907,14 @@
       "economie": 82,
       "werk": 95,
       "mobiliteit": 2,
-      "fietsveiligheid": 36,
+      "fietsveiligheid": 8,
       "onderwijs": 80,
       "wonen": 25,
       "veiligheid": 54,
-      "zorg": 75,
-      "bestuur": 21,
+      "zorg": 27,
+      "bestuur": 9,
       "armoede": 83,
-      "leefbaarheid": 65
+      "leefbaarheid": 19
     }
   },
   {
@@ -18997,14 +18997,14 @@
       "economie": 94,
       "werk": 89,
       "mobiliteit": 91,
-      "fietsveiligheid": 56,
+      "fietsveiligheid": 76,
       "onderwijs": 97,
       "wonen": 24,
       "veiligheid": 69,
-      "zorg": 77,
-      "bestuur": 28,
+      "zorg": 35,
+      "bestuur": 43,
       "armoede": 93,
-      "leefbaarheid": 67
+      "leefbaarheid": 26
     }
   },
   {
@@ -19087,14 +19087,14 @@
       "economie": 81,
       "werk": 62,
       "mobiliteit": 56,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 52,
       "wonen": 50,
       "veiligheid": 32,
-      "zorg": 66,
+      "zorg": 9,
       "bestuur": 24,
       "armoede": 77,
-      "leefbaarheid": 65
+      "leefbaarheid": 20
     }
   },
   {
@@ -19177,14 +19177,14 @@
       "economie": 72,
       "werk": 60,
       "mobiliteit": 72,
-      "fietsveiligheid": 64,
+      "fietsveiligheid": 93,
       "onderwijs": 36,
       "wonen": 33,
       "veiligheid": 30,
-      "zorg": 47,
-      "bestuur": 26,
+      "zorg": 1,
+      "bestuur": 34,
       "armoede": 71,
-      "leefbaarheid": 68
+      "leefbaarheid": 29
     }
   },
   {
@@ -19267,14 +19267,14 @@
       "economie": 47,
       "werk": 41,
       "mobiliteit": 9,
-      "fietsveiligheid": 40,
+      "fietsveiligheid": 16,
       "onderwijs": 52,
       "wonen": 77,
       "veiligheid": 64,
-      "zorg": 80,
-      "bestuur": 16,
+      "zorg": 49,
+      "bestuur": 2,
       "armoede": 24,
-      "leefbaarheid": 63
+      "leefbaarheid": 14
     }
   },
   {
@@ -19357,14 +19357,14 @@
       "economie": 97,
       "werk": 75,
       "mobiliteit": 45,
-      "fietsveiligheid": 59,
+      "fietsveiligheid": 81,
       "onderwijs": 95,
       "wonen": 2,
       "veiligheid": 48,
-      "zorg": 86,
-      "bestuur": 28,
+      "zorg": 78,
+      "bestuur": 43,
       "armoede": 96,
-      "leefbaarheid": 75
+      "leefbaarheid": 79
     }
   },
   {
@@ -19447,12 +19447,12 @@
       "economie": 73,
       "werk": 27,
       "mobiliteit": 59,
-      "fietsveiligheid": 62,
+      "fietsveiligheid": 89,
       "onderwijs": 24,
       "wonen": 27,
       "veiligheid": 19,
-      "zorg": 86,
-      "bestuur": 33,
+      "zorg": 78,
+      "bestuur": 65,
       "armoede": 42,
       "leefbaarheid": 74
     }
@@ -19537,14 +19537,14 @@
       "economie": 98,
       "werk": 36,
       "mobiliteit": 8,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 92,
       "wonen": 2,
       "veiligheid": 69,
-      "zorg": 79,
-      "bestuur": 49,
+      "zorg": 44,
+      "bestuur": 97,
       "armoede": 95,
-      "leefbaarheid": 75
+      "leefbaarheid": 76
     }
   },
   {
@@ -19627,14 +19627,14 @@
       "economie": 69,
       "werk": 55,
       "mobiliteit": 21,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 36,
       "wonen": 60,
       "veiligheid": 76,
-      "zorg": 80,
-      "bestuur": 25,
+      "zorg": 49,
+      "bestuur": 29,
       "armoede": 13,
-      "leefbaarheid": 69
+      "leefbaarheid": 36
     }
   },
   {
@@ -19717,14 +19717,14 @@
       "economie": 77,
       "werk": 60,
       "mobiliteit": 61,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 58,
       "wonen": 17,
       "veiligheid": 50,
-      "zorg": 73,
-      "bestuur": 27,
+      "zorg": 21,
+      "bestuur": 38,
       "armoede": 58,
-      "leefbaarheid": 71
+      "leefbaarheid": 54
     }
   },
   {
@@ -19807,14 +19807,14 @@
       "economie": 44,
       "werk": 65,
       "mobiliteit": 12,
-      "fietsveiligheid": 46,
+      "fietsveiligheid": 35,
       "onderwijs": 75,
       "wonen": 50,
       "veiligheid": 91,
-      "zorg": 65,
-      "bestuur": 28,
+      "zorg": 7,
+      "bestuur": 43,
       "armoede": 6,
-      "leefbaarheid": 74
+      "leefbaarheid": 71
     }
   },
   {
@@ -19897,14 +19897,14 @@
       "economie": 74,
       "werk": 86,
       "mobiliteit": 23,
-      "fietsveiligheid": 33,
+      "fietsveiligheid": 5,
       "onderwijs": 73,
       "wonen": 62,
       "veiligheid": 56,
-      "zorg": 84,
-      "bestuur": 37,
+      "zorg": 70,
+      "bestuur": 80,
       "armoede": 68,
-      "leefbaarheid": 74
+      "leefbaarheid": 71
     }
   },
   {
@@ -19987,14 +19987,14 @@
       "economie": 99,
       "werk": 90,
       "mobiliteit": 94,
-      "fietsveiligheid": 52,
+      "fietsveiligheid": 59,
       "onderwijs": 99,
       "wonen": 1,
       "veiligheid": 87,
-      "zorg": 94,
-      "bestuur": 40,
+      "zorg": 99,
+      "bestuur": 84,
       "armoede": 97,
-      "leefbaarheid": 77
+      "leefbaarheid": 91
     }
   },
   {
@@ -20077,14 +20077,14 @@
       "economie": 12,
       "werk": 2,
       "mobiliteit": 65,
-      "fietsveiligheid": 46,
+      "fietsveiligheid": 35,
       "onderwijs": 4,
       "wonen": 66,
       "veiligheid": 5,
-      "zorg": 78,
-      "bestuur": 25,
+      "zorg": 40,
+      "bestuur": 29,
       "armoede": 4,
-      "leefbaarheid": 58
+      "leefbaarheid": 6
     }
   },
   {
@@ -20167,14 +20167,14 @@
       "economie": 17,
       "werk": 27,
       "mobiliteit": 46,
-      "fietsveiligheid": 48,
+      "fietsveiligheid": 44,
       "onderwijs": 3,
       "wonen": 35,
       "veiligheid": 19,
-      "zorg": 74,
-      "bestuur": 40,
+      "zorg": 23,
+      "bestuur": 84,
       "armoede": 64,
-      "leefbaarheid": 70
+      "leefbaarheid": 45
     }
   },
   {
@@ -20257,14 +20257,14 @@
       "economie": 13,
       "werk": 10,
       "mobiliteit": 61,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 17,
       "wonen": 91,
       "veiligheid": 11,
-      "zorg": 87,
-      "bestuur": 13,
+      "zorg": 83,
+      "bestuur": 1,
       "armoede": 8,
-      "leefbaarheid": 65
+      "leefbaarheid": 18
     }
   },
   {
@@ -20347,14 +20347,14 @@
       "economie": 8,
       "werk": 11,
       "mobiliteit": 99,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 85,
       "wonen": 50,
       "veiligheid": 25,
-      "zorg": 77,
-      "bestuur": 49,
+      "zorg": 35,
+      "bestuur": 97,
       "armoede": 98,
-      "leefbaarheid": 75
+      "leefbaarheid": 82
     }
   },
   {
@@ -20437,14 +20437,14 @@
       "economie": 71,
       "werk": 45,
       "mobiliteit": 14,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 33,
       "wonen": 38,
       "veiligheid": 70,
-      "zorg": 62,
-      "bestuur": 23,
+      "zorg": 5,
+      "bestuur": 20,
       "armoede": 49,
-      "leefbaarheid": 68
+      "leefbaarheid": 28
     }
   },
   {
@@ -20527,14 +20527,14 @@
       "economie": 15,
       "werk": 80,
       "mobiliteit": 90,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 56,
       "wonen": 90,
       "veiligheid": 74,
-      "zorg": 84,
-      "bestuur": 33,
+      "zorg": 70,
+      "bestuur": 65,
       "armoede": 36,
-      "leefbaarheid": 73
+      "leefbaarheid": 67
     }
   },
   {
@@ -20617,14 +20617,14 @@
       "economie": 86,
       "werk": 80,
       "mobiliteit": 67,
-      "fietsveiligheid": 55,
+      "fietsveiligheid": 72,
       "onderwijs": 33,
       "wonen": 5,
       "veiligheid": 23,
-      "zorg": 74,
-      "bestuur": 42,
+      "zorg": 23,
+      "bestuur": 88,
       "armoede": 87,
-      "leefbaarheid": 77
+      "leefbaarheid": 90
     }
   },
   {
@@ -20707,14 +20707,14 @@
       "economie": 60,
       "werk": 45,
       "mobiliteit": 28,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 43,
       "wonen": 58,
       "veiligheid": 66,
-      "zorg": 79,
-      "bestuur": 32,
+      "zorg": 44,
+      "bestuur": 62,
       "armoede": 19,
-      "leefbaarheid": 73
+      "leefbaarheid": 69
     }
   },
   {
@@ -20797,14 +20797,14 @@
       "economie": 51,
       "werk": 15,
       "mobiliteit": 86,
-      "fietsveiligheid": 39,
+      "fietsveiligheid": 13,
       "onderwijs": 10,
       "wonen": 59,
       "veiligheid": 22,
-      "zorg": 77,
-      "bestuur": 28,
+      "zorg": 35,
+      "bestuur": 43,
       "armoede": 27,
-      "leefbaarheid": 61
+      "leefbaarheid": 9
     }
   },
   {
@@ -20887,14 +20887,14 @@
       "economie": 77,
       "werk": 83,
       "mobiliteit": 64,
-      "fietsveiligheid": 37,
+      "fietsveiligheid": 11,
       "onderwijs": 36,
       "wonen": 35,
       "veiligheid": 22,
-      "zorg": 81,
-      "bestuur": 23,
+      "zorg": 55,
+      "bestuur": 20,
       "armoede": 90,
-      "leefbaarheid": 65
+      "leefbaarheid": 19
     }
   },
   {
@@ -20977,14 +20977,14 @@
       "economie": 98,
       "werk": 48,
       "mobiliteit": 7,
-      "fietsveiligheid": 53,
+      "fietsveiligheid": 64,
       "onderwijs": 89,
       "wonen": 2,
       "veiligheid": 64,
-      "zorg": 89,
-      "bestuur": 39,
+      "zorg": 90,
+      "bestuur": 83,
       "armoede": 87,
-      "leefbaarheid": 77
+      "leefbaarheid": 91
     }
   },
   {
@@ -21167,14 +21167,14 @@
       "economie": 72,
       "werk": 51,
       "mobiliteit": 12,
-      "fietsveiligheid": 37,
+      "fietsveiligheid": 11,
       "onderwijs": 62,
       "wonen": 28,
       "veiligheid": 75,
-      "zorg": 79,
-      "bestuur": 18,
+      "zorg": 44,
+      "bestuur": 3,
       "armoede": 45,
-      "leefbaarheid": 62
+      "leefbaarheid": 10
     }
   },
   {
@@ -21257,14 +21257,14 @@
       "economie": 20,
       "werk": 5,
       "mobiliteit": 49,
-      "fietsveiligheid": 34,
+      "fietsveiligheid": 6,
       "onderwijs": 6,
       "wonen": 92,
       "veiligheid": 11,
-      "zorg": 80,
-      "bestuur": 21,
+      "zorg": 49,
+      "bestuur": 9,
       "armoede": 30,
-      "leefbaarheid": 54
+      "leefbaarheid": 3
     }
   },
   {
@@ -21397,14 +21397,14 @@
       "economie": 29,
       "werk": 32,
       "mobiliteit": 33,
-      "fietsveiligheid": 44,
+      "fietsveiligheid": 28,
       "onderwijs": 62,
       "wonen": 73,
       "veiligheid": 54,
-      "zorg": 87,
-      "bestuur": 29,
+      "zorg": 83,
+      "bestuur": 48,
       "armoede": 11,
-      "leefbaarheid": 68
+      "leefbaarheid": 33
     }
   },
   {
@@ -21487,14 +21487,14 @@
       "economie": 78,
       "werk": 83,
       "mobiliteit": 1,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 89,
       "wonen": 31,
       "veiligheid": 90,
-      "zorg": 79,
-      "bestuur": 18,
+      "zorg": 44,
+      "bestuur": 3,
       "armoede": 82,
-      "leefbaarheid": 71
+      "leefbaarheid": 51
     }
   },
   {
@@ -21577,14 +21577,14 @@
       "economie": 3,
       "werk": 1,
       "mobiliteit": 77,
-      "fietsveiligheid": 41,
+      "fietsveiligheid": 19,
       "onderwijs": 5,
       "wonen": 78,
       "veiligheid": 6,
-      "zorg": 72,
-      "bestuur": 20,
+      "zorg": 18,
+      "bestuur": 8,
       "armoede": 2,
-      "leefbaarheid": 53
+      "leefbaarheid": 2
     }
   },
   {
@@ -21667,14 +21667,14 @@
       "economie": 12,
       "werk": 45,
       "mobiliteit": 98,
-      "fietsveiligheid": 46,
+      "fietsveiligheid": 35,
       "onderwijs": 46,
       "wonen": 57,
       "veiligheid": 17,
-      "zorg": 71,
-      "bestuur": 29,
+      "zorg": 16,
+      "bestuur": 48,
       "armoede": 19,
-      "leefbaarheid": 67
+      "leefbaarheid": 25
     }
   },
   {
@@ -21757,14 +21757,14 @@
       "economie": 14,
       "werk": 8,
       "mobiliteit": 81,
-      "fietsveiligheid": 43,
+      "fietsveiligheid": 25,
       "onderwijs": 1,
       "wonen": 37,
       "veiligheid": 9,
-      "zorg": 64,
-      "bestuur": 27,
+      "zorg": 6,
+      "bestuur": 38,
       "armoede": 18,
-      "leefbaarheid": 55
+      "leefbaarheid": 3
     }
   },
   {
@@ -21847,14 +21847,14 @@
       "economie": 7,
       "werk": 96,
       "mobiliteit": 47,
-      "fietsveiligheid": 57,
+      "fietsveiligheid": 78,
       "onderwijs": 38,
       "wonen": 50,
       "veiligheid": 98,
-      "zorg": 80,
-      "bestuur": 43,
+      "zorg": 49,
+      "bestuur": 91,
       "armoede": 47,
-      "leefbaarheid": 78
+      "leefbaarheid": 94
     }
   },
   {
@@ -21937,14 +21937,14 @@
       "economie": 50,
       "werk": 80,
       "mobiliteit": 10,
-      "fietsveiligheid": 40,
+      "fietsveiligheid": 16,
       "onderwijs": 62,
       "wonen": 50,
       "veiligheid": 63,
-      "zorg": 58,
-      "bestuur": 42,
+      "zorg": 3,
+      "bestuur": 88,
       "armoede": 70,
-      "leefbaarheid": 75
+      "leefbaarheid": 80
     }
   },
   {
@@ -22027,14 +22027,14 @@
       "economie": 51,
       "werk": 51,
       "mobiliteit": 14,
-      "fietsveiligheid": 60,
+      "fietsveiligheid": 84,
       "onderwijs": 88,
       "wonen": 26,
       "veiligheid": 71,
-      "zorg": 48,
-      "bestuur": 56,
+      "zorg": 2,
+      "bestuur": 99,
       "armoede": 59,
-      "leefbaarheid": 81
+      "leefbaarheid": 99
     }
   },
   {
@@ -22117,14 +22117,14 @@
       "economie": 84,
       "werk": 60,
       "mobiliteit": 4,
-      "fietsveiligheid": 62,
+      "fietsveiligheid": 89,
       "onderwijs": 88,
       "wonen": 23,
       "veiligheid": 86,
-      "zorg": 83,
-      "bestuur": 36,
+      "zorg": 63,
+      "bestuur": 77,
       "armoede": 49,
-      "leefbaarheid": 78
+      "leefbaarheid": 92
     }
   },
   {
@@ -22207,14 +22207,14 @@
       "economie": 90,
       "werk": 48,
       "mobiliteit": 24,
-      "fietsveiligheid": 46,
+      "fietsveiligheid": 35,
       "onderwijs": 37,
       "wonen": 19,
       "veiligheid": 52,
-      "zorg": 81,
-      "bestuur": 26,
+      "zorg": 55,
+      "bestuur": 34,
       "armoede": 42,
-      "leefbaarheid": 69
+      "leefbaarheid": 36
     }
   },
   {
@@ -22297,14 +22297,14 @@
       "economie": 41,
       "werk": 41,
       "mobiliteit": 98,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 43,
       "wonen": 64,
       "veiligheid": 35,
-      "zorg": 89,
-      "bestuur": 35,
+      "zorg": 90,
+      "bestuur": 74,
       "armoede": 34,
-      "leefbaarheid": 71
+      "leefbaarheid": 56
     }
   },
   {
@@ -22387,14 +22387,14 @@
       "economie": 51,
       "werk": 73,
       "mobiliteit": 24,
-      "fietsveiligheid": 41,
+      "fietsveiligheid": 19,
       "onderwijs": 88,
       "wonen": 68,
       "veiligheid": 90,
-      "zorg": 75,
-      "bestuur": 22,
+      "zorg": 27,
+      "bestuur": 15,
       "armoede": 79,
-      "leefbaarheid": 69
+      "leefbaarheid": 41
     }
   },
   {
@@ -22477,14 +22477,14 @@
       "economie": 55,
       "werk": 18,
       "mobiliteit": 17,
-      "fietsveiligheid": 51,
+      "fietsveiligheid": 55,
       "onderwijs": 18,
       "wonen": 5,
       "veiligheid": 16,
-      "zorg": 71,
-      "bestuur": 36,
+      "zorg": 16,
+      "bestuur": 77,
       "armoede": 53,
-      "leefbaarheid": 68
+      "leefbaarheid": 30
     }
   },
   {
@@ -22567,14 +22567,14 @@
       "economie": 6,
       "werk": 15,
       "mobiliteit": 16,
-      "fietsveiligheid": 48,
+      "fietsveiligheid": 44,
       "onderwijs": 9,
       "wonen": 99,
       "veiligheid": 24,
-      "zorg": 76,
-      "bestuur": 22,
+      "zorg": 31,
+      "bestuur": 15,
       "armoede": 21,
-      "leefbaarheid": 64
+      "leefbaarheid": 17
     }
   },
   {
@@ -22657,14 +22657,14 @@
       "economie": 50,
       "werk": 45,
       "mobiliteit": 78,
-      "fietsveiligheid": 65,
+      "fietsveiligheid": 95,
       "onderwijs": 56,
       "wonen": 60,
       "veiligheid": 38,
-      "zorg": 83,
-      "bestuur": 45,
+      "zorg": 63,
+      "bestuur": 94,
       "armoede": 32,
-      "leefbaarheid": 81
+      "leefbaarheid": 99
     }
   },
   {
@@ -22747,14 +22747,14 @@
       "economie": 29,
       "werk": 20,
       "mobiliteit": 76,
-      "fietsveiligheid": 36,
+      "fietsveiligheid": 8,
       "onderwijs": 7,
       "wonen": 88,
       "veiligheid": 14,
-      "zorg": 81,
-      "bestuur": 20,
+      "zorg": 55,
+      "bestuur": 8,
       "armoede": 20,
-      "leefbaarheid": 53
+      "leefbaarheid": 2
     }
   },
   {
@@ -22837,14 +22837,14 @@
       "economie": 42,
       "werk": 48,
       "mobiliteit": 76,
-      "fietsveiligheid": 44,
+      "fietsveiligheid": 28,
       "onderwijs": 40,
       "wonen": 95,
       "veiligheid": 61,
-      "zorg": 87,
-      "bestuur": 42,
+      "zorg": 83,
+      "bestuur": 88,
       "armoede": 59,
-      "leefbaarheid": 72
+      "leefbaarheid": 62
     }
   },
   {
@@ -22927,14 +22927,14 @@
       "economie": 93,
       "werk": 36,
       "mobiliteit": 1,
-      "fietsveiligheid": 48,
+      "fietsveiligheid": 44,
       "onderwijs": 92,
       "wonen": 1,
       "veiligheid": 29,
-      "zorg": 75,
-      "bestuur": 37,
+      "zorg": 27,
+      "bestuur": 80,
       "armoede": 97,
-      "leefbaarheid": 70
+      "leefbaarheid": 45
     }
   },
   {
@@ -23017,14 +23017,14 @@
       "economie": 57,
       "werk": 60,
       "mobiliteit": 14,
-      "fietsveiligheid": 36,
+      "fietsveiligheid": 8,
       "onderwijs": 73,
       "wonen": 58,
       "veiligheid": 55,
-      "zorg": 72,
-      "bestuur": 34,
+      "zorg": 18,
+      "bestuur": 69,
       "armoede": 71,
-      "leefbaarheid": 70
+      "leefbaarheid": 42
     }
   },
   {
@@ -23107,14 +23107,14 @@
       "economie": 38,
       "werk": 73,
       "mobiliteit": 96,
-      "fietsveiligheid": 41,
+      "fietsveiligheid": 19,
       "onderwijs": 64,
       "wonen": 65,
       "veiligheid": 79,
-      "zorg": 84,
-      "bestuur": 20,
+      "zorg": 70,
+      "bestuur": 8,
       "armoede": 72,
-      "leefbaarheid": 67
+      "leefbaarheid": 25
     }
   },
   {
@@ -23197,14 +23197,14 @@
       "economie": 57,
       "werk": 22,
       "mobiliteit": 94,
-      "fietsveiligheid": 69,
+      "fietsveiligheid": 98,
       "onderwijs": 39,
       "wonen": 32,
       "veiligheid": 4,
-      "zorg": 75,
-      "bestuur": 36,
+      "zorg": 27,
+      "bestuur": 77,
       "armoede": 63,
-      "leefbaarheid": 74
+      "leefbaarheid": 71
     }
   },
   {
@@ -23287,14 +23287,14 @@
       "economie": 31,
       "werk": 10,
       "mobiliteit": 71,
-      "fietsveiligheid": 42,
+      "fietsveiligheid": 23,
       "onderwijs": 3,
       "wonen": 63,
       "veiligheid": 26,
-      "zorg": 66,
-      "bestuur": 18,
+      "zorg": 9,
+      "bestuur": 3,
       "armoede": 14,
-      "leefbaarheid": 51
+      "leefbaarheid": 1
     }
   },
   {
@@ -23427,14 +23427,14 @@
       "economie": 59,
       "werk": 20,
       "mobiliteit": 91,
-      "fietsveiligheid": 62,
+      "fietsveiligheid": 89,
       "onderwijs": 37,
       "wonen": 22,
       "veiligheid": 25,
-      "zorg": 56,
-      "bestuur": 38,
+      "zorg": 2,
+      "bestuur": 81,
       "armoede": 35,
-      "leefbaarheid": 73
+      "leefbaarheid": 67
     }
   },
   {
@@ -23517,14 +23517,14 @@
       "economie": 86,
       "werk": 99,
       "mobiliteit": 84,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 97,
       "wonen": 50,
       "veiligheid": 95,
-      "zorg": 83,
-      "bestuur": 42,
+      "zorg": 63,
+      "bestuur": 88,
       "armoede": 99,
-      "leefbaarheid": 78
+      "leefbaarheid": 94
     }
   },
   {
@@ -23607,14 +23607,14 @@
       "economie": 46,
       "werk": 62,
       "mobiliteit": 28,
-      "fietsveiligheid": 59,
+      "fietsveiligheid": 81,
       "onderwijs": 58,
       "wonen": 21,
       "veiligheid": 46,
-      "zorg": 83,
-      "bestuur": 38,
+      "zorg": 63,
+      "bestuur": 81,
       "armoede": 89,
-      "leefbaarheid": 76
+      "leefbaarheid": 87
     }
   },
   {
@@ -23697,14 +23697,14 @@
       "economie": 69,
       "werk": 65,
       "mobiliteit": 75,
-      "fietsveiligheid": 66,
+      "fietsveiligheid": 96,
       "onderwijs": 69,
       "wonen": 16,
       "veiligheid": 78,
-      "zorg": 75,
-      "bestuur": 47,
+      "zorg": 27,
+      "bestuur": 95,
       "armoede": 85,
-      "leefbaarheid": 81
+      "leefbaarheid": 98
     }
   },
   {
@@ -23787,14 +23787,14 @@
       "economie": 32,
       "werk": 17,
       "mobiliteit": 99,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 14,
       "wonen": 9,
       "veiligheid": 10,
-      "zorg": 74,
-      "bestuur": 33,
+      "zorg": 23,
+      "bestuur": 65,
       "armoede": 34,
-      "leefbaarheid": 60
+      "leefbaarheid": 8
     }
   },
   {
@@ -23877,14 +23877,14 @@
       "economie": 67,
       "werk": 95,
       "mobiliteit": 71,
-      "fietsveiligheid": 38,
+      "fietsveiligheid": 12,
       "onderwijs": 88,
       "wonen": 39,
       "veiligheid": 96,
-      "zorg": 80,
-      "bestuur": 29,
+      "zorg": 49,
+      "bestuur": 48,
       "armoede": 57,
-      "leefbaarheid": 70
+      "leefbaarheid": 49
     }
   },
   {
@@ -23967,14 +23967,14 @@
       "economie": 19,
       "werk": 22,
       "mobiliteit": 81,
-      "fietsveiligheid": 44,
+      "fietsveiligheid": 28,
       "onderwijs": 13,
       "wonen": 76,
       "veiligheid": 21,
-      "zorg": 79,
-      "bestuur": 14,
+      "zorg": 44,
+      "bestuur": 1,
       "armoede": 28,
-      "leefbaarheid": 54
+      "leefbaarheid": 2
     }
   },
   {
@@ -24057,14 +24057,14 @@
       "economie": 6,
       "werk": 7,
       "mobiliteit": 70,
-      "fietsveiligheid": 27,
+      "fietsveiligheid": 1,
       "onderwijs": 1,
       "wonen": 92,
       "veiligheid": 5,
-      "zorg": 71,
-      "bestuur": 34,
+      "zorg": 16,
+      "bestuur": 69,
       "armoede": 5,
-      "leefbaarheid": 52
+      "leefbaarheid": 1
     }
   },
   {
@@ -24147,12 +24147,12 @@
       "economie": 96,
       "werk": 95,
       "mobiliteit": 19,
-      "fietsveiligheid": 66,
+      "fietsveiligheid": 96,
       "onderwijs": 67,
       "wonen": 22,
       "veiligheid": 56,
-      "zorg": 79,
-      "bestuur": 27,
+      "zorg": 44,
+      "bestuur": 38,
       "armoede": 94,
       "leefbaarheid": 74
     }
@@ -24237,14 +24237,14 @@
       "economie": 83,
       "werk": 80,
       "mobiliteit": 22,
-      "fietsveiligheid": 62,
+      "fietsveiligheid": 89,
       "onderwijs": 91,
       "wonen": 7,
       "veiligheid": 89,
-      "zorg": 86,
-      "bestuur": 26,
+      "zorg": 78,
+      "bestuur": 34,
       "armoede": 89,
-      "leefbaarheid": 75
+      "leefbaarheid": 79
     }
   },
   {
@@ -24327,14 +24327,14 @@
       "economie": 52,
       "werk": 55,
       "mobiliteit": 41,
-      "fietsveiligheid": 56,
+      "fietsveiligheid": 76,
       "onderwijs": 73,
       "wonen": 65,
       "veiligheid": 39,
-      "zorg": 89,
-      "bestuur": 40,
+      "zorg": 90,
+      "bestuur": 84,
       "armoede": 64,
-      "leefbaarheid": 78
+      "leefbaarheid": 92
     }
   },
   {
@@ -24417,14 +24417,14 @@
       "economie": 23,
       "werk": 89,
       "mobiliteit": 77,
-      "fietsveiligheid": 45,
+      "fietsveiligheid": 32,
       "onderwijs": 88,
       "wonen": 75,
       "veiligheid": 93,
-      "zorg": 82,
-      "bestuur": 31,
+      "zorg": 60,
+      "bestuur": 59,
       "armoede": 67,
-      "leefbaarheid": 75
+      "leefbaarheid": 76
     }
   },
   {
@@ -24507,14 +24507,14 @@
       "economie": 61,
       "werk": 34,
       "mobiliteit": 51,
-      "fietsveiligheid": 31,
+      "fietsveiligheid": 1,
       "onderwijs": 28,
       "wonen": 86,
       "veiligheid": 12,
-      "zorg": 85,
-      "bestuur": 18,
+      "zorg": 74,
+      "bestuur": 3,
       "armoede": 31,
-      "leefbaarheid": 57
+      "leefbaarheid": 5
     }
   },
   {
@@ -24597,14 +24597,14 @@
       "economie": 44,
       "werk": 38,
       "mobiliteit": 31,
-      "fietsveiligheid": 47,
+      "fietsveiligheid": 39,
       "onderwijs": 43,
       "wonen": 94,
       "veiligheid": 73,
-      "zorg": 80,
-      "bestuur": 29,
+      "zorg": 49,
+      "bestuur": 48,
       "armoede": 49,
-      "leefbaarheid": 69
+      "leefbaarheid": 36
     }
   },
   {
@@ -24687,14 +24687,14 @@
       "economie": 60,
       "werk": 96,
       "mobiliteit": 56,
-      "fietsveiligheid": 59,
+      "fietsveiligheid": 81,
       "onderwijs": 24,
       "wonen": 50,
       "veiligheid": 60,
-      "zorg": 37,
-      "bestuur": 50,
+      "zorg": 1,
+      "bestuur": 97,
       "armoede": 91,
-      "leefbaarheid": 82
+      "leefbaarheid": 99
     }
   },
   {
@@ -24777,14 +24777,14 @@
       "economie": 57,
       "werk": 80,
       "mobiliteit": 55,
-      "fietsveiligheid": 52,
+      "fietsveiligheid": 59,
       "onderwijs": 78,
       "wonen": 49,
       "veiligheid": 61,
       "zorg": 88,
-      "bestuur": 38,
+      "bestuur": 81,
       "armoede": 29,
-      "leefbaarheid": 74
+      "leefbaarheid": 75
     }
   },
   {
@@ -24867,14 +24867,14 @@
       "economie": 40,
       "werk": 38,
       "mobiliteit": 66,
-      "fietsveiligheid": 69,
+      "fietsveiligheid": 98,
       "onderwijs": 75,
       "wonen": 85,
       "veiligheid": 57,
-      "zorg": 60,
-      "bestuur": 35,
+      "zorg": 4,
+      "bestuur": 74,
       "armoede": 18,
-      "leefbaarheid": 79
+      "leefbaarheid": 95
     }
   },
   {
@@ -24957,14 +24957,14 @@
       "economie": 78,
       "werk": 92,
       "mobiliteit": 15,
-      "fietsveiligheid": 49,
+      "fietsveiligheid": 48,
       "onderwijs": 88,
       "wonen": 45,
       "veiligheid": 91,
-      "zorg": 79,
-      "bestuur": 29,
+      "zorg": 44,
+      "bestuur": 48,
       "armoede": 78,
-      "leefbaarheid": 73
+      "leefbaarheid": 67
     }
   },
   {
@@ -25047,14 +25047,14 @@
       "economie": 54,
       "werk": 68,
       "mobiliteit": 52,
-      "fietsveiligheid": 48,
+      "fietsveiligheid": 44,
       "onderwijs": 56,
       "wonen": 83,
       "veiligheid": 83,
-      "zorg": 86,
-      "bestuur": 15,
+      "zorg": 78,
+      "bestuur": 1,
       "armoede": 65,
-      "leefbaarheid": 66
+      "leefbaarheid": 21
     }
   }
 ]

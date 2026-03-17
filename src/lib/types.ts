@@ -50,18 +50,18 @@ export interface ThemaScores {
 export type ThemaKey = keyof ThemaScores;
 
 export const THEMA_TOOLTIPS: Record<ThemaKey, string> = {
-  demografie: "Percentiel-ranking op basis van jaarlijkse bevolkingsgroei (Statbel 2025). Hogere groei = hogere score.",
-  economie: "Percentiel-ranking op basis van mediaan netto belastbaar inkomen per aangifte (Statbel 2023).",
-  werk: "Percentiel-ranking op basis van werkzoekendengraad (Stadsmonitor WE_36). Lagere werkloosheid = hogere score.",
-  mobiliteit: "Percentiel-ranking op basis van laadpalen per 1000 inwoners (Dept. MOW WFS, live data).",
-  fietsveiligheid: "% inwoners dat zich veilig voelt om te fietsen in de gemeente (Stadsmonitor MO_S_06, burgerbevraging 2023).",
-  onderwijs: "Percentiel-ranking op basis van Onderwijskansarmoede-indicator OKI (Stadsmonitor AR_05). Lagere OKI = hogere score.",
-  wonen: "Percentiel-ranking op basis van mediaanprijs woningen (Statbel 2024). Lagere prijs = hogere score (betaalbaarder).",
-  veiligheid: "Percentiel-ranking op basis van criminaliteitsgraad per 1000 inwoners (Stadsmonitor SA_01). Minder criminaliteit = hogere score.",
-  zorg: "% inwoners dat tevreden is over gezondheidsvoorzieningen in de gemeente (Stadsmonitor ZO_S_06, burgerbevraging 2023).",
-  bestuur: "% inwoners dat veel vertrouwen heeft in het gemeentebestuur (Stadsmonitor LO_S_13, burgerbevraging 2023).",
-  armoede: "Percentiel-ranking op basis van kansarmoede-index (Stadsmonitor AR_03). Lagere kansarmoede = hogere score.",
-  leefbaarheid: "Gemiddelde van 6 survey-indicatoren: graag wonen, tevredenheid, netheid centrum, netheid straten, groen in buurt, vertrouwen bestuur (burgerbevraging 2023).",
+  demografie: "Bevolkingsgroei t.o.v. vorig jaar (Statbel 2025). Score 50 = mediaan. Hogere groei = hogere score.",
+  economie: "Mediaan netto belastbaar inkomen per aangifte (Statbel 2023). Score 50 = mediaan.",
+  werk: "Werkzoekendengraad (Stadsmonitor WE_36). Score 50 = mediaan. Lagere werkloosheid = hogere score.",
+  mobiliteit: "Laadpalen per 1000 inwoners (Dept. MOW WFS). Score 50 = mediaan. Meer laadpalen = hogere score.",
+  fietsveiligheid: "% inwoners dat zich veilig voelt om te fietsen (Stadsmonitor MO_S_06, 2023). Score 50 = mediaan t.o.v. andere gemeenten.",
+  onderwijs: "Onderwijskansarmoede-indicator OKI (Stadsmonitor AR_05). Score 50 = mediaan. Lagere OKI = hogere score.",
+  wonen: "Mediaanprijs woningen (Statbel 2024). Score 50 = mediaan. Lagere prijs = hogere score (betaalbaarder).",
+  veiligheid: "Criminaliteitsgraad per 1000 inwoners (Stadsmonitor SA_01). Score 50 = mediaan. Minder criminaliteit = hogere score.",
+  zorg: "Tevredenheid over gezondheidsvoorzieningen (Stadsmonitor ZO_S_06, 2023). Score 50 = mediaan t.o.v. andere gemeenten.",
+  bestuur: "Vertrouwen in gemeentebestuur (Stadsmonitor LO_S_13, 2023). Score 50 = mediaan t.o.v. andere gemeenten.",
+  armoede: "Kansarmoede-index (Stadsmonitor AR_03). Score 50 = mediaan. Lagere kansarmoede = hogere score.",
+  leefbaarheid: "Gemiddelde van 6 survey-indicatoren (netheid, groen, tevredenheid, graag wonen, vertrouwen). Score 50 = mediaan t.o.v. andere gemeenten.",
 };
 
 export type Provincie =

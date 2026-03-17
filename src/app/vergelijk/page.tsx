@@ -45,7 +45,7 @@ export default function VergelijkPage() {
     .map((id) => gemeenten.find((g) => g.id === id)!)
     .filter(Boolean);
 
-  const RADAR_THEMES = ["demografie", "economie", "werk", "mobiliteit", "fietsveiligheid", "onderwijs", "wonen", "veiligheid", "zorg", "bestuur", "armoede", "leefbaarheid"] as const;
+  const RADAR_THEMES = ["demografie", "werk", "mobiliteit", "fietsveiligheid", "onderwijs", "wonen", "veiligheid", "zorg", "bestuur", "armoede", "leefbaarheid"] as const;
   const radarData = selectedGemeenten.length > 0
     ? RADAR_THEMES.map((key) => {
         const point: Record<string, string | number> = {

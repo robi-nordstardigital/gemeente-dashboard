@@ -56,8 +56,7 @@ export default function GemeenteDetailPage({
 
   // All theme scores for radar chart
   const RADAR_THEMES: { key: ThemaKey; label: string }[] = [
-    { key: "demografie", label: "Demografie" },
-    { key: "economie", label: "Economie" },
+    { key: "demografie", label: "Bev.groei" },
     { key: "werk", label: "Werk" },
     { key: "mobiliteit", label: "Mobiliteit" },
     { key: "fietsveiligheid", label: "Fietsveiligheid" },
