@@ -406,10 +406,44 @@ const tevredenheidGemeenteByNIS = parseSurveySheet(surveyWonenFile, "WO_S_15");
 const graagWonenByNIS = parseSurveySheet(surveyWonenFile, "WO_S_16");
 const vertrouwenBestuurByNIS = parseSurveySheet(surveyLBFile, "LO_S_13");
 
+// Additional survey files
+const surveyMobFile = resolve(RAW, "stadsmonitor_survey_mobiliteit.xlsx");
+const surveyZorgFile = resolve(RAW, "stadsmonitor_survey_zorg.xlsx");
+const veiligFietsenByNIS = parseSurveySheet(surveyMobFile, "MO_S_06");
+const tevredenheidZorgByNIS = parseSurveySheet(surveyZorgFile, "ZO_S_06");
+
+// Register indicators with different column structures
+function parseRegisterSheet(filePath, sheetName, valueColIndex) {
+  const wb = XLSX.readFile(filePath);
+  const rows = XLSX.utils.sheet_to_json(wb.Sheets[sheetName], { header: 1 });
+  const result = new Map();
+  for (let i = 1; i < rows.length; i++) {
+    const row = rows[i];
+    const nis = String(row[1]);
+    if (!isFlemishNIS(nis)) continue;
+    const jaar = row[3];
+    const val = row[valueColIndex];
+    if (typeof val !== "number") continue;
+    const existing = result.get(nis);
+    if (!existing || jaar > existing.jaar) {
+      result.set(nis, { jaar, val: +val.toFixed(2) });
+    }
+  }
+  return result;
+}
+
+const regArmoede = resolve(RAW, "stadsmonitor_register_armoede.xlsx");
+const regSamenleven = resolve(RAW, "stadsmonitor_register_samenleven.xlsx");
+const kansarmoedeByNIS = parseRegisterSheet(regArmoede, "AR_03", 4); // Procent (%)
+const okiByNIS = parseRegisterSheet(regArmoede, "AR_05", 6); // OKI index
+const criminaliteitByNIS = parseRegisterSheet(regSamenleven, "SA_01", 6); // Per 1000 inwoners
+
 console.log(`  Netheid centrum: ${netheidCentrumByNIS.size} municipalities`);
-console.log(`  Netheid straten: ${netheidStratenByNIS.size} municipalities`);
-console.log(`  Groen in buurt: ${groenBuurtByNIS.size} municipalities`);
-console.log(`  Tevredenheid gemeente: ${tevredenheidGemeenteByNIS.size} municipalities`);
+console.log(`  Veilig fietsen: ${veiligFietsenByNIS.size} municipalities`);
+console.log(`  Kansarmoede-index: ${kansarmoedeByNIS.size} municipalities`);
+console.log(`  OKI: ${okiByNIS.size} municipalities`);
+console.log(`  Criminaliteitsgraad: ${criminaliteitByNIS.size} municipalities`);
+console.log(`  Tevredenheid zorg: ${tevredenheidZorgByNIS.size} municipalities`);
 console.log(`  Graag wonen: ${graagWonenByNIS.size} municipalities`);
 console.log(`  Vertrouwen bestuur: ${vertrouwenBestuurByNIS.size} municipalities`);
 
@@ -469,6 +503,11 @@ for (const [nis, popData] of pop2025) {
     tevredenheidGemeente: tevredenheidGemeenteByNIS.get(nis)?.pct || 0,
     graagWonen: graagWonenByNIS.get(nis)?.pct || 0,
     vertrouwenBestuur: vertrouwenBestuurByNIS.get(nis)?.pct || 0,
+    veiligFietsen: veiligFietsenByNIS.get(nis)?.pct || 0,
+    tevredenheidZorg: tevredenheidZorgByNIS.get(nis)?.pct || 0,
+    kansarmoede: kansarmoedeByNIS.get(nis)?.val || 0,
+    oki: okiByNIS.get(nis)?.val || 0,
+    criminaliteitsgraad: criminaliteitByNIS.get(nis)?.val || 0,
     bevolkingsgroei,
     gemiddeldeHuisprijs: huisprijs ? huisprijs.mediaanPrijs : 0,
     leerlingen: aantalLeerlingen,
@@ -478,12 +517,15 @@ for (const [nis, popData] of pop2025) {
     scores: {
       demografie: 0,
       economie: 0,
+      werk: 0,
       mobiliteit: 0,
+      fietsveiligheid: 0,
       onderwijs: 0,
-      milieu: 0,
-      veiligheid: 0,
       wonen: 0,
+      veiligheid: 0,
       zorg: 0,
+      bestuur: 0,
+      armoede: 0,
       leefbaarheid: 0,
     },
   };
@@ -520,26 +562,36 @@ for (const g of gemeenten) {
   g.scores.wonen = g.gemiddeldeHuisprijs > 0
     ? computePercentileScore(allHuisprijs, g.gemiddeldeHuisprijs, false) : 50; // lower price = better
   g.scores.demografie = computePercentileScore(allGroei, g.bevolkingsgroei);
-  // Mobiliteit score based on laadpalen per inwoner (real data from MOW WFS)
+  // Mobiliteit: laadpalen per inwoner (MOW WFS)
   g.scores.mobiliteit = g.laadpalenPerInwoner > 0
     ? computePercentileScore(allLaadpalen, g.laadpalenPerInwoner) : 50;
-  // Onderwijs score based on leerlingen per inwoner ratio (from Dataloep)
-  const leerlingenRatio = g.inwoners > 0 ? g.leerlingen / g.inwoners : 0;
-  const allRatios = gemeenten.filter(x => x.leerlingen > 0 && x.inwoners > 0).map(x => x.leerlingen / x.inwoners);
-  g.scores.onderwijs = leerlingenRatio > 0
-    ? computePercentileScore(allRatios, leerlingenRatio) : 50;
-  // Leefbaarheid score: average of survey indicators (direct %, not percentile)
+  // Fietsveiligheid: MO_S_06 survey (direct %)
+  g.scores.fietsveiligheid = g.veiligFietsen > 0 ? g.veiligFietsen : 50;
+  // Werk: werkzoekendengraad (inverse — lower is better)
+  const allWerkloosheid = gemeenten.map(x => x.werkloosheidsgraad).filter(v => v > 0);
+  g.scores.werk = g.werkloosheidsgraad > 0
+    ? computePercentileScore(allWerkloosheid, g.werkloosheidsgraad, false) : 50;
+  // Onderwijs: OKI (inverse — lower kansarmoede = better)
+  const allOKI = gemeenten.map(x => x.oki).filter(v => v > 0);
+  g.scores.onderwijs = g.oki > 0
+    ? computePercentileScore(allOKI, g.oki, false) : 50;
+  // Veiligheid: criminaliteitsgraad (inverse — lower crime = better)
+  const allCrim = gemeenten.map(x => x.criminaliteitsgraad).filter(v => v > 0);
+  g.scores.veiligheid = g.criminaliteitsgraad > 0
+    ? computePercentileScore(allCrim, g.criminaliteitsgraad, false) : 50;
+  // Zorg: tevredenheid gezondheidsvoorzieningen (direct %)
+  g.scores.zorg = g.tevredenheidZorg > 0 ? g.tevredenheidZorg : 50;
+  // Bestuur: vertrouwen gemeentebestuur (direct %)
+  g.scores.bestuur = g.vertrouwenBestuur > 0 ? g.vertrouwenBestuur : 50;
+  // Armoede: kansarmoede-index (inverse — lower = better)
+  const allKansarmoede = gemeenten.map(x => x.kansarmoede).filter(v => v > 0);
+  g.scores.armoede = g.kansarmoede > 0
+    ? computePercentileScore(allKansarmoede, g.kansarmoede, false) : 50;
+  // Leefbaarheid: average of survey indicators
   const surveyValues = [g.netheidCentrum, g.netheidStraten, g.groenBuurt,
     g.tevredenheidGemeente, g.graagWonen, g.vertrouwenBestuur].filter(v => v > 0);
   g.scores.leefbaarheid = surveyValues.length > 0
     ? Math.round(surveyValues.reduce((s, v) => s + v, 0) / surveyValues.length) : 50;
-  // Milieu score based on groen in buurt survey
-  g.scores.milieu = g.groenBuurt > 0 ? g.groenBuurt : 50;
-  // Veiligheid: netheid as proxy
-  const netheidValues = [g.netheidCentrum, g.netheidStraten].filter(v => v > 0);
-  g.scores.veiligheid = netheidValues.length > 0
-    ? Math.round(netheidValues.reduce((s, v) => s + v, 0) / netheidValues.length) : 50;
-  g.scores.zorg = 50;
 }
 
 // ────────────────────────────────────────────

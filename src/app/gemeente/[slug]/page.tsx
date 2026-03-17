@@ -17,7 +17,7 @@ import {
   Cell,
 } from "recharts";
 import { getGemeenteBySlug, gemeenten } from "@/data/gemeenten";
-import { INDICATOR_LABELS, PROVINCIE_KLEUREN, Indicator } from "@/lib/types";
+import { INDICATOR_LABELS, PROVINCIE_KLEUREN, Indicator, THEMA_TOOLTIPS, ThemaKey } from "@/lib/types";
 import { formatIndicator, formatNumber, formatCurrency, getRank } from "@/lib/utils";
 
 const SURVEY_INDICATORS: { key: Indicator; label: string; icon: string; tooltip: string }[] = [
@@ -54,11 +54,25 @@ export default function GemeenteDetailPage({
 
   if (!gemeente) return notFound();
 
-  // Scores backed by real data
-  const REAL_SCORES = ["demografie", "economie", "mobiliteit", "onderwijs", "wonen", "leefbaarheid", "milieu", "veiligheid"] as const;
-  const radarData = REAL_SCORES.map((key) => ({
-    subject: key.charAt(0).toUpperCase() + key.slice(1),
+  // All theme scores for radar chart
+  const RADAR_THEMES: { key: ThemaKey; label: string }[] = [
+    { key: "demografie", label: "Demografie" },
+    { key: "economie", label: "Economie" },
+    { key: "werk", label: "Werk" },
+    { key: "mobiliteit", label: "Mobiliteit" },
+    { key: "fietsveiligheid", label: "Fietsveiligheid" },
+    { key: "onderwijs", label: "Onderwijs" },
+    { key: "wonen", label: "Wonen" },
+    { key: "veiligheid", label: "Veiligheid" },
+    { key: "zorg", label: "Zorg" },
+    { key: "bestuur", label: "Bestuur" },
+    { key: "armoede", label: "Armoede" },
+    { key: "leefbaarheid", label: "Leefbaarheid" },
+  ];
+  const radarData = RADAR_THEMES.map(({ key, label }) => ({
+    subject: label,
     score: gemeente.scores[key],
+    tooltip: THEMA_TOOLTIPS[key],
     fullMark: 100,
   }));
 
@@ -119,12 +133,12 @@ export default function GemeenteDetailPage({
           <p className="mb-2 text-[11px] font-medium uppercase tracking-wider text-muted">
             Thema Scores
           </p>
-          <ResponsiveContainer width="100%" height={300}>
+          <ResponsiveContainer width="100%" height={350}>
             <RadarChart data={radarData}>
               <PolarGrid stroke="rgba(255,255,255,0.08)" />
               <PolarAngleAxis
                 dataKey="subject"
-                tick={{ fontSize: 11, fill: "#8888a0" }}
+                tick={{ fontSize: 10, fill: "#8888a0" }}
               />
               <Radar
                 dataKey="score"
@@ -132,6 +146,18 @@ export default function GemeenteDetailPage({
                 fill={provincieColor}
                 fillOpacity={0.2}
                 strokeWidth={2}
+              />
+              <Tooltip
+                content={({ active, payload }) => {
+                  if (!active || !payload?.[0]) return null;
+                  const d = payload[0].payload;
+                  return (
+                    <div className="rounded-lg border border-glass-border bg-[rgba(18,18,30,0.95)] px-3 py-2 max-w-[250px]">
+                      <p className="text-[13px] font-medium text-foreground">{d.subject}: {d.score}/100</p>
+                      <p className="mt-1 text-[10px] text-muted leading-relaxed">{d.tooltip}</p>
+                    </div>
+                  );
+                }}
               />
             </RadarChart>
           </ResponsiveContainer>

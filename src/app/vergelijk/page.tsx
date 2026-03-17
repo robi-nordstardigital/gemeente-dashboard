@@ -45,10 +45,9 @@ export default function VergelijkPage() {
     .map((id) => gemeenten.find((g) => g.id === id)!)
     .filter(Boolean);
 
-  // Scores backed by real data
-  const REAL_SCORES = ["demografie", "economie", "mobiliteit", "onderwijs", "wonen", "leefbaarheid", "milieu", "veiligheid"] as const;
+  const RADAR_THEMES = ["demografie", "economie", "werk", "mobiliteit", "fietsveiligheid", "onderwijs", "wonen", "veiligheid", "zorg", "bestuur", "armoede", "leefbaarheid"] as const;
   const radarData = selectedGemeenten.length > 0
-    ? REAL_SCORES.map((key) => {
+    ? RADAR_THEMES.map((key) => {
         const point: Record<string, string | number> = {
           subject: key.charAt(0).toUpperCase() + key.slice(1),
         };
