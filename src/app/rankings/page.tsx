@@ -13,12 +13,10 @@ const SORTABLE_INDICATORS: Indicator[] = [
   "gemiddeldeHuisprijs",
   "bevolkingsgroei",
   "oppervlakte",
-  "graagWonen",
-  "tevredenheidGemeente",
-  "netheidCentrum",
-  "groenBuurt",
-  "vertrouwenBestuur",
 ];
+
+// Special column: leefbaarheid uses scores.leefbaarheid, not a direct Gemeente property
+const LEEFBAARHEID_TOOLTIP = "Gemiddelde van 6 survey-indicatoren uit de Gemeente-Stadsmonitor burgerbevraging 2023: graag wonen, tevredenheid gemeente, netheid centrum, netheid straten, groen in buurt en vertrouwen in gemeentebestuur.";
 
 const PROVINCIES: (Provincie | "Alle")[] = [
   "Alle",
@@ -30,24 +28,27 @@ const PROVINCIES: (Provincie | "Alle")[] = [
 ];
 
 export default function RankingsPage() {
-  const [sortBy, setSortBy] = useState<Indicator>("inwoners");
+  const [sortBy, setSortBy] = useState<Indicator | "leefbaarheid">("inwoners");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
   const [filter, setFilter] = useState<Provincie | "Alle">("Alle");
   const [search, setSearch] = useState("");
+
+  const getValue = (g: typeof gemeenten[0], key: Indicator | "leefbaarheid") =>
+    key === "leefbaarheid" ? g.scores.leefbaarheid : g[key] as number;
 
   const sorted = useMemo(() => {
     let list = [...gemeenten];
     if (filter !== "Alle") list = list.filter((g) => g.provincie === filter);
     if (search) list = list.filter((g) => g.naam.toLowerCase().includes(search.toLowerCase()));
     list.sort((a, b) => {
-      const va = a[sortBy] as number;
-      const vb = b[sortBy] as number;
+      const va = getValue(a, sortBy);
+      const vb = getValue(b, sortBy);
       return sortDir === "desc" ? vb - va : va - vb;
     });
     return list;
   }, [sortBy, sortDir, filter, search]);
 
-  function toggleSort(indicator: Indicator) {
+  function toggleSort(indicator: Indicator | "leefbaarheid") {
     if (sortBy === indicator) {
       setSortDir((d) => (d === "desc" ? "asc" : "desc"));
     } else {
@@ -129,6 +130,19 @@ export default function RankingsPage() {
                     )}
                   </th>
                 ))}
+                <th
+                  onClick={() => toggleSort("leefbaarheid")}
+                  className="cursor-pointer px-3 py-2.5 text-right text-[11px] font-medium uppercase tracking-wider text-muted hover:text-foreground transition-colors whitespace-nowrap"
+                  title={LEEFBAARHEID_TOOLTIP}
+                >
+                  Leefbaarheid
+                  <span className="text-muted/30 ml-0.5 cursor-help">?</span>
+                  {sortBy === "leefbaarheid" && (
+                    <span className="ml-1 text-accent-light">
+                      {sortDir === "desc" ? "↓" : "↑"}
+                    </span>
+                  )}
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -162,6 +176,17 @@ export default function RankingsPage() {
                       {formatIndicator(ind, g[ind] as number)}
                     </td>
                   ))}
+                  <td
+                    className={`px-3 py-2 text-right font-mono text-[12px] ${
+                      sortBy === "leefbaarheid" ? "text-accent-light font-medium" : "text-muted"
+                    }`}
+                  >
+                    {g.scores.leefbaarheid > 0 && g.scores.leefbaarheid !== 50 ? (
+                      <span>{g.scores.leefbaarheid}/100</span>
+                    ) : (
+                      <span className="text-muted/30">—</span>
+                    )}
+                  </td>
                 </tr>
               ))}
             </tbody>
