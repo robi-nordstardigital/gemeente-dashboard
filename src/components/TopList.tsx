@@ -37,10 +37,10 @@ export default function TopList({ title, gemeenten, indicator, ascending = false
             <Link
               key={g.id}
               href={`/gemeente/${slugify(g.naam)}`}
-              className="table-row flex items-center gap-2 rounded-lg px-2 py-1.5"
+              className="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-white/[0.03] transition-colors"
             >
-              <span className="w-5 text-right text-[11px] font-mono text-muted">
-                {i + 1}
+              <span className="w-5 text-right text-[11px] font-mono text-muted shrink-0">
+                {i + 1}.
               </span>
               <div
                 className="h-2 w-2 rounded-full shrink-0"
