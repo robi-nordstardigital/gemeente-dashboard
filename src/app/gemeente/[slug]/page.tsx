@@ -187,7 +187,7 @@ export default function GemeenteDetailPage({
           <p className="mb-4 text-[11px] text-muted/60">
             % inwoners dat positief antwoordde (eens/veel) · Bron: Gemeente-Stadsmonitor
           </p>
-          <div className="space-y-5">
+          <div className="space-y-6">
             {SURVEY_INDICATORS.map(({ key, label, icon, tooltip }) => {
               const value = gemeente[key] as number;
               if (value === 0) return null;
@@ -198,82 +198,87 @@ export default function GemeenteDetailPage({
               const max = Math.max(...values);
               const diff = value - vlAvg;
               const rank = getRank(withData, gemeente.id, key);
+              const aboveAvg = diff >= 0;
               // Position within min-max range (0-100%)
               const range = max - min || 1;
               const valuePos = ((value - min) / range) * 100;
               const avgPos = ((vlAvg - min) / range) * 100;
+              // How many gemeenten score worse (below this value)
+              const betterThanPct = Math.round(((withData.length - rank) / withData.length) * 100);
 
               return (
                 <div key={key} className="group">
-                  {/* Label row */}
-                  <div className="flex items-center justify-between mb-1">
-                    <div className="flex items-center gap-2 relative">
+                  {/* Label + score row */}
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
                       <span className="text-sm">{icon}</span>
                       <span className="text-[13px] text-foreground/90">{label}</span>
-                      <span className="text-muted/40 text-[10px] cursor-help" title={tooltip}>?</span>
+                      <span className="text-muted/30 text-[10px] cursor-help" title={tooltip}>?</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-[14px] font-bold font-mono">{value}%</span>
+                      <span className={`text-[15px] font-bold font-mono ${aboveAvg ? "text-emerald-400" : "text-red-400"}`}>
+                        {value}%
+                      </span>
                       <span className="text-[11px] font-mono text-muted">
-                        #{rank}<span className="text-muted/50">/{withData.length}</span>
+                        #{rank}<span className="text-muted/40">/{withData.length}</span>
                       </span>
                     </div>
                   </div>
-                  {/* Tooltip explanation */}
-                  <p className="text-[10px] text-muted/50 mb-1.5 hidden group-hover:block">{tooltip}</p>
-                  {/* Range bar: min to max with markers */}
-                  <div className="relative h-4 rounded-full bg-white/[0.03] overflow-visible">
-                    {/* Track background showing full range */}
-                    <div className="absolute inset-y-0 left-0 right-0 rounded-full bg-white/5" />
-                    {/* Value bar from left edge to value position */}
+                  {/* Tooltip on hover */}
+                  <p className="text-[10px] text-muted/40 mb-2 hidden group-hover:block">{tooltip}</p>
+                  {/* Range visualization */}
+                  <div className="relative h-6 overflow-visible">
+                    {/* Full track: min to max */}
+                    <div className="absolute inset-y-0 left-0 right-0 rounded bg-white/[0.04]" />
+                    {/* Below-average zone (red tint, left of avg) */}
                     <div
-                      className="absolute inset-y-0 left-0 rounded-full transition-all"
-                      style={{
-                        width: `${valuePos}%`,
-                        background: diff >= 5
-                          ? "linear-gradient(90deg, rgba(34,197,94,0.15), rgba(34,197,94,0.45))"
-                          : diff > -5
-                            ? "linear-gradient(90deg, rgba(245,158,11,0.15), rgba(245,158,11,0.35))"
-                            : "linear-gradient(90deg, rgba(239,68,68,0.15), rgba(239,68,68,0.4))",
-                      }}
+                      className="absolute inset-y-0 left-0 rounded-l bg-red-500/[0.07]"
+                      style={{ width: `${avgPos}%` }}
                     />
-                    {/* Value dot */}
+                    {/* Above-average zone (green tint, right of avg) */}
                     <div
-                      className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-2 z-20"
-                      style={{
-                        left: `${valuePos}%`,
-                        background: diff >= 5 ? "#22c55e" : diff > -5 ? "#f59e0b" : "#ef4444",
-                        borderColor: diff >= 5 ? "#16a34a" : diff > -5 ? "#d97706" : "#dc2626",
-                      }}
+                      className="absolute inset-y-0 right-0 rounded-r bg-emerald-500/[0.07]"
+                      style={{ width: `${100 - avgPos}%` }}
                     />
-                    {/* Flemish average marker */}
+                    {/* Average divider line */}
                     <div
-                      className="absolute top-0 h-full w-0.5 bg-white/30 z-10"
+                      className="absolute top-0 h-full w-px bg-white/25 z-10"
                       style={{ left: `${avgPos}%` }}
                     />
+                    {/* Gemeente marker dot + value label */}
                     <div
-                      className="absolute -bottom-3.5 -translate-x-1/2 text-[8px] text-white/30"
-                      style={{ left: `${avgPos}%` }}
+                      className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 z-20 flex flex-col items-center"
+                      style={{ left: `${valuePos}%` }}
                     >
-                      gem.
+                      <div
+                        className="w-4 h-4 rounded-full border-2 shadow-lg"
+                        style={{
+                          background: aboveAvg ? "#22c55e" : "#ef4444",
+                          borderColor: aboveAvg ? "#15803d" : "#b91c1c",
+                          boxShadow: `0 0 8px ${aboveAvg ? "rgba(34,197,94,0.4)" : "rgba(239,68,68,0.4)"}`,
+                        }}
+                      />
                     </div>
                   </div>
-                  {/* Min / diff badge / Max labels */}
-                  <div className="flex items-center justify-between mt-4 text-[10px] font-mono">
-                    <span className="text-muted/40">{min}%</span>
-                    <span
-                      className={`px-1.5 py-0.5 rounded text-[10px] font-medium ${
-                        diff >= 5
-                          ? "bg-emerald-500/10 text-emerald-400"
-                          : diff > -5
-                            ? "bg-amber-500/10 text-amber-400"
-                            : "bg-red-500/10 text-red-400"
-                      }`}
-                    >
-                      {diff > 0 ? "+" : ""}{diff.toFixed(1)} vs Vlaams gem. ({vlAvg.toFixed(0)}%)
+                  {/* Labels row below bar */}
+                  <div className="flex items-center justify-between mt-1.5">
+                    <span className="text-[10px] font-mono text-muted/40">
+                      {min}% <span className="text-muted/25">(laagste)</span>
                     </span>
-                    <span className="text-muted/40">{max}%</span>
+                    <span className="text-[10px] font-mono text-white/30">
+                      gem. {vlAvg.toFixed(0)}%
+                    </span>
+                    <span className="text-[10px] font-mono text-muted/40">
+                      <span className="text-muted/25">(hoogste)</span> {max}%
+                    </span>
                   </div>
+                  {/* Interpretation line */}
+                  <p className={`text-[10px] mt-1 ${aboveAvg ? "text-emerald-400/60" : "text-red-400/60"}`}>
+                    {aboveAvg
+                      ? `Beter dan ${betterThanPct}% van de gemeenten · ${diff.toFixed(1)} procentpunt boven gemiddelde`
+                      : `Slechter dan ${100 - betterThanPct}% van de gemeenten · ${Math.abs(diff).toFixed(1)} procentpunt onder gemiddelde`
+                    }
+                  </p>
                 </div>
               );
             })}
