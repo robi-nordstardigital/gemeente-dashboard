@@ -545,8 +545,10 @@ console.log("📈 Computing relative scores...");
 function computePercentileScore(values, value, higherIsBetter = true) {
   const sorted = [...values].sort((a, b) => a - b);
   const rank = sorted.findIndex(v => v >= value);
-  const pct = (rank / sorted.length) * 100;
-  return higherIsBetter ? Math.round(pct) : Math.round(100 - pct);
+  // Use (rank + 0.5) / length to avoid 0% and 100% extremes
+  const pct = ((rank + 0.5) / sorted.length) * 100;
+  const score = higherIsBetter ? Math.round(pct) : Math.round(100 - pct);
+  return Math.max(1, Math.min(99, score)); // clamp to 1-99 range
 }
 
 const allInkomen = gemeenten.map(g => g.mediaalInkomen).filter(v => v > 0);
