@@ -19,7 +19,6 @@ import {
 } from "recharts";
 import {
   gemeenten,
-  laadpalenTrend,
   bevolkingsTrend,
   getTopGemeenten,
 } from "@/data/gemeenten";
@@ -36,7 +35,7 @@ const tooltipStyle = {
 
 export default function TrendsPage() {
   const topGroei = getTopGemeenten("bevolkingsgroei", 15);
-  const topDaling = getTopGemeenten("bevolkingsgroei", 15, true);
+  const topLaadpalen = getTopGemeenten("laadpalenPerInwoner", 15);
 
   // Scatter data: inkomen vs laadpalen
   const scatterData = gemeenten.map((g) => ({
@@ -55,7 +54,6 @@ export default function TrendsPage() {
     return {
       naam: p,
       inkomen: Math.round(pg.reduce((s, g) => s + g.mediaalInkomen, 0) / pg.length),
-      werkloosheid: +(pg.reduce((s, g) => s + g.werkloosheidsgraad, 0) / pg.length).toFixed(1),
       huisprijs: Math.round(pg.reduce((s, g) => s + g.gemiddeldeHuisprijs, 0) / pg.length),
       laadpalen: Math.round(pg.reduce((s, g) => s + g.laadpalen, 0)),
       kleur: PROVINCIE_KLEUREN[p],
@@ -77,22 +75,19 @@ export default function TrendsPage() {
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
         <div className="glass-strong rounded-xl p-4">
           <p className="mb-3 text-[11px] font-medium uppercase tracking-wider text-muted">
-            Laadpalen Groei Vlaanderen (2018-2025)
+            Top 15 — Laadpalen per 1000 inwoners
           </p>
           <ResponsiveContainer width="100%" height={200}>
-            <AreaChart data={laadpalenTrend}>
-              <defs>
-                <linearGradient id="gradLaad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#22c55e" stopOpacity={0.3} />
-                  <stop offset="100%" stopColor="#22c55e" stopOpacity={0} />
-                </linearGradient>
-              </defs>
-              <CartesianGrid stroke="rgba(255,255,255,0.04)" />
-              <XAxis dataKey="jaar" tick={{ fontSize: 10, fill: "#8888a0" }} axisLine={false} tickLine={false} />
-              <YAxis tick={{ fontSize: 10, fill: "#8888a0" }} axisLine={false} tickLine={false} />
-              <Tooltip contentStyle={tooltipStyle} formatter={(v: number) => [formatNumber(v), "Laadpalen"]} />
-              <Area type="monotone" dataKey="waarde" stroke="#22c55e" strokeWidth={2} fill="url(#gradLaad)" />
-            </AreaChart>
+            <BarChart data={topLaadpalen.map((g) => ({ naam: g.naam, waarde: g.laadpalenPerInwoner, provincie: g.provincie }))} layout="vertical">
+              <XAxis type="number" tick={{ fontSize: 10, fill: "#8888a0" }} axisLine={false} tickLine={false} />
+              <YAxis dataKey="naam" type="category" width={110} tick={{ fontSize: 9, fill: "#8888a0" }} axisLine={false} tickLine={false} />
+              <Tooltip contentStyle={tooltipStyle} formatter={(v) => [Number(v).toFixed(2), "per 1000 inw."]} />
+              <Bar dataKey="waarde" radius={[0, 4, 4, 0]} barSize={10}>
+                {topLaadpalen.map((g, i) => (
+                  <Cell key={i} fill={PROVINCIE_KLEUREN[g.provincie]} fillOpacity={0.7} />
+                ))}
+              </Bar>
+            </BarChart>
           </ResponsiveContainer>
         </div>
 
@@ -111,7 +106,7 @@ export default function TrendsPage() {
               <CartesianGrid stroke="rgba(255,255,255,0.04)" />
               <XAxis dataKey="jaar" tick={{ fontSize: 10, fill: "#8888a0" }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fontSize: 10, fill: "#8888a0" }} axisLine={false} tickLine={false} domain={["dataMin - 50000", "dataMax + 50000"]} />
-              <Tooltip contentStyle={tooltipStyle} formatter={(v: number) => [formatNumber(v), "Inwoners"]} />
+              <Tooltip contentStyle={tooltipStyle} formatter={(v) => [formatNumber(Number(v)), "Inwoners"]} />
               <Area type="monotone" dataKey="waarde" stroke="#6366f1" strokeWidth={2} fill="url(#gradBev)" />
             </AreaChart>
           </ResponsiveContainer>
@@ -149,10 +144,11 @@ export default function TrendsPage() {
             <ZAxis dataKey="z" range={[20, 200]} />
             <Tooltip
               contentStyle={tooltipStyle}
-              formatter={(value: number, name: string) => {
-                if (name === "Inkomen") return [`€${formatNumber(value)}`, name];
-                if (name === "Laadpalen /1000 inw") return [value.toFixed(2), name];
-                return [formatNumber(value), name];
+              formatter={(value, name) => {
+                const v = Number(value);
+                if (name === "Inkomen") return [`€${formatNumber(v)}`, name];
+                if (name === "Laadpalen /1000 inw") return [v.toFixed(2), name];
+                return [formatNumber(v), String(name)];
               }}
               labelFormatter={(_, payload) => payload?.[0]?.payload?.naam || ""}
             />
@@ -179,7 +175,7 @@ export default function TrendsPage() {
             <BarChart data={topGroei.map((g) => ({ naam: g.naam, groei: g.bevolkingsgroei, provincie: g.provincie }))} layout="vertical">
               <XAxis type="number" tick={{ fontSize: 10, fill: "#8888a0" }} axisLine={false} tickLine={false} />
               <YAxis dataKey="naam" type="category" width={120} tick={{ fontSize: 10, fill: "#8888a0" }} axisLine={false} tickLine={false} />
-              <Tooltip contentStyle={tooltipStyle} formatter={(v: number) => [`${v.toFixed(2)}%`, "Groei"]} />
+              <Tooltip contentStyle={tooltipStyle} formatter={(v) => [`${Number(v).toFixed(2)}%`, "Groei"]} />
               <Bar dataKey="groei" radius={[0, 4, 4, 0]} barSize={12}>
                 {topGroei.map((g, i) => (
                   <Cell key={i} fill={PROVINCIE_KLEUREN[g.provincie]} fillOpacity={0.7} />

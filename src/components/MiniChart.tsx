@@ -39,7 +39,7 @@ export default function MiniChart({ data, color = "#6366f1", height = 120, label
               fontSize: "12px",
               color: "#e8e8f0",
             }}
-            formatter={(value: number) => [new Intl.NumberFormat("nl-BE").format(value), ""]}
+            formatter={(value) => [new Intl.NumberFormat("nl-BE").format(Number(value)), ""]}
             labelFormatter={(label) => `${label}`}
           />
           <Area

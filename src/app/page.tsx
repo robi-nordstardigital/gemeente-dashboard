@@ -30,7 +30,7 @@ export default function Home() {
       <div className="flex items-center gap-2 rounded-lg border border-success/20 bg-success/5 px-3 py-2">
         <div className="h-2 w-2 rounded-full bg-success animate-pulse" />
         <p className="text-xs text-success">
-          Echte data: bevolking (Statbel 2025), fiscaal inkomen (Statbel 2023), huisprijzen (Statbel 2017)
+          6 echte datasets: bevolking, inkomen, vastgoed, oppervlakte (Statbel) · laadpalen (MOW) · onderwijs (Dataloep)
         </p>
       </div>
 
@@ -62,7 +62,7 @@ export default function Home() {
         <KpiCard
           label="Gem. Huisprijs"
           value={formatCurrency(gemiddeldeHuisprijs)}
-          change="Mediaan woonhuis 2017"
+          change="Mediaan woonhuis 2024"
           changeType="neutral"
           delay={2}
           icon={
