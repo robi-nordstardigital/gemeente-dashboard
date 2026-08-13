@@ -1,0 +1,17 @@
+{
+  "name": "hvc-backup",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Backup van de bestaande HVC Wix-site: contacten, content en websitecopy",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "discover": "node --env-file=.env scripts/01-discover.mjs",
+    "contacts": "node --env-file=.env scripts/02-export-contacts.mjs",
+    "content": "node --env-file=.env scripts/03-export-wix-content.mjs",
+    "crawl": "node --env-file=.env scripts/04-crawl-site.mjs",
+    "backup": "node --env-file=.env scripts/export-all.mjs"
+  }
+}

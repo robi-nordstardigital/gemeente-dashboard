@@ -1,0 +1,8 @@
+# Exports contain personal data (contacts, form submissions) — GDPR.
+# Never commit them.
+exports/
+
+# Credentials
+.env
+*.env
+!.env.example
